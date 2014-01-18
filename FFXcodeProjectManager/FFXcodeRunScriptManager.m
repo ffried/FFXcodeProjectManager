@@ -44,7 +44,7 @@ static id SharedManager = nil;
     [objects enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *objIsa = [obj valueForKey:@"isa"];
         if ([objIsa isEqualToString:kTargetISA]) {
-            FFXcodeTarget *target = [[FFXcodeTarget alloc] initWithUUID:key ofDictionary:obj];
+            FFXcodeTarget *target = [[FFXcodeTarget alloc] initWithUID:key ofDictionary:obj];
             [targets addObject:target];
         }
     }];
@@ -62,10 +62,10 @@ static id SharedManager = nil;
     if (!objects) return;
     
     [target addRunScript:runScript];
-    objects[target.uuid] = [target dictionaryRepresentation];
+    objects[target.uid] = [target dictionaryRepresentation];
     
     NSDictionary *runscriptDictionary = [runScript dictionaryRepresentation];
-    objects[runScript.uuid] = runscriptDictionary;
+    objects[runScript.uid] = runscriptDictionary;
     pbxproj[@"objects"] = objects.copy;
     
     [pbxproj writeToURL:path atomically:YES];
@@ -86,9 +86,9 @@ static id SharedManager = nil;
     if (!objects) return;
     
     [target removeRunScript:runScript];
-    objects[target.uuid] = [target dictionaryRepresentation];
+    objects[target.uid] = [target dictionaryRepresentation];
     
-    [objects removeObjectForKey:runScript.uuid];
+    [objects removeObjectForKey:runScript.uid];
     pbxproj[@"objects"] = objects.copy;
     
     [pbxproj writeToURL:path atomically:YES];

@@ -20,8 +20,8 @@
 		07F1BD8F1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD8E1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m */; };
 		07F1BDA61882B0FF00D96872 /* FFXcodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD9D1882B0FF00D96872 /* FFXcodeObject.m */; };
 		07F1BDA71882B0FF00D96872 /* FFXcodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD9D1882B0FF00D96872 /* FFXcodeObject.m */; };
-		07F1BDA81882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m */; };
-		07F1BDA91882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m */; };
+		07F1BDA81882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m */; };
+		07F1BDA91882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m */; };
 		07F1BDAA1882B0FF00D96872 /* FFXcodeRunScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDA11882B0FF00D96872 /* FFXcodeRunScript.m */; };
 		07F1BDAB1882B0FF00D96872 /* FFXcodeRunScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDA11882B0FF00D96872 /* FFXcodeRunScript.m */; };
 		07F1BDAC1882B0FF00D96872 /* FFXcodeRunScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDA31882B0FF00D96872 /* FFXcodeRunScriptManager.m */; };
@@ -64,8 +64,8 @@
 		07F1BD8E1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectManager_SampleTests.m; sourceTree = "<group>"; };
 		07F1BD9C1882B0FF00D96872 /* FFXcodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeObject.h; sourceTree = "<group>"; };
 		07F1BD9D1882B0FF00D96872 /* FFXcodeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeObject.m; sourceTree = "<group>"; };
-		07F1BD9E1882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeProjectUUIDGenerator.h; sourceTree = "<group>"; };
-		07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectUUIDGenerator.m; sourceTree = "<group>"; };
+		07F1BD9E1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeProjectUIDGenerator.h; sourceTree = "<group>"; };
+		07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectUIDGenerator.m; sourceTree = "<group>"; };
 		07F1BDA01882B0FF00D96872 /* FFXcodeRunScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeRunScript.h; sourceTree = "<group>"; };
 		07F1BDA11882B0FF00D96872 /* FFXcodeRunScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeRunScript.m; sourceTree = "<group>"; };
 		07F1BDA21882B0FF00D96872 /* FFXcodeRunScriptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeRunScriptManager.h; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 				07F1BD9D1882B0FF00D96872 /* FFXcodeObject.m */,
 				07F1BDB01882B17200D96872 /* FFXCodeProjectFile.h */,
 				07F1BDB11882B17200D96872 /* FFXCodeProjectFile.m */,
-				07F1BD9E1882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.h */,
-				07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m */,
+				07F1BD9E1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.h */,
+				07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m */,
 				07F1BDA01882B0FF00D96872 /* FFXcodeRunScript.h */,
 				07F1BDA11882B0FF00D96872 /* FFXcodeRunScript.m */,
 				07F1BDA21882B0FF00D96872 /* FFXcodeRunScriptManager.h */,
@@ -299,7 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1BDAC1882B0FF00D96872 /* FFXcodeRunScriptManager.m in Sources */,
-				07F1BDA81882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m in Sources */,
+				07F1BDA81882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m in Sources */,
 				07F1BDA61882B0FF00D96872 /* FFXcodeObject.m in Sources */,
 				07F1BDAE1882B0FF00D96872 /* FFXcodeTarget.m in Sources */,
 				07F1BD781881DA0500D96872 /* FFAppDelegate.m in Sources */,
@@ -315,7 +315,7 @@
 			files = (
 				07F1BDAF1882B0FF00D96872 /* FFXcodeTarget.m in Sources */,
 				07F1BDA71882B0FF00D96872 /* FFXcodeObject.m in Sources */,
-				07F1BDA91882B0FF00D96872 /* FFXcodeProjectUUIDGenerator.m in Sources */,
+				07F1BDA91882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m in Sources */,
 				07F1BDAB1882B0FF00D96872 /* FFXcodeRunScript.m in Sources */,
 				07F1BDAD1882B0FF00D96872 /* FFXcodeRunScriptManager.m in Sources */,
 				07F1BD8F1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m in Sources */,
@@ -522,6 +522,7 @@
 				07F1BD941881DA0500D96872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07F1BD951881DA0500D96872 /* Build configuration list for PBXNativeTarget "FFXcodeProjectManager SampleTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +531,7 @@
 				07F1BD971881DA0500D96872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

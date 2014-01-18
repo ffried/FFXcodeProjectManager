@@ -34,6 +34,7 @@ static NSString *const kRootObjectKey = @"rootObject";
                 
                 NSDictionary *objects = dictionary[kObjectsKey];
                 self.objectsDict = objects; // TODO: Remove once every object has a representing class
+                
             }
         }
     }
@@ -44,12 +45,12 @@ static NSString *const kRootObjectKey = @"rootObject";
 {
     NSArray *keys = @[kArchiveVersionKey, kClassesKey, kObjectVersionKey];
     NSMutableDictionary *dictionary = [self dictionaryWithValuesForKeys:keys].mutableCopy;
-    dictionary[kRootObjectKey] = self.rootObject.uuid;
+    dictionary[kRootObjectKey] = self.rootObject.uid;
     
     // TODO: Create a new dictionary here once every object has a representing class
     NSMutableDictionary *objects = self.objectsDict.mutableCopy;
     [self.objects enumerateObjectsUsingBlock:^(FFXcodeObject *obj, NSUInteger idx, BOOL *stop) {
-        objects[obj.uuid] = [obj dictionaryRepresentation];
+        objects[obj.uid] = [obj dictionaryRepresentation];
     }];
     dictionary[kObjectsKey] = objects.copy;
     

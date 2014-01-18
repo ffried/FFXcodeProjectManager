@@ -17,12 +17,12 @@
 
 #import "FFXcodeObject.h"
 
-static NSString *const kUUIDKey = @"uuid";
+static NSString *const kUIDKey = @"uid";
 static NSString *const kISAKey = @"isa";
 
 @interface FFXcodeObject ()
 
-@property (nonatomic, strong, readwrite) NSString *uuid;
+@property (nonatomic, strong, readwrite) NSString *uid;
 
 @end
 
@@ -31,18 +31,18 @@ static NSString *const kISAKey = @"isa";
 // We need to synthesize that because "isa" is already in use
 @synthesize isa = _isa;
 
-- (instancetype)initWithUUID:(NSString *)uuid ofDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
     if (self) {
-        self.uuid = (uuid) ?: [FFXcodeProjectUUIDGenerator randomXcodeProjectUUID];
+        self.uid = (uid) ?: [FFXcodeProjectUIDGenerator randomXcodeProjectUID];
         self.isa = dictionary[kISAKey];
     }
     return self;
 }
 
 - (instancetype)init {
-    return [self initWithUUID:[FFXcodeProjectUUIDGenerator randomXcodeProjectUUID] ofDictionary:nil];
+    return [self initWithUID:[FFXcodeProjectUIDGenerator randomXcodeProjectUID] ofDictionary:nil];
 }
 
 #pragma mark - NSCoding
@@ -52,7 +52,7 @@ static NSString *const kISAKey = @"isa";
 {
     self = [super init];
     if (self) {
-        self.uuid = [aDecoder decodeObjectOfClass:[NSString class] forKey:kUUIDKey];
+        self.uid = [aDecoder decodeObjectOfClass:[NSString class] forKey:kUIDKey];
         self.isa = [aDecoder decodeObjectOfClass:[NSString class] forKey:kISAKey];
     }
     return self;
@@ -60,7 +60,7 @@ static NSString *const kISAKey = @"isa";
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeObject:self.uuid forKey:kUUIDKey];
+    [aCoder encodeObject:self.uid forKey:kUIDKey];
     [aCoder encodeObject:self.isa forKey:kISAKey];
 }
 
@@ -69,7 +69,7 @@ static NSString *const kISAKey = @"isa";
 {
     __typeof(self) copy = [[[self class] alloc] init];
     
-    // UUID not copied as it's unique to one object!
+    // UID not copied as it's unique to one object!
     // It's generated in the init method
     copy.isa = [self.isa copyWithZone:zone];
     
@@ -79,7 +79,7 @@ static NSString *const kISAKey = @"isa";
 #pragma mark - Dictionary Representation
 - (NSDictionary *)dictionaryRepresentation
 {
-    return [self dictionaryWithValuesForKeys:@[kUUIDKey]];
+    return [self dictionaryWithValuesForKeys:@[kISAKey]];
 }
 
 @end

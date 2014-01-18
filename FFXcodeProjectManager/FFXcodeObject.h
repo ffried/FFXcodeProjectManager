@@ -16,14 +16,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FFXcodeProjectUUIDGenerator.h"
+#import "FFXcodeProjectUIDGenerator.h"
 
 @interface FFXcodeObject : NSObject <NSSecureCoding, NSCopying>
 
-@property (nonatomic, strong, readonly) NSString *uuid;
+@property (nonatomic, strong, readonly) NSString *uid;
 @property (nonatomic, strong) NSString *isa;
 
-- (instancetype)initWithUUID:(NSString *)uuid ofDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary;
 
 - (NSDictionary *)dictionaryRepresentation;
 

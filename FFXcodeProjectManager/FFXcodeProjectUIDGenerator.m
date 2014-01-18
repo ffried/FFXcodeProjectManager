@@ -1,5 +1,5 @@
 //
-//  FFXcodeProjectUUIDGenerator.h
+//  FFXcodeProjectUIDGenerator.m
 //
 //  Created by Florian Friedrich on 3.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
@@ -15,14 +15,26 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#import "FFXcodeProjectUIDGenerator.h"
 
-#import <Foundation/Foundation.h>
+static NSString *const kHexCharacters = @"0123456789ABCDEF";
 
-static NSUInteger const kFFXcodeProjectUUIDDefaultLength = 24; // Default length (Xcode 5.0.2)
+@implementation FFXcodeProjectUIDGenerator
 
-@interface FFXcodeProjectUUIDGenerator : NSObject
++ (NSString *)randomXcodeProjectUID
+{
+    return [[self class] randomXcodeProjectUIDWithLength:kFFXcodeProjectUIDDefaultLength];
+}
 
-+ (NSString *)randomXcodeProjectUUID; // Generates Xcode UUID with default length
-+ (NSString *)randomXcodeProjectUUIDWithLength:(NSUInteger)length; // Generates Xcode UUID with given length
++ (NSString *)randomXcodeProjectUIDWithLength:(NSUInteger)length
+{
+    NSMutableString *uid = [[NSMutableString alloc] init];
+    
+    for (NSUInteger x = 0; x < length; x++) {
+        [uid appendFormat:@"%C", [kHexCharacters characterAtIndex:(arc4random() % kHexCharacters.length)]];
+    }
+    
+    return uid.copy;
+}
 
 @end

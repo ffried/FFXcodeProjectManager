@@ -33,9 +33,9 @@ NSString *const kDefaultShellPath = @"/bin/sh";
 @implementation FFXcodeRunScript
 
 #pragma mark - Initializer
-- (instancetype)initWithUUID:(NSString *)uuid ofDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
-    self = [super initWithUUID:uuid ofDictionary:dictionary];
+    self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
         self.name = dictionary[kNameKey] ?: @"";
         self.files = dictionary[kFilesKey] ?: @[];
@@ -67,7 +67,7 @@ runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
     dictionary[kRunOnlyForDeploymentPostprocessingKey] = [NSNumber numberWithBool:runOnlyForDeploymentPostprocessing];
     if (shellPath) dictionary[kShellPathKey] = shellPath;
     if (shellScript) dictionary[kShellScriptKey] = shellScript;
-    return [self initWithUUID:nil ofDictionary:dictionary.copy];
+    return [self initWithUID:nil ofDictionary:dictionary.copy];
 }
 
 - (instancetype)init {

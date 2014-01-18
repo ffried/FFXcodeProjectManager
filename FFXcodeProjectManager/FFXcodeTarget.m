@@ -30,9 +30,9 @@ NSString *const kTargetISA = @"PBXNativeTarget";
 
 @implementation FFXcodeTarget
 
-- (instancetype)initWithUUID:(NSString *)uuid ofDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
-    self = [super initWithUUID:uuid ofDictionary:dictionary];
+    self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
         self.name = dictionary[kNameKey] ?: @"";
         self.buildConfigurationList = dictionary[kBuildConfigurationListKey] ?: @"";
@@ -64,7 +64,7 @@ NSString *const kTargetISA = @"PBXNativeTarget";
     if (productName) dictionary[kProductNameKey] = productName;
     if (productReference) dictionary[kProductReferenceKey] = productReference;
     if (productType) dictionary[kProductTypeKey] = productType;
-    return [self initWithUUID:nil ofDictionary:dictionary.copy];
+    return [self initWithUID:nil ofDictionary:dictionary.copy];
 }
 
 - (instancetype) init
@@ -149,14 +149,14 @@ NSString *const kTargetISA = @"PBXNativeTarget";
 #pragma mark - Run Scripts
 - (void)addRunScript:(FFXcodeRunScript *)runscript
 {
-    self.buildPhases = [self.buildPhases arrayByAddingObject:runscript.uuid];
+    self.buildPhases = [self.buildPhases arrayByAddingObject:runscript.uid];
 }
 
 - (void)removeRunScript:(FFXcodeRunScript *)runscript
 {
     NSMutableArray *buildPhases = self.buildPhases.mutableCopy;
     [self.buildPhases enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([(NSString *)obj isEqualToString:runscript.uuid]) {
+        if ([(NSString *)obj isEqualToString:runscript.uid]) {
             [buildPhases removeObjectAtIndex:idx];
             *stop = YES;
         }
