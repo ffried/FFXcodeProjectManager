@@ -1,5 +1,5 @@
 //
-//  FFXcodeRunScript.m
+//  FFShellScriptBuildPhase.m
 //
 //  Created by Florian Friedrich on 5.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
@@ -15,69 +15,64 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "FFXcodeRunScript.h"
+#import "FFShellScriptBuildPhase.h"
 
-static NSString *const kNameKey = @"name";
-static NSString *const kFilesKey = @"files";
-static NSString *const kInputPathsKey = @"inputPaths";
-static NSString *const kOutputPathsKey = @"outputPaths";
-static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDeploymentPostprocessing";
-static NSString *const kShellPathKey = @"shellPath";
-static NSString *const kShellScriptKey = @"shellScript";
-static NSString *const kBuildActionMaskKey = @"buildActionMask";
-
-NSUInteger const kDefaultBuildActionMask = 2147483647;
 NSString *const kPBXShellScriptBuildPhase = @"PBXShellScriptBuildPhase";
 NSString *const kDefaultShellPath = @"/bin/sh";
 
-@implementation FFXcodeRunScript
+static NSString *const kInputPathsKey = @"inputPaths";
+static NSString *const kOutputPathsKey = @"outputPaths";
+static NSString *const kShellPathKey = @"shellPath";
+static NSString *const kShellScriptKey = @"shellScript";
+
+@implementation FFShellScriptBuildPhase
 
 #pragma mark - Initializer
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.name = dictionary[kNameKey] ?: @"";
-        self.files = dictionary[kFilesKey] ?: @[];
         self.inputPaths = dictionary[kInputPathsKey] ?: @[];
         self.outputPaths = dictionary[kOutputPathsKey] ?: @[];
-        self.runOnlyForDeploymentPostprocessing = [dictionary[kRunOnlyForDeploymentPostprocessingKey] boolValue] ?: NO;
         self.shellPath = dictionary[kShellPathKey] ?: kDefaultShellPath;
         self.shellScript = dictionary[kShellScriptKey] ?: @"";
-        self.buildActionMask = (dictionary[kBuildActionMaskKey]) ?: @(kDefaultBuildActionMask);
-        
         self.isa = (self.isa) ?: kPBXShellScriptBuildPhase;
     }
     return self;
 }
 
-- (instancetype)initWithName:(NSString *)name
-                       files:(NSArray *)files
-                  inputPaths:(NSArray *)inputPaths
-                 outputPaths:(NSArray *)outputPaths
-runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                   shellPath:(NSString *)shellPath
-                 shellScript:(NSString *)shellScript
+- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
+                                  files:(NSArray *)files
+     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
+                                   name:(NSString *)name
+                             inputPaths:(NSArray *)inputPaths
+                            outputPaths:(NSArray *)outputPaths
+                              shellPath:(NSString *)shellPath
+                            shellScript:(NSString *)shellScript
 {
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    if (name) dictionary[kNameKey] = name;
-    if (files) dictionary[kFilesKey] = files;
-    if (inputPaths) dictionary[kInputPathsKey] = inputPaths;
-    if (outputPaths) dictionary[kOutputPathsKey] = outputPaths;
-    dictionary[kRunOnlyForDeploymentPostprocessingKey] = [NSNumber numberWithBool:runOnlyForDeploymentPostprocessing];
-    if (shellPath) dictionary[kShellPathKey] = shellPath;
-    if (shellScript) dictionary[kShellScriptKey] = shellScript;
-    return [self initWithUID:nil ofDictionary:dictionary.copy];
+    self = [super initWithBuildActionMask:buildActionMask files:files runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing name:name];
+    if (self) {
+        self.inputPaths = (inputPaths) ?: @[];
+        self.outputPaths = (outputPaths) ?: @[];
+        self.shellPath = (shellPath) ?: @"";
+        self.shellScript = (shellScript) ?: @"";
+    }
+    return self;
 }
 
-- (instancetype)init {
-    return [self initWithName:nil
-                        files:nil
-                   inputPaths:nil
-                  outputPaths:nil
-runOnlyForDeploymentPostprocessing:NO
-                    shellPath:nil
-                  shellScript:nil];
+- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
+                                  files:(NSArray *)files
+     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
+                                   name:(NSString *)name
+{
+    return [self initWithBuildActionMask:buildActionMask
+                                   files:files
+      runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing
+                                    name:name
+                                 inputPaths:nil
+                             outputPaths:nil
+                               shellPath:nil
+                             shellScript:nil];
 }
 
 #pragma mark - NSCoding
@@ -85,12 +80,8 @@ runOnlyForDeploymentPostprocessing:NO
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.buildActionMask = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:kBuildActionMaskKey];
-        self.name = [aDecoder decodeObjectOfClass:[NSString class] forKey:kNameKey];
-        self.files = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kFilesKey];
         self.inputPaths = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kInputPathsKey];
         self.outputPaths = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kOutputPathsKey];
-        self.runOnlyForDeploymentPostprocessing = [aDecoder decodeBoolForKey:kRunOnlyForDeploymentPostprocessingKey];
         self.shellPath = [aDecoder decodeObjectOfClass:[NSString class] forKey:kShellPathKey];
         self.shellScript = [aDecoder decodeObjectOfClass:[NSString class] forKey:kShellScriptKey];
     }
@@ -100,12 +91,8 @@ runOnlyForDeploymentPostprocessing:NO
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.buildActionMask forKey:kBuildActionMaskKey];
-    [aCoder encodeObject:self.name forKey:kNameKey];
-    [aCoder encodeObject:self.files forKey:kFilesKey];
     [aCoder encodeObject:self.inputPaths forKey:kInputPathsKey];
     [aCoder encodeObject:self.outputPaths forKey:kOutputPathsKey];
-    [aCoder encodeBool:self.runOnlyForDeploymentPostprocessing forKey:kRunOnlyForDeploymentPostprocessingKey];
     [aCoder encodeObject:self.shellPath forKey:kShellPathKey];
     [aCoder encodeObject:self.shellScript forKey:kShellScriptKey];
 }
@@ -115,12 +102,8 @@ runOnlyForDeploymentPostprocessing:NO
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.buildActionMask = [self.buildActionMask copyWithZone:zone];
-    copy.name = [self.name copyWithZone:zone];
-    copy.files = [self.files copyWithZone:zone];
     copy.inputPaths = [self.inputPaths copyWithZone:zone];
     copy.outputPaths = [self.outputPaths copyWithZone:zone];
-    copy.runOnlyForDeploymentPostprocessing = self.runOnlyForDeploymentPostprocessing;
     copy.shellPath = [self.shellPath copyWithZone:zone];
     copy.shellScript = [self.shellScript copyWithZone:zone];
     
@@ -131,16 +114,12 @@ runOnlyForDeploymentPostprocessing:NO
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kBuildActionMaskKey,
-                      kNameKey,
-                      kFilesKey,
-                      kInputPathsKey,
+    NSArray *keys = @[kInputPathsKey,
                       kOutputPathsKey,
                       kShellPathKey,
                       kShellScriptKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];
-    dict[kRunOnlyForDeploymentPostprocessingKey] = (self.runOnlyForDeploymentPostprocessing) ? @(1) : @(0);
     
     return dict.copy;
 }

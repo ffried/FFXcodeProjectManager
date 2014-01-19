@@ -1,5 +1,5 @@
 //
-//  FFXcodeRunScript.h
+//  FFShellScriptBuildPhase.h
 //
 //  Created by Florian Friedrich on 5.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
@@ -15,29 +15,24 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import "FFXcodeObject.h"
+#import "FFNamedBuildPhase.h"
 
-extern NSUInteger const kDefaultBuildActionMask;
 extern NSString *const kPBXShellScriptBuildPhase;
 
-@interface FFXcodeRunScript : FFXcodeObject
+@interface FFShellScriptBuildPhase : FFNamedBuildPhase
 
-@property (nonatomic, strong) NSNumber *buildActionMask;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSArray *files;
 @property (nonatomic, strong) NSArray *inputPaths;
 @property (nonatomic, strong) NSArray *outputPaths;
-@property (nonatomic, assign) BOOL runOnlyForDeploymentPostprocessing;
 @property (nonatomic, strong) NSString *shellPath;
 @property (nonatomic, strong) NSString *shellScript;
 
-- (instancetype)initWithName:(NSString *)name
-                       files:(NSArray *)files
-                  inputPaths:(NSArray *)inputPaths
-                 outputPaths:(NSArray *)outputPaths
-runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                   shellPath:(NSString *)shellPath
-                 shellScript:(NSString *)shellScript;
+- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
+                                  files:(NSArray *)files
+     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
+                                   name:(NSString *)name
+                             inputPaths:(NSArray *)inputPaths
+                            outputPaths:(NSArray *)outputPaths
+                              shellPath:(NSString *)shellPath
+                            shellScript:(NSString *)shellScript;
 
 @end

@@ -67,18 +67,6 @@ NSString *const kTargetISA = @"PBXNativeTarget";
     return [self initWithUID:nil ofDictionary:dictionary.copy];
 }
 
-- (instancetype) init
-{
-    return [self initWithName:nil
-       buildConfigurationList:nil
-                  buildPhases:nil
-                   buildRules:nil
-                 dependencies:nil
-                  productName:nil
-             productReference:nil
-                  productType:nil];
-}
-
 #pragma mark - NSCoding
 + (BOOL)supportsSecureCoding { return YES; }
 

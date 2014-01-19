@@ -16,7 +16,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FFXcodeRunScript.h"
+#import "FFShellScriptBuildPhase.h"
 #import "FFXcodeTarget.h"
 
 @interface FFXcodeRunScriptManager : NSObject
@@ -27,12 +27,12 @@
 
 - (NSArray *)targetsInProjectFileAtPath:(NSURL *)path;
 
-- (void)addRunScript:(FFXcodeRunScript *)runScript
+- (void)addRunScript:(FFShellScriptBuildPhase *)runScript
             toTarget:(FFXcodeTarget *)target
  inProjectFileAtPath:(NSURL *)path
             remember:(BOOL)remember;
 
-- (void)removeRunScript:(FFXcodeRunScript *)runScript
+- (void)removeRunScript:(FFShellScriptBuildPhase *)runScript
              fromTarget:(FFXcodeTarget *)target
     inProjectFileAtPath:(NSURL *)path;
 

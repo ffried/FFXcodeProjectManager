@@ -17,7 +17,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FFXcodeObject.h"
-#import "FFXcodeRunScript.h"
+#import "FFShellScriptBuildPhase.h"
 
 extern NSString *const kTargetISA;
 
@@ -41,7 +41,7 @@ extern NSString *const kTargetISA;
             productReference:(NSString *)productReference
                  productType:(NSString *)productType;
 
-- (void)addRunScript:(FFXcodeRunScript *)runscript;
-- (void)removeRunScript:(FFXcodeRunScript *)runscript;
+- (void)addRunScript:(FFShellScriptBuildPhase *)runscript;
+- (void)removeRunScript:(FFShellScriptBuildPhase *)runscript;
 
 @end

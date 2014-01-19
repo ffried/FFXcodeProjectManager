@@ -52,7 +52,7 @@ static id SharedManager = nil;
     return targets.copy;
 }
 
-- (void)addRunScript:(FFXcodeRunScript *)runScript
+- (void)addRunScript:(FFShellScriptBuildPhase *)runScript
             toTarget:(FFXcodeTarget *)target
  inProjectFileAtPath:(NSURL *)path
             remember:(BOOL)remember
@@ -77,7 +77,7 @@ static id SharedManager = nil;
     }
 }
 
-- (void)removeRunScript:(FFXcodeRunScript *)runScript
+- (void)removeRunScript:(FFShellScriptBuildPhase *)runScript
              fromTarget:(FFXcodeTarget *)target
     inProjectFileAtPath:(NSURL *)path
 {

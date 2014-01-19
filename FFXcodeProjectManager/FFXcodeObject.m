@@ -41,8 +41,9 @@ static NSString *const kISAKey = @"isa";
     return self;
 }
 
-- (instancetype)init {
-    return [self initWithUID:[FFXcodeProjectUIDGenerator randomXcodeProjectUID] ofDictionary:nil];
+- (instancetype)init
+{
+    return [self initWithUID:nil ofDictionary:nil];
 }
 
 #pragma mark - NSCoding
