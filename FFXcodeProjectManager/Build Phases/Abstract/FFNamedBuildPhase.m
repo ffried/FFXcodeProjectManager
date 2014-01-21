@@ -44,7 +44,7 @@ static NSString *const kBuildPhaseNameKey = @"name";
                                     name:nil];
 }
 
-#pragma mark - NSCoding
+#pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -60,7 +60,7 @@ static NSString *const kBuildPhaseNameKey = @"name";
     [aCoder encodeObject:self.name forKey:kBuildPhaseNameKey];
 }
 
-#pragma mark - Copying
+#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [super copyWithZone:zone];

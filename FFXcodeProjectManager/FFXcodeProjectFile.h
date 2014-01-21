@@ -1,5 +1,5 @@
 //
-//  FFXCodeProjectFile.h
+//  FFXcodeProjectFile.h
 //
 //  Created by Florian Friedrich on 12.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "FFXcodeObject.h"
 
-@interface FFXCodeProjectFile : NSObject
+@interface FFXcodeProjectFile : NSObject
 
 @property (nonatomic, strong) NSURL *projectFileURL;
 

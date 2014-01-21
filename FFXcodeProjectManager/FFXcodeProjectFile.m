@@ -1,11 +1,11 @@
 //
-//  FFXCodeProjectFile.m
+//  FFXcodeProjectFile.m
 //
 //  Created by Florian Friedrich on 12.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-#import "FFXCodeProjectFile.h"
+#import "FFXcodeProjectFile.h"
 
 static NSString *const kArchiveVersionKey = @"archiveVersion";
 static NSString *const kClassesKey = @"classes";
@@ -13,12 +13,12 @@ static NSString *const kObjectVersionKey = @"objectVersion";
 static NSString *const kObjectsKey = @"objects";
 static NSString *const kRootObjectKey = @"rootObject";
 
-@interface FFXCodeProjectFile ()
+@interface FFXcodeProjectFile ()
 // TODO: Only needed as long as not all objects have a representing class
 @property (nonatomic, strong) NSDictionary *objectsDict;
 @end
 
-@implementation FFXCodeProjectFile
+@implementation FFXcodeProjectFile
 
 - (instancetype)initWithProjectFileURL:(NSURL *)projectFileURL
 {

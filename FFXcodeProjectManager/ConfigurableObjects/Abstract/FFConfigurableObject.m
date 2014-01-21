@@ -1,38 +1,31 @@
 //
-//  FFNamedGroup.m
+//  FFConfigurableObject.m
 //
 //  Created by Florian Friedrich on 19.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-#import "FFNamedGroup.h"
+#import "FFConfigurableObject.h"
+#import "FFConfigurationList.h"
 
-static NSString *const kGroupNameKey = @"name";
+static NSString *kBuildConfigurationListKey = @"buildConfigurationList";
 
-@implementation FFNamedGroup
+@implementation FFConfigurableObject
 
-#pragma mark - Initializer
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.name = (dictionary[kGroupNameKey]) ?: @"";
+        self.buildConfigurationList = nil; // TODO: use the factory here
     }
     return self;
 }
 
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree name:(NSString *)name
+- (instancetype)initWithBuildConfigurationList:(FFConfigurationList *)buildConfigurationList
 {
-    self = [super initWithChildren:children sourceTree:sourceTree];
-    if (self) {
-        self.name = (name) ?: @"";
-    }
-    return self;
-}
-
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree
-{
-    return [self initWithChildren:children sourceTree:sourceTree name:nil];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    if (buildConfigurationList) dict[kBuildConfigurationListKey] = buildConfigurationList;
+    return [self initWithUID:nil ofDictionary:dict.copy];
 }
 
 #pragma mark - NSSecureCoding
@@ -40,7 +33,7 @@ static NSString *const kGroupNameKey = @"name";
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.name = [aDecoder decodeObjectOfClass:[NSString class] forKey:kGroupNameKey];
+        self.buildConfigurationList = [aDecoder decodeObjectOfClass:[FFConfigurationList class] forKey:kBuildConfigurationListKey];
     }
     return self;
 }
@@ -48,7 +41,7 @@ static NSString *const kGroupNameKey = @"name";
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.name forKey:kGroupNameKey];
+    [aCoder encodeObject:self.buildConfigurationList forKey:kBuildConfigurationListKey];
 }
 
 #pragma mark - NSCopying
@@ -56,7 +49,7 @@ static NSString *const kGroupNameKey = @"name";
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.name = [self.name copyWithZone:zone];
+    copy.buildConfigurationList = [self.buildConfigurationList copyWithZone:zone];
     
     return copy;
 }
@@ -65,7 +58,7 @@ static NSString *const kGroupNameKey = @"name";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kGroupNameKey];
+    NSArray *keys = @[kBuildConfigurationListKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];
     

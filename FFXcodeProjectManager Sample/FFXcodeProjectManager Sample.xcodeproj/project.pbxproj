@@ -35,8 +35,16 @@
 		0767169E188C4B4400F996EF /* FFBuildConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0767169A188C4B4400F996EF /* FFBuildConfiguration.m */; };
 		0767169F188C4B4400F996EF /* FFConfigurationList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0767169C188C4B4400F996EF /* FFConfigurationList.m */; };
 		076716A0188C4B4400F996EF /* FFConfigurationList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0767169C188C4B4400F996EF /* FFConfigurationList.m */; };
-		076716A3188C4BEC00F996EF /* FFConfigurableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716A2188C4BEC00F996EF /* FFConfigurableObject.m */; };
-		076716A4188C4BEC00F996EF /* FFConfigurableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716A2188C4BEC00F996EF /* FFConfigurableObject.m */; };
+		076716C3188EFD8700F996EF /* FFConfigurableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716B8188EFD8700F996EF /* FFConfigurableObject.m */; };
+		076716C4188EFD8700F996EF /* FFConfigurableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716B8188EFD8700F996EF /* FFConfigurableObject.m */; };
+		076716C5188EFD8700F996EF /* FFProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716BA188EFD8700F996EF /* FFProject.m */; };
+		076716C6188EFD8700F996EF /* FFProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716BA188EFD8700F996EF /* FFProject.m */; };
+		076716C7188EFD8700F996EF /* FFTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716BE188EFD8700F996EF /* FFTarget.m */; };
+		076716C8188EFD8700F996EF /* FFTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716BE188EFD8700F996EF /* FFTarget.m */; };
+		076716C9188EFD8700F996EF /* FFAggregateTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716C0188EFD8700F996EF /* FFAggregateTarget.m */; };
+		076716CA188EFD8700F996EF /* FFAggregateTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716C0188EFD8700F996EF /* FFAggregateTarget.m */; };
+		076716CB188EFD8700F996EF /* FFNativeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716C2188EFD8700F996EF /* FFNativeTarget.m */; };
+		076716CC188EFD8700F996EF /* FFNativeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716C2188EFD8700F996EF /* FFNativeTarget.m */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD6D1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD711881DA0500D96872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD701881DA0500D96872 /* main.m */; };
@@ -54,10 +62,8 @@
 		07F1BDA91882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m */; };
 		07F1BDAC1882B0FF00D96872 /* FFXcodeRunScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDA31882B0FF00D96872 /* FFXcodeRunScriptManager.m */; };
 		07F1BDAD1882B0FF00D96872 /* FFXcodeRunScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDA31882B0FF00D96872 /* FFXcodeRunScriptManager.m */; };
-		07F1BDAE1882B0FF00D96872 /* FFXcodeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDA51882B0FF00D96872 /* FFXcodeTarget.m */; };
-		07F1BDAF1882B0FF00D96872 /* FFXcodeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDA51882B0FF00D96872 /* FFXcodeTarget.m */; };
-		07F1BDB21882B17200D96872 /* FFXCodeProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDB11882B17200D96872 /* FFXCodeProjectFile.m */; };
-		07F1BDB31882B17200D96872 /* FFXCodeProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDB11882B17200D96872 /* FFXCodeProjectFile.m */; };
+		07F1BDB21882B17200D96872 /* FFXcodeProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDB11882B17200D96872 /* FFXcodeProjectFile.m */; };
+		07F1BDB31882B17200D96872 /* FFXcodeProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BDB11882B17200D96872 /* FFXcodeProjectFile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +105,16 @@
 		0767169A188C4B4400F996EF /* FFBuildConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBuildConfiguration.m; sourceTree = "<group>"; };
 		0767169B188C4B4400F996EF /* FFConfigurationList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConfigurationList.h; sourceTree = "<group>"; };
 		0767169C188C4B4400F996EF /* FFConfigurationList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFConfigurationList.m; sourceTree = "<group>"; };
-		076716A1188C4BEC00F996EF /* FFConfigurableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConfigurableObject.h; sourceTree = "<group>"; };
-		076716A2188C4BEC00F996EF /* FFConfigurableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFConfigurableObject.m; sourceTree = "<group>"; };
+		076716B7188EFD8700F996EF /* FFConfigurableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConfigurableObject.h; sourceTree = "<group>"; };
+		076716B8188EFD8700F996EF /* FFConfigurableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFConfigurableObject.m; sourceTree = "<group>"; };
+		076716B9188EFD8700F996EF /* FFProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFProject.h; sourceTree = "<group>"; };
+		076716BA188EFD8700F996EF /* FFProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFProject.m; sourceTree = "<group>"; };
+		076716BD188EFD8700F996EF /* FFTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTarget.h; sourceTree = "<group>"; };
+		076716BE188EFD8700F996EF /* FFTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTarget.m; sourceTree = "<group>"; };
+		076716BF188EFD8700F996EF /* FFAggregateTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAggregateTarget.h; sourceTree = "<group>"; };
+		076716C0188EFD8700F996EF /* FFAggregateTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAggregateTarget.m; sourceTree = "<group>"; };
+		076716C1188EFD8700F996EF /* FFNativeTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNativeTarget.h; sourceTree = "<group>"; };
+		076716C2188EFD8700F996EF /* FFNativeTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNativeTarget.m; sourceTree = "<group>"; };
 		07F1BD611881DA0500D96872 /* FFXcodeProjectManager Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFXcodeProjectManager Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1BD641881DA0500D96872 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		07F1BD671881DA0500D96872 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -126,10 +140,8 @@
 		07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectUIDGenerator.m; sourceTree = "<group>"; };
 		07F1BDA21882B0FF00D96872 /* FFXcodeRunScriptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeRunScriptManager.h; sourceTree = "<group>"; };
 		07F1BDA31882B0FF00D96872 /* FFXcodeRunScriptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeRunScriptManager.m; sourceTree = "<group>"; };
-		07F1BDA41882B0FF00D96872 /* FFXcodeTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeTarget.h; sourceTree = "<group>"; };
-		07F1BDA51882B0FF00D96872 /* FFXcodeTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeTarget.m; sourceTree = "<group>"; };
-		07F1BDB01882B17200D96872 /* FFXCodeProjectFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCodeProjectFile.h; sourceTree = "<group>"; };
-		07F1BDB11882B17200D96872 /* FFXCodeProjectFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCodeProjectFile.m; sourceTree = "<group>"; };
+		07F1BDB01882B17200D96872 /* FFXcodeProjectFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeProjectFile.h; sourceTree = "<group>"; };
+		07F1BDB11882B17200D96872 /* FFXcodeProjectFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectFile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +228,47 @@
 				0767169C188C4B4400F996EF /* FFConfigurationList.m */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		076716B5188EFD8700F996EF /* ConfigurableObjects */ = {
+			isa = PBXGroup;
+			children = (
+				076716B6188EFD8700F996EF /* Abstract */,
+				076716B9188EFD8700F996EF /* FFProject.h */,
+				076716BA188EFD8700F996EF /* FFProject.m */,
+				076716BB188EFD8700F996EF /* Targets */,
+			);
+			path = ConfigurableObjects;
+			sourceTree = "<group>";
+		};
+		076716B6188EFD8700F996EF /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				076716B7188EFD8700F996EF /* FFConfigurableObject.h */,
+				076716B8188EFD8700F996EF /* FFConfigurableObject.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		076716BB188EFD8700F996EF /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				076716BC188EFD8700F996EF /* Abstract */,
+				076716BF188EFD8700F996EF /* FFAggregateTarget.h */,
+				076716C0188EFD8700F996EF /* FFAggregateTarget.m */,
+				076716C1188EFD8700F996EF /* FFNativeTarget.h */,
+				076716C2188EFD8700F996EF /* FFNativeTarget.m */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		076716BC188EFD8700F996EF /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				076716BD188EFD8700F996EF /* FFTarget.h */,
+				076716BE188EFD8700F996EF /* FFTarget.m */,
+			);
+			path = Abstract;
 			sourceTree = "<group>";
 		};
 		07F1BD581881DA0500D96872 = {
@@ -305,19 +358,16 @@
 			children = (
 				0767163F188BF86A00F996EF /* Build Phases */,
 				07671698188C4B4400F996EF /* Configurations */,
+				076716B5188EFD8700F996EF /* ConfigurableObjects */,
 				07671686188C4B2300F996EF /* Groups */,
-				07F1BDB01882B17200D96872 /* FFXCodeProjectFile.h */,
-				07F1BDB11882B17200D96872 /* FFXCodeProjectFile.m */,
+				07F1BDB01882B17200D96872 /* FFXcodeProjectFile.h */,
+				07F1BDB11882B17200D96872 /* FFXcodeProjectFile.m */,
 				07F1BD9E1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.h */,
 				07F1BD9F1882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m */,
 				07F1BDA21882B0FF00D96872 /* FFXcodeRunScriptManager.h */,
 				07F1BDA31882B0FF00D96872 /* FFXcodeRunScriptManager.m */,
 				07F1BD9C1882B0FF00D96872 /* FFXcodeObject.h */,
 				07F1BD9D1882B0FF00D96872 /* FFXcodeObject.m */,
-				07F1BDA41882B0FF00D96872 /* FFXcodeTarget.h */,
-				07F1BDA51882B0FF00D96872 /* FFXcodeTarget.m */,
-				076716A1188C4BEC00F996EF /* FFConfigurableObject.h */,
-				076716A2188C4BEC00F996EF /* FFConfigurableObject.m */,
 			);
 			name = FFXcodeProjectManager;
 			path = ../FFXcodeProjectManager;
@@ -427,23 +477,26 @@
 				07671668188BF99000F996EF /* FFNamedBuildPhase.m in Sources */,
 				07F1BDA61882B0FF00D96872 /* FFXcodeObject.m in Sources */,
 				0767165A188BF86A00F996EF /* FFResourcesBuildPhase.m in Sources */,
+				076716C9188EFD8700F996EF /* FFAggregateTarget.m in Sources */,
 				07671696188C4B2300F996EF /* FFVariantGroup.m in Sources */,
-				07F1BDAE1882B0FF00D96872 /* FFXcodeTarget.m in Sources */,
 				07671656188BF86A00F996EF /* FFHeadersBuildPhase.m in Sources */,
+				076716C7188EFD8700F996EF /* FFTarget.m in Sources */,
 				07F1BD781881DA0500D96872 /* FFAppDelegate.m in Sources */,
 				07671692188C4B2300F996EF /* FFNamedGroup.m in Sources */,
 				07671694188C4B2300F996EF /* FFPathGroup.m in Sources */,
 				07671654188BF86A00F996EF /* FFFrameworksBuildPhase.m in Sources */,
-				07F1BDB21882B17200D96872 /* FFXCodeProjectFile.m in Sources */,
+				076716C5188EFD8700F996EF /* FFProject.m in Sources */,
+				07F1BDB21882B17200D96872 /* FFXcodeProjectFile.m in Sources */,
 				0767169D188C4B4400F996EF /* FFBuildConfiguration.m in Sources */,
 				0767165E188BF86A00F996EF /* FFSourcesBuildPhase.m in Sources */,
 				07671652188BF86A00F996EF /* FFCopyFilesBuildPhase.m in Sources */,
 				0767165C188BF86A00F996EF /* FFShellScriptBuildPhase.m in Sources */,
 				07671666188BF99000F996EF /* FFBuildPhase.m in Sources */,
 				07F1BD711881DA0500D96872 /* main.m in Sources */,
-				076716A3188C4BEC00F996EF /* FFConfigurableObject.m in Sources */,
+				076716C3188EFD8700F996EF /* FFConfigurableObject.m in Sources */,
 				0767169F188C4B4400F996EF /* FFConfigurationList.m in Sources */,
 				07671690188C4B2300F996EF /* FFGroup.m in Sources */,
+				076716CB188EFD8700F996EF /* FFNativeTarget.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,23 +506,26 @@
 			files = (
 				0767169E188C4B4400F996EF /* FFBuildConfiguration.m in Sources */,
 				07671697188C4B2300F996EF /* FFVariantGroup.m in Sources */,
-				07F1BDAF1882B0FF00D96872 /* FFXcodeTarget.m in Sources */,
 				07671691188C4B2300F996EF /* FFGroup.m in Sources */,
+				076716C8188EFD8700F996EF /* FFTarget.m in Sources */,
 				07671657188BF86A00F996EF /* FFHeadersBuildPhase.m in Sources */,
 				07671695188C4B2300F996EF /* FFPathGroup.m in Sources */,
 				07671667188BF99000F996EF /* FFBuildPhase.m in Sources */,
+				076716CA188EFD8700F996EF /* FFAggregateTarget.m in Sources */,
 				07F1BDA71882B0FF00D96872 /* FFXcodeObject.m in Sources */,
 				076716A0188C4B4400F996EF /* FFConfigurationList.m in Sources */,
 				07671693188C4B2300F996EF /* FFNamedGroup.m in Sources */,
 				07F1BDA91882B0FF00D96872 /* FFXcodeProjectUIDGenerator.m in Sources */,
+				076716CC188EFD8700F996EF /* FFNativeTarget.m in Sources */,
 				07F1BDAD1882B0FF00D96872 /* FFXcodeRunScriptManager.m in Sources */,
 				07F1BD8F1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m in Sources */,
+				076716C6188EFD8700F996EF /* FFProject.m in Sources */,
 				07671655188BF86A00F996EF /* FFFrameworksBuildPhase.m in Sources */,
 				07671669188BF99000F996EF /* FFNamedBuildPhase.m in Sources */,
-				076716A4188C4BEC00F996EF /* FFConfigurableObject.m in Sources */,
+				076716C4188EFD8700F996EF /* FFConfigurableObject.m in Sources */,
 				0767165D188BF86A00F996EF /* FFShellScriptBuildPhase.m in Sources */,
 				07671653188BF86A00F996EF /* FFCopyFilesBuildPhase.m in Sources */,
-				07F1BDB31882B17200D96872 /* FFXCodeProjectFile.m in Sources */,
+				07F1BDB31882B17200D96872 /* FFXcodeProjectFile.m in Sources */,
 				0767165B188BF86A00F996EF /* FFResourcesBuildPhase.m in Sources */,
 				0767165F188BF86A00F996EF /* FFSourcesBuildPhase.m in Sources */,
 			);

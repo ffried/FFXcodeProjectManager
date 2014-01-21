@@ -36,7 +36,7 @@ static NSString *const kGroupPathKey = @"path";
     return [self initWithChildren:children sourceTree:sourceTree path:nil];
 }
 
-#pragma mark - NSCoding
+#pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -52,7 +52,7 @@ static NSString *const kGroupPathKey = @"path";
     [aCoder encodeObject:self.path forKey:kGroupPathKey];
 }
 
-#pragma mark - Copying
+#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [super copyWithZone:zone];

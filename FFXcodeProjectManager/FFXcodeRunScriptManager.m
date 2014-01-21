@@ -43,8 +43,8 @@ static id SharedManager = nil;
     NSMutableArray *targets = [[NSMutableArray alloc] init];
     [objects enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         NSString *objIsa = [obj valueForKey:@"isa"];
-        if ([objIsa isEqualToString:kTargetISA]) {
-            FFXcodeTarget *target = [[FFXcodeTarget alloc] initWithUID:key ofDictionary:obj];
+        if ([objIsa isEqualToString:kPBXNativeTarget]) {
+            FFNativeTarget *target = [[FFNativeTarget alloc] initWithUID:key ofDictionary:obj];
             [targets addObject:target];
         }
     }];
@@ -53,7 +53,7 @@ static id SharedManager = nil;
 }
 
 - (void)addRunScript:(FFShellScriptBuildPhase *)runScript
-            toTarget:(FFXcodeTarget *)target
+            toTarget:(FFNativeTarget *)target
  inProjectFileAtPath:(NSURL *)path
             remember:(BOOL)remember
 {
@@ -61,7 +61,8 @@ static id SharedManager = nil;
     NSMutableDictionary *objects = [NSMutableDictionary dictionaryWithDictionary:pbxproj[@"objects"]];
     if (!objects) return;
     
-    [target addRunScript:runScript];
+    //[target addRunScript:runScript];
+    target.buildPhases = [target.buildPhases arrayByAddingObject:runScript];
     objects[target.uid] = [target dictionaryRepresentation];
     
     NSDictionary *runscriptDictionary = [runScript dictionaryRepresentation];
@@ -78,14 +79,15 @@ static id SharedManager = nil;
 }
 
 - (void)removeRunScript:(FFShellScriptBuildPhase *)runScript
-             fromTarget:(FFXcodeTarget *)target
+             fromTarget:(FFNativeTarget *)target
     inProjectFileAtPath:(NSURL *)path
 {
     NSMutableDictionary *pbxproj = [[NSMutableDictionary alloc] initWithContentsOfURL:path];
     NSMutableDictionary *objects = [NSMutableDictionary dictionaryWithDictionary:pbxproj[@"objects"]];
     if (!objects) return;
     
-    [target removeRunScript:runScript];
+    //[target removeRunScript:runScript];
+    // TODO: remove the run script
     objects[target.uid] = [target dictionaryRepresentation];
     
     [objects removeObjectForKey:runScript.uid];

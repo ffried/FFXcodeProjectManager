@@ -40,7 +40,7 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
     return [self initWithUID:nil ofDictionary:dict.copy];
 }
 
-#pragma mark - NSCoding
+#pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -60,7 +60,7 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
     [aCoder encodeObject:self.defaultConfigurationName forKey:kDefaultConfigurationNameKey];
 }
 
-#pragma mark - Copying
+#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [super copyWithZone:zone];

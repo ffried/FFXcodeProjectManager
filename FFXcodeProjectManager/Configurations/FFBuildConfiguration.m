@@ -35,7 +35,7 @@ static NSString *const kBuildConfigurationNameKey = @"name";
     return [self initWithUID:nil ofDictionary:dictionary.copy];
 }
 
-#pragma mark - NSCoding
+#pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -53,7 +53,7 @@ static NSString *const kBuildConfigurationNameKey = @"name";
     [aCoder encodeObject:self.name forKey:kBuildConfigurationNameKey];
 }
 
-#pragma mark - Copying
+#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [super copyWithZone:zone];

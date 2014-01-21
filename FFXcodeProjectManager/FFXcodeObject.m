@@ -46,7 +46,7 @@ static NSString *const kISAKey = @"isa";
     return [self initWithUID:nil ofDictionary:nil];
 }
 
-#pragma mark - NSCoding
+#pragma mark - NSSecureCoding
 + (BOOL)supportsSecureCoding { return YES; }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -65,7 +65,7 @@ static NSString *const kISAKey = @"isa";
     [aCoder encodeObject:self.isa forKey:kISAKey];
 }
 
-#pragma mark - Copying
+#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [[[self class] alloc] init];

@@ -75,7 +75,7 @@ static NSString *const kShellScriptKey = @"shellScript";
                              shellScript:nil];
 }
 
-#pragma mark - NSCoding
+#pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -97,7 +97,7 @@ static NSString *const kShellScriptKey = @"shellScript";
     [aCoder encodeObject:self.shellScript forKey:kShellScriptKey];
 }
 
-#pragma mark - Copying
+#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [super copyWithZone:zone];

@@ -59,7 +59,7 @@ static NSUInteger const kDefaultDstSubfolderSpec = 0;
                         dstSubfolderSpec:nil];
 }
 
-#pragma mark - NSCoding
+#pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -77,7 +77,7 @@ static NSUInteger const kDefaultDstSubfolderSpec = 0;
     [aCoder encodeObject:self.dstSubfolderSpec forKey:kDstSubfolderSpecKey];
 }
 
-#pragma mark - Copying
+#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [super copyWithZone:zone];
