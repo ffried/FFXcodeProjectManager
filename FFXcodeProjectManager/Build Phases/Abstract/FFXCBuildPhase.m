@@ -13,6 +13,7 @@ static NSString *const kBuildActionMaskKey = @"buildActionMask";
 static NSString *const kFilesKey = @"files";
 static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDeploymentPostprocessing";
 
+
 @implementation FFXCBuildPhase
 
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary

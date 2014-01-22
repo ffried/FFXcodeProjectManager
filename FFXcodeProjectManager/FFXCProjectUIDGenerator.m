@@ -19,6 +19,7 @@
 
 static NSString *const kHexCharacters = @"0123456789ABCDEF";
 
+
 @implementation FFXCProjectUIDGenerator
 
 + (NSString *)randomXcodeProjectUID

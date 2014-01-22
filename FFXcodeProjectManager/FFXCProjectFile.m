@@ -14,9 +14,12 @@ static NSString *const kObjectsKey = @"objects";
 static NSString *const kRootObjectKey = @"rootObject";
 
 @interface FFXCProjectFile ()
+
 // TODO: Only needed as long as not all objects have a representing class
 @property (nonatomic, strong) NSDictionary *objectsDict;
+
 @end
+
 
 @implementation FFXCProjectFile
 

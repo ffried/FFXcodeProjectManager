@@ -9,6 +9,7 @@
 
 NSString *const kPBXVariantGroup = @"PBXVariantGroup";
 
+
 @implementation FFXCVariantGroup
 
 #pragma mark - Initializer

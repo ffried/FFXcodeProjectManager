@@ -9,6 +9,7 @@
 
 static NSString *const kBuildPhaseNameKey = @"name";
 
+
 @implementation FFXCNamedBuildPhase
 
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary

@@ -16,6 +16,7 @@ static NSString *const kDstSubfolderSpecKey = @"dstSubfolderSpec";
 // http://stackoverflow.com/questions/5684583/anyone-had-success-with-copy-files-build-phases-in-xcode-4-templates
 static NSUInteger const kDefaultDstSubfolderSpec = 0;
 
+
 @implementation FFXCCopyFilesBuildPhase
 
 #pragma mark - Initializer

@@ -21,6 +21,7 @@ static NSString *const kProjectDirPathKey = @"projectDirPath";
 static NSString *const kProjectRootKey = @"projectRoot";
 static NSString *const kTargetsKey = @"targets";
 
+
 @implementation FFXCProject
 
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary

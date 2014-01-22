@@ -25,6 +25,7 @@ static NSString *const kOutputPathsKey = @"outputPaths";
 static NSString *const kShellPathKey = @"shellPath";
 static NSString *const kShellScriptKey = @"shellScript";
 
+
 @implementation FFXCShellScriptBuildPhase
 
 #pragma mark - Initializer

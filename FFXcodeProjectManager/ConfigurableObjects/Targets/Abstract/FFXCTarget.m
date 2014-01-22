@@ -12,6 +12,7 @@ static NSString *const kDependenciesKey = @"dependencies";
 static NSString *const kTargetNameKey = @"name";
 static NSString *const kProductNameKey = @"productName";
 
+
 @implementation FFXCTarget
 
 #pragma mark - Initializer

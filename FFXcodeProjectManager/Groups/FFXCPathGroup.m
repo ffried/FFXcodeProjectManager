@@ -9,6 +9,7 @@
 
 static NSString *const kGroupPathKey = @"path";
 
+
 @implementation FFXCPathGroup
 
 #pragma mark - Initializer

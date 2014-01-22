@@ -10,6 +10,7 @@
 extern NSString *const kPBXProject;
 
 @class FFXCGroup;
+
 @interface FFXCProject : FFXCConfigurableObject
 
 @property (nonatomic, strong) NSDictionary *attributes; // contains keys like "CLASSPREFIX", "ORGANIZATIONNAME", "TargetAttributes" (which is a dict as well), etc.

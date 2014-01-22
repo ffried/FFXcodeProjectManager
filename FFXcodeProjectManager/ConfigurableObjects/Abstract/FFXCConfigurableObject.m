@@ -10,6 +10,7 @@
 
 static NSString *kBuildConfigurationListKey = @"buildConfigurationList";
 
+
 @implementation FFXCConfigurableObject
 
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary

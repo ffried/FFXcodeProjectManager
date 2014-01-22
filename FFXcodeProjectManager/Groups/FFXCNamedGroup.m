@@ -9,6 +9,7 @@
 
 static NSString *const kGroupNameKey = @"name";
 
+
 @implementation FFXCNamedGroup
 
 #pragma mark - Initializer

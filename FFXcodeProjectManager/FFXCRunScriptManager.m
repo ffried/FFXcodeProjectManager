@@ -20,7 +20,9 @@
 static id SharedManager = nil;
 
 @interface FFXCRunScriptManager ()
+
 @property (nonatomic, strong, readwrite) NSMutableDictionary *savedRunScripts;
+
 @end
 
 

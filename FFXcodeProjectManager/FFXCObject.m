@@ -28,6 +28,7 @@ static NSString *const kISAKey = @"isa";
 
 
 @implementation FFXCObject
+
 // We need to synthesize that because "isa" (without underline) is already in use
 @synthesize isa = _isa;
 

@@ -12,6 +12,7 @@ NSString *const kPBXGroup = @"PBXGroup";
 static NSString *const kChildrenKey = @"children";
 static NSString *const kGroupSourceTreeKey = @"sourceTree";
 
+
 @implementation FFXCGroup
 
 #pragma mark - Initializer

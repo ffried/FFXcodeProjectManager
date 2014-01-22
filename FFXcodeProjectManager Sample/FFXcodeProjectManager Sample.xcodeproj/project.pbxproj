@@ -55,6 +55,8 @@
 		076717311890352A00F996EF /* FFXCRunScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076717031890352A00F996EF /* FFXCRunScriptManager.m */; };
 		0767173C189048F000F996EF /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0767173B189048F000F996EF /* FFXCFileObject.m */; };
 		0767173D189048F000F996EF /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0767173B189048F000F996EF /* FFXCFileObject.m */; };
+		0767173F18904DDA00F996EF /* StyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0767173E18904DDA00F996EF /* StyleSettings.plist */; };
+		0767174018904DDA00F996EF /* StyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0767173E18904DDA00F996EF /* StyleSettings.plist */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD6D1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD711881DA0500D96872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD701881DA0500D96872 /* main.m */; };
@@ -127,6 +129,7 @@
 		076717031890352A00F996EF /* FFXCRunScriptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCRunScriptManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0767173A189048F000F996EF /* FFXCFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCFileObject.h; sourceTree = "<group>"; };
 		0767173B189048F000F996EF /* FFXCFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCFileObject.m; sourceTree = "<group>"; };
+		0767173E18904DDA00F996EF /* StyleSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
 		07F1BD611881DA0500D96872 /* FFXcodeProjectManager Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFXcodeProjectManager Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1BD641881DA0500D96872 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		07F1BD671881DA0500D96872 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -330,6 +333,7 @@
 		07F1BD6B1881DA0500D96872 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0767173E18904DDA00F996EF /* StyleSettings.plist */,
 				07F1BD6C1881DA0500D96872 /* FFXcodeProjectManager Sample-Info.plist */,
 				07F1BD6D1881DA0500D96872 /* InfoPlist.strings */,
 				07F1BD701881DA0500D96872 /* main.m */,
@@ -389,6 +393,7 @@
 				07F1BD5D1881DA0500D96872 /* Sources */,
 				07F1BD5E1881DA0500D96872 /* Frameworks */,
 				07F1BD5F1881DA0500D96872 /* Resources */,
+				OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */,
 			);
 			buildRules = (
 			);
@@ -457,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */,
+				0767173F18904DDA00F996EF /* StyleSettings.plist in Resources */,
 				07F1BD7D1881DA0500D96872 /* Images.xcassets in Resources */,
 				07F1BD751881DA0500D96872 /* Credits.rtf in Resources */,
 				07F1BD7B1881DA0500D96872 /* MainMenu.xib in Resources */,
@@ -468,10 +474,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1BD8D1881DA0500D96872 /* InfoPlist.strings in Resources */,
+				0767174018904DDA00F996EF /* StyleSettings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Objective-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}/../\"?FFXC,FF \nelse\necho \"warning: You have to install and set up Objective-Clean to use its features!\" \nfi\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07F1BD5D1881DA0500D96872 /* Sources */ = {

@@ -8,6 +8,7 @@
 #import "FFXCObject.h"
 
 @class FFXCConfigurationList;
+
 @interface FFXCConfigurableObject : FFXCObject
 
 @property (nonatomic, strong) FFXCConfigurationList *buildConfigurationList;

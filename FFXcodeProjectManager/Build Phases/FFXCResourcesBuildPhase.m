@@ -9,6 +9,7 @@
 
 NSString *const kPBXResourcesBuildPhase = @"PBXResourcesBuildPhase";
 
+
 @implementation FFXCResourcesBuildPhase
 
 #pragma mark - Initializer

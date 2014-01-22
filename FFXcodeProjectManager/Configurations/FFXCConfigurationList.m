@@ -13,6 +13,7 @@ static NSString *const kBuildConfigurationsKey = @"buildConfigurations";
 static NSString *const kDefaultConfigurationIsVisibleKey = @"defaultConfigurationIsVisible";
 static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName";
 
+
 @implementation FFXCConfigurationList
 
 #pragma mark - Initializer

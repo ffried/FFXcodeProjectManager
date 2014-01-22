@@ -12,6 +12,7 @@ NSString *const kXCBuildConfiguration = @"XCBuildConfiguration";
 static NSString *const kBuildSettingsKey = @"buildSettings";
 static NSString *const kBuildConfigurationNameKey = @"name";
 
+
 @implementation FFXCBuildConfiguration
 
 #pragma mark - Initializer

@@ -13,6 +13,7 @@ static NSString *const kBuildRulesKey = @"buildRules";
 static NSString *const kProductReferenceKey = @"productReference";
 static NSString *const kProductTypeKey = @"productType";
 
+
 @implementation FFXCNativeTarget
 
 #pragma mark - Initializer
