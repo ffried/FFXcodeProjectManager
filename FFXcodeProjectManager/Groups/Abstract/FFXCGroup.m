@@ -27,14 +27,6 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
     return self;
 }
 
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree
-{
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    if (children) dict[kChildrenKey] = children;
-    if (sourceTree) dict[kGroupSourceTreeKey] = sourceTree;
-    return [self initWithUID:nil ofDictionary:dict.copy];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

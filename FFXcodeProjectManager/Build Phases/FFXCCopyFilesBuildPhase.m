@@ -31,34 +31,6 @@ static NSUInteger const kDefaultDstSubfolderSpec = 0;
     return self;
 }
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name
-                                dstPath:(NSString *)dstPath
-                       dstSubfolderSpec:(NSNumber *)dstSubfolderSpec
-{
-    self = [super initWithBuildActionMask:buildActionMask files:files runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing name:name];
-    if (self) {
-        self.dstPath = (dstPath) ?: @"";
-        self.dstSubfolderSpec = (dstSubfolderSpec) ?: @(kDefaultDstSubfolderSpec);
-    }
-    return self;
-}
-
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name
-{
-    return [self initWithBuildActionMask:buildActionMask
-                                   files:files
-      runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing
-                                    name:name
-                                 dstPath:nil
-                        dstSubfolderSpec:nil];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

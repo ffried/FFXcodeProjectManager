@@ -29,46 +29,6 @@ static NSString *const kProductTypeKey = @"productType";
     return self;
 }
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                   buildPhases:(NSArray *)buildPhases
-                                  dependencies:(NSArray *)dependencies
-                                          name:(NSString *)name
-                                   productName:(NSString *)productName
-                                    buildRules:(NSArray *)buildRules
-                              productReference:(FFXCObject *)productReference
-                                   productType:(NSString *)productType
-{
-    self = [super initWithBuildConfigurationList:buildConfigurationList
-                                     buildPhases:buildPhases
-                                    dependencies:dependencies
-                                            name:name
-                                     productName:productName];
-    if (self) {
-        self.buildRules = (buildRules) ?: @[];
-        self.productReference = productReference;
-        self.productType = (productType) ?: @"";
-        
-        self.isa = (self.isa) ?: kPBXNativeTarget;
-    }
-    return self;
-}
-
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                   buildPhases:(NSArray *)buildPhases
-                                  dependencies:(NSArray *)dependencies
-                                          name:(NSString *)name
-                                   productName:(NSString *)productName
-{
-    return [self initWithBuildConfigurationList:buildConfigurationList
-                                    buildPhases:buildPhases
-                                   dependencies:dependencies
-                                           name:name
-                                    productName:productName
-                                     buildRules:nil
-                               productReference:nil
-                                    productType:nil];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

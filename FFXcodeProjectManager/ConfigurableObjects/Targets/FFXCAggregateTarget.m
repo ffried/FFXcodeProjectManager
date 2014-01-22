@@ -21,21 +21,4 @@ NSString *const kPBXAggregateTarget = @"PBXAggregateTarget";
     return self;
 }
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                   buildPhases:(NSArray *)buildPhases
-                                  dependencies:(NSArray *)dependencies
-                                          name:(NSString *)name
-                                   productName:(NSString *)productName
-{
-    self = [super initWithBuildConfigurationList:buildConfigurationList
-                                     buildPhases:buildPhases
-                                    dependencies:dependencies
-                                            name:name
-                                     productName:productName];
-    if (self) {
-        self.isa = (self.isa) ?: kPBXAggregateTarget;
-    }
-    return self;
-}
-
 @end

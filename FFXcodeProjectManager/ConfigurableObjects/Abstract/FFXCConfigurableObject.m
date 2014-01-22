@@ -21,13 +21,6 @@ static NSString *kBuildConfigurationListKey = @"buildConfigurationList";
     return self;
 }
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-{
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    if (buildConfigurationList) dict[kBuildConfigurationListKey] = buildConfigurationList;
-    return [self initWithUID:nil ofDictionary:dict.copy];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

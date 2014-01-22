@@ -20,30 +20,6 @@ static NSString *const kBuildPhaseNameKey = @"name";
     return self;
 }
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name
-{
-    self = [super initWithBuildActionMask:buildActionMask
-                                    files:files
-       runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing];
-    if (self) {
-        self.name = name;
-    }
-    return self;
-}
-
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-{
-    return [self initWithBuildActionMask:buildActionMask
-                                   files:files
-      runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing
-                                    name:nil];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

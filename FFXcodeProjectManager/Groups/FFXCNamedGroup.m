@@ -21,20 +21,6 @@ static NSString *const kGroupNameKey = @"name";
     return self;
 }
 
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree name:(NSString *)name
-{
-    self = [super initWithChildren:children sourceTree:sourceTree];
-    if (self) {
-        self.name = (name) ?: @"";
-    }
-    return self;
-}
-
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree
-{
-    return [self initWithChildren:children sourceTree:sourceTree name:nil];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

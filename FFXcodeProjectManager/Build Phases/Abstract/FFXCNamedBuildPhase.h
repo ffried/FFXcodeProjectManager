@@ -12,9 +12,4 @@
 
 @property (nonatomic, strong) NSString *name;
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name;
-
 @end

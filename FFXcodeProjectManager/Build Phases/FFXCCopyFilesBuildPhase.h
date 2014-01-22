@@ -14,11 +14,4 @@ extern NSString *const kPBXCopyFilesBuildPhase;
 @property (nonatomic, strong) NSString *dstPath;
 @property (nonatomic, strong) NSNumber *dstSubfolderSpec;
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name
-                                dstPath:(NSString *)dstPath
-                       dstSubfolderSpec:(NSNumber *)dstSubfolderSpec;
-
 @end

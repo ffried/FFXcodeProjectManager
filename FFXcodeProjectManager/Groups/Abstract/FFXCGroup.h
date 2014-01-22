@@ -14,6 +14,4 @@ extern NSString *const kPBXGroup;
 @property (nonatomic, strong) NSArray *children;
 @property (nonatomic, strong) NSString *sourceTree;
 
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree;
-
 @end

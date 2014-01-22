@@ -21,20 +21,6 @@ static NSString *const kGroupPathKey = @"path";
     return self;
 }
 
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree path:(NSString *)path
-{
-    self = [super initWithChildren:children sourceTree:sourceTree];
-    if (self) {
-        self.path = (path) ?: @"";
-    }
-    return self;
-}
-
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree
-{
-    return [self initWithChildren:children sourceTree:sourceTree path:nil];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

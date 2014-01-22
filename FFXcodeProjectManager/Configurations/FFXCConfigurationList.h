@@ -15,8 +15,4 @@ extern NSString *const kXCConfigurationList;
 @property (nonatomic, assign) BOOL defaultConfigurationIsVisible;
 @property (nonatomic, strong) NSString *defaultConfigurationName;
 
-- (instancetype)initWithBuildConfigurations:(NSArray *)buildConfigurations
-              defaultConfigurationIsVisible:(BOOL)defaultConfigurationIsVisible
-                   defaultConfigurationName:(NSString *)defaultConfigurationName;
-
 @end

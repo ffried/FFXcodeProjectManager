@@ -11,6 +11,4 @@
 
 @property (nonatomic, strong) NSString *name;
 
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree name:(NSString *)name;
-
 @end

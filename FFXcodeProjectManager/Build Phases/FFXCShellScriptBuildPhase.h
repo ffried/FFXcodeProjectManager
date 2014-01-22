@@ -26,13 +26,4 @@ extern NSString *const kPBXShellScriptBuildPhase;
 @property (nonatomic, strong) NSString *shellPath;
 @property (nonatomic, strong) NSString *shellScript;
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name
-                             inputPaths:(NSArray *)inputPaths
-                            outputPaths:(NSArray *)outputPaths
-                              shellPath:(NSString *)shellPath
-                            shellScript:(NSString *)shellScript;
-
 @end

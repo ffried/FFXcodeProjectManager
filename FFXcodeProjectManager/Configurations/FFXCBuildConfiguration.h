@@ -14,6 +14,4 @@ extern NSString *const kXCBuildConfiguration;
 @property (nonatomic, strong) NSDictionary *buildSettings;
 @property (nonatomic, strong) NSString *name;
 
-- (instancetype)initWithBuildSettigs:(NSDictionary *)buildSettings name:(NSString *)name;
-
 @end

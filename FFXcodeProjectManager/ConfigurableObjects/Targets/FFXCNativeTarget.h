@@ -15,13 +15,4 @@ extern NSString *const kPBXNativeTarget;
 @property (nonatomic, strong) FFXCObject *productReference; // TODO: is FFXCFileReference (or how ever the class will be named)
 @property (nonatomic, strong) NSString *productType;
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                   buildPhases:(NSArray *)buildPhases
-                                  dependencies:(NSArray *)dependencies
-                                          name:(NSString *)name
-                                   productName:(NSString *)productName
-                                    buildRules:(NSArray *)buildRules
-                              productReference:(FFXCObject *)productReference
-                                   productType:(NSString *)productType;
-
 @end

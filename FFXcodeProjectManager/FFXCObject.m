@@ -31,6 +31,7 @@ static NSString *const kISAKey = @"isa";
 // We need to synthesize that because "isa" (without underline) is already in use
 @synthesize isa = _isa;
 
+#pragma mark - Initializer
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
     self = [super init];

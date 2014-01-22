@@ -26,17 +26,6 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
     return self;
 }
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-{
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    if (files) dictionary[kFilesKey] = files;
-    if (buildActionMask) dictionary[kBuildActionMaskKey] = buildActionMask;
-    dictionary[kRunOnlyForDeploymentPostprocessingKey] = [NSNumber numberWithBool:runOnlyForDeploymentPostprocessing];
-    return [self initWithUID:nil ofDictionary:dictionary.copy];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

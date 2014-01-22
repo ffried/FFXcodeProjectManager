@@ -21,13 +21,4 @@ NSString *const kPBXVariantGroup = @"PBXVariantGroup";
     return self;
 }
 
-- (instancetype)initWithChildren:(NSArray *)children sourceTree:(NSString *)sourceTree name:(NSString *)name
-{
-    self = [super initWithChildren:children sourceTree:sourceTree name:name];
-    if (self) {
-        if (![self.isa isEqualToString:kPBXVariantGroup]) self.isa = kPBXVariantGroup;
-    }
-    return self;
-}
-
 @end

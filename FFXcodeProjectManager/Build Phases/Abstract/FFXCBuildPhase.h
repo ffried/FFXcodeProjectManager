@@ -16,8 +16,4 @@ extern NSUInteger const kDefaultBuildActionMask;
 @property (nonatomic, strong) NSArray *files;
 @property (nonatomic, assign) BOOL runOnlyForDeploymentPostprocessing;
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing;
-
 @end

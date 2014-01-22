@@ -23,16 +23,4 @@ extern NSString *const kPBXProject;
 @property (nonatomic, strong) NSString *projectRoot;
 @property (nonatomic, strong) NSArray *targets;
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                    attributes:(NSDictionary *)attributes
-                          compatibilityVersion:(NSString *)compatibilityVersion
-                             developmentRegion:(NSString *)developmentRegion
-                        hasScannedForEncodings:(BOOL)hasScannedForEncodings
-                                  knownRegions:(NSArray *)knownRegions
-                                     mainGroup:(FFXCGroup *)mainGroup
-                               projectRefGroup:(FFXCGroup *)projectRefGroup
-                                projectDirPath:(NSString *)projectDirPath
-                                   projectRoot:(NSString *)projectRoot
-                                       targets:(NSArray *)targets;
-
 @end

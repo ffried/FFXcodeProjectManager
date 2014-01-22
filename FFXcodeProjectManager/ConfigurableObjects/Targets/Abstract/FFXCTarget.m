@@ -27,22 +27,6 @@ static NSString *const kProductNameKey = @"productName";
     return self;
 }
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                   buildPhases:(NSArray *)buildPhases
-                                  dependencies:(NSArray *)dependencies
-                                          name:(NSString *)name
-                                   productName:(NSString *)productName
-{
-    self = [super initWithBuildConfigurationList:buildConfigurationList];
-    if (self) {
-        self.buildPhases = (buildPhases) ?: @[];
-        self.dependencies = (dependencies) ?: @[];
-        self.name = (name) ?: @"";
-        self.productName =  (productName) ?: @"";
-    }
-    return self;
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

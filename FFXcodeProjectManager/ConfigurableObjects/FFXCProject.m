@@ -41,34 +41,6 @@ static NSString *const kTargetsKey = @"targets";
     return self;
 }
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                    attributes:(NSDictionary *)attributes
-                          compatibilityVersion:(NSString *)compatibilityVersion
-                             developmentRegion:(NSString *)developmentRegion
-                        hasScannedForEncodings:(BOOL)hasScannedForEncodings
-                                  knownRegions:(NSArray *)knownRegions
-                                     mainGroup:(FFXCGroup *)mainGroup
-                               projectRefGroup:(FFXCGroup *)projectRefGroup
-                                projectDirPath:(NSString *)projectDirPath
-                                   projectRoot:(NSString *)projectRoot
-                                       targets:(NSArray *)targets
-{
-    self = [super initWithBuildConfigurationList:buildConfigurationList];
-    if (self) {
-        self.attributes = (attributes) ?: @{};
-        self.compatibilityVersion = (compatibilityVersion) ?: @"";
-        self.developmentRegion = (developmentRegion) ?: @"";
-        self.hasScannedForEncodings = hasScannedForEncodings;
-        self.knownRegions = (knownRegions) ?: @[];
-        self.mainGroup = mainGroup;
-        self.projectRefGroup = projectRefGroup;
-        self.projectDirPath = (projectDirPath) ?: @"";
-        self.projectRoot = (projectRoot) ?: @"";
-        self.targets = (targets) ?: @[];
-    }
-    return self;
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

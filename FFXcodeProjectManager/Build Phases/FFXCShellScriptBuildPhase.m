@@ -41,40 +41,6 @@ static NSString *const kShellScriptKey = @"shellScript";
     return self;
 }
 
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name
-                             inputPaths:(NSArray *)inputPaths
-                            outputPaths:(NSArray *)outputPaths
-                              shellPath:(NSString *)shellPath
-                            shellScript:(NSString *)shellScript
-{
-    self = [super initWithBuildActionMask:buildActionMask files:files runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing name:name];
-    if (self) {
-        self.inputPaths = (inputPaths) ?: @[];
-        self.outputPaths = (outputPaths) ?: @[];
-        self.shellPath = (shellPath) ?: @"";
-        self.shellScript = (shellScript) ?: @"";
-    }
-    return self;
-}
-
-- (instancetype)initWithBuildActionMask:(NSNumber *)buildActionMask
-                                  files:(NSArray *)files
-     runOnlyForDeploymentPostprocessing:(BOOL)runOnlyForDeploymentPostprocessing
-                                   name:(NSString *)name
-{
-    return [self initWithBuildActionMask:buildActionMask
-                                   files:files
-      runOnlyForDeploymentPostprocessing:runOnlyForDeploymentPostprocessing
-                                    name:name
-                                 inputPaths:nil
-                             outputPaths:nil
-                               shellPath:nil
-                             shellScript:nil];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

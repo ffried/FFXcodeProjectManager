@@ -27,14 +27,6 @@ static NSString *const kBuildConfigurationNameKey = @"name";
     return self;
 }
 
-- (instancetype)initWithBuildSettigs:(NSDictionary *)buildSettings name:(NSString *)name
-{
-    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-    if (buildSettings) dictionary[kBuildSettingsKey] = buildSettings;
-    if (name) dictionary[kBuildConfigurationNameKey] = name;
-    return [self initWithUID:nil ofDictionary:dictionary.copy];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

@@ -14,10 +14,4 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *productName;
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList
-                                   buildPhases:(NSArray *)buildPhases
-                                  dependencies:(NSArray *)dependencies
-                                          name:(NSString *)name
-                                   productName:(NSString *)productName;
-
 @end

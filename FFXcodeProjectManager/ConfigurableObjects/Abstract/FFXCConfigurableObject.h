@@ -12,6 +12,4 @@
 
 @property (nonatomic, strong) FFXCConfigurationList *buildConfigurationList;
 
-- (instancetype)initWithBuildConfigurationList:(FFXCConfigurationList *)buildConfigurationList;
-
 @end

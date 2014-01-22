@@ -29,17 +29,6 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
     return self;
 }
 
-- (instancetype)initWithBuildConfigurations:(NSArray *)buildConfigurations
-              defaultConfigurationIsVisible:(BOOL)defaultConfigurationIsVisible
-                   defaultConfigurationName:(NSString *)defaultConfigurationName
-{
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    if (buildConfigurations) dict[kBuildConfigurationsKey] = buildConfigurations;
-    dict[kDefaultConfigurationIsVisibleKey] = @(defaultConfigurationIsVisible);
-    if (defaultConfigurationName) dict[kDefaultConfigurationNameKey] = defaultConfigurationName;
-    return [self initWithUID:nil ofDictionary:dict.copy];
-}
-
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
