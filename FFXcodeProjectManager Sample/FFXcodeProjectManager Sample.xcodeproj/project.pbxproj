@@ -53,8 +53,6 @@
 		0767172F1890352A00F996EF /* FFXCProjectUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 076717011890352A00F996EF /* FFXCProjectUIDGenerator.m */; };
 		076717301890352A00F996EF /* FFXCRunScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076717031890352A00F996EF /* FFXCRunScriptManager.m */; };
 		076717311890352A00F996EF /* FFXCRunScriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076717031890352A00F996EF /* FFXCRunScriptManager.m */; };
-		0767173C189048F000F996EF /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0767173B189048F000F996EF /* FFXCFileObject.m */; };
-		0767173D189048F000F996EF /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0767173B189048F000F996EF /* FFXCFileObject.m */; };
 		0767173F18904DDA00F996EF /* StyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0767173E18904DDA00F996EF /* StyleSettings.plist */; };
 		0767174018904DDA00F996EF /* StyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0767173E18904DDA00F996EF /* StyleSettings.plist */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
@@ -68,6 +66,14 @@
 		07F1BD851881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD8D1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD8B1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD8F1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD8E1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m */; };
+		07F22F08189059F90057BC37 /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F01189059F90057BC37 /* FFXCFileObject.m */; };
+		07F22F09189059F90057BC37 /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F01189059F90057BC37 /* FFXCFileObject.m */; };
+		07F22F0A189059F90057BC37 /* FFXCExplicitFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */; };
+		07F22F0B189059F90057BC37 /* FFXCExplicitFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */; };
+		07F22F0C189059F90057BC37 /* FFXCKnownFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */; };
+		07F22F0D189059F90057BC37 /* FFXCKnownFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */; };
+		07F22F0E189059F90057BC37 /* FFXCNamedFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */; };
+		07F22F0F189059F90057BC37 /* FFXCNamedFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +133,6 @@
 		076717011890352A00F996EF /* FFXCProjectUIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCProjectUIDGenerator.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		076717021890352A00F996EF /* FFXCRunScriptManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCRunScriptManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		076717031890352A00F996EF /* FFXCRunScriptManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCRunScriptManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		0767173A189048F000F996EF /* FFXCFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCFileObject.h; sourceTree = "<group>"; };
-		0767173B189048F000F996EF /* FFXCFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCFileObject.m; sourceTree = "<group>"; };
 		0767173E18904DDA00F996EF /* StyleSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
 		07F1BD611881DA0500D96872 /* FFXcodeProjectManager Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFXcodeProjectManager Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1BD641881DA0500D96872 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -149,6 +153,14 @@
 		07F1BD8A1881DA0500D96872 /* FFXcodeProjectManager SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFXcodeProjectManager SampleTests-Info.plist"; sourceTree = "<group>"; };
 		07F1BD8C1881DA0500D96872 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07F1BD8E1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXcodeProjectManager_SampleTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		07F22F00189059F90057BC37 /* FFXCFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCFileObject.h; sourceTree = "<group>"; };
+		07F22F01189059F90057BC37 /* FFXCFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCFileObject.m; sourceTree = "<group>"; };
+		07F22F02189059F90057BC37 /* FFXCExplicitFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCExplicitFileReference.h; sourceTree = "<group>"; };
+		07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCExplicitFileReference.m; sourceTree = "<group>"; };
+		07F22F04189059F90057BC37 /* FFXCKnownFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCKnownFileReference.h; sourceTree = "<group>"; };
+		07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCKnownFileReference.m; sourceTree = "<group>"; };
+		07F22F06189059F90057BC37 /* FFXCNamedFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCNamedFileReference.h; sourceTree = "<group>"; };
+		07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCNamedFileReference.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,9 +379,8 @@
 				076716CD1890352A00F996EF /* Build Phases */,
 				076716DF1890352A00F996EF /* ConfigurableObjects */,
 				076716ED1890352A00F996EF /* Configurations */,
+				07F22EFE189059F90057BC37 /* Files */,
 				076716F21890352A00F996EF /* Groups */,
-				0767173A189048F000F996EF /* FFXCFileObject.h */,
-				0767173B189048F000F996EF /* FFXCFileObject.m */,
 				076716FC1890352A00F996EF /* FFXCObject.h */,
 				076716FD1890352A00F996EF /* FFXCObject.m */,
 				076716FE1890352A00F996EF /* FFXCProjectFile.h */,
@@ -381,6 +392,29 @@
 			);
 			name = FFXcodeProjectManager;
 			path = ../FFXcodeProjectManager;
+			sourceTree = "<group>";
+		};
+		07F22EFE189059F90057BC37 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				07F22EFF189059F90057BC37 /* Abstract */,
+				07F22F02189059F90057BC37 /* FFXCExplicitFileReference.h */,
+				07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */,
+				07F22F04189059F90057BC37 /* FFXCKnownFileReference.h */,
+				07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */,
+				07F22F06189059F90057BC37 /* FFXCNamedFileReference.h */,
+				07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		07F22EFF189059F90057BC37 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				07F22F00189059F90057BC37 /* FFXCFileObject.h */,
+				07F22F01189059F90057BC37 /* FFXCFileObject.m */,
+			);
+			path = Abstract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,7 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1BD781881DA0500D96872 /* FFAppDelegate.m in Sources */,
-				0767173C189048F000F996EF /* FFXCFileObject.m in Sources */,
+				07F22F08189059F90057BC37 /* FFXCFileObject.m in Sources */,
 				076717101890352A00F996EF /* FFXCShellScriptBuildPhase.m in Sources */,
 				0767171E1890352A00F996EF /* FFXCBuildConfiguration.m in Sources */,
 				0767172E1890352A00F996EF /* FFXCProjectUIDGenerator.m in Sources */,
@@ -512,6 +546,8 @@
 				0767171C1890352A00F996EF /* FFXCNativeTarget.m in Sources */,
 				0767170A1890352A00F996EF /* FFXCFrameworksBuildPhase.m in Sources */,
 				076717121890352A00F996EF /* FFXCSourcesBuildPhase.m in Sources */,
+				07F22F0C189059F90057BC37 /* FFXCKnownFileReference.m in Sources */,
+				07F22F0A189059F90057BC37 /* FFXCExplicitFileReference.m in Sources */,
 				0767172C1890352A00F996EF /* FFXCProjectFile.m in Sources */,
 				076717281890352A00F996EF /* FFXCVariantGroup.m in Sources */,
 				07F1BD711881DA0500D96872 /* main.m in Sources */,
@@ -521,6 +557,7 @@
 				076717041890352A00F996EF /* FFXCBuildPhase.m in Sources */,
 				076717241890352A00F996EF /* FFXCNamedGroup.m in Sources */,
 				0767170C1890352A00F996EF /* FFXCHeadersBuildPhase.m in Sources */,
+				07F22F0E189059F90057BC37 /* FFXCNamedFileReference.m in Sources */,
 				076717201890352A00F996EF /* FFXCConfigurationList.m in Sources */,
 				076717141890352A00F996EF /* FFXCConfigurableObject.m in Sources */,
 				076717221890352A00F996EF /* FFXCGroup.m in Sources */,
@@ -535,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F22F0D189059F90057BC37 /* FFXCKnownFileReference.m in Sources */,
 				076717251890352A00F996EF /* FFXCNamedGroup.m in Sources */,
 				0767171F1890352A00F996EF /* FFXCBuildConfiguration.m in Sources */,
 				0767170D1890352A00F996EF /* FFXCHeadersBuildPhase.m in Sources */,
@@ -545,7 +583,7 @@
 				0767171B1890352A00F996EF /* FFXCAggregateTarget.m in Sources */,
 				076717291890352A00F996EF /* FFXCVariantGroup.m in Sources */,
 				07F1BD8F1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m in Sources */,
-				0767173D189048F000F996EF /* FFXCFileObject.m in Sources */,
+				07F22F09189059F90057BC37 /* FFXCFileObject.m in Sources */,
 				076717071890352A00F996EF /* FFXCNamedBuildPhase.m in Sources */,
 				076717111890352A00F996EF /* FFXCShellScriptBuildPhase.m in Sources */,
 				076717171890352A00F996EF /* FFXCProject.m in Sources */,
@@ -556,7 +594,9 @@
 				0767170B1890352A00F996EF /* FFXCFrameworksBuildPhase.m in Sources */,
 				076717151890352A00F996EF /* FFXCConfigurableObject.m in Sources */,
 				0767171D1890352A00F996EF /* FFXCNativeTarget.m in Sources */,
+				07F22F0F189059F90057BC37 /* FFXCNamedFileReference.m in Sources */,
 				0767170F1890352A00F996EF /* FFXCResourcesBuildPhase.m in Sources */,
+				07F22F0B189059F90057BC37 /* FFXCExplicitFileReference.m in Sources */,
 				076717211890352A00F996EF /* FFXCConfigurationList.m in Sources */,
 				076717131890352A00F996EF /* FFXCSourcesBuildPhase.m in Sources */,
 				076717051890352A00F996EF /* FFXCBuildPhase.m in Sources */,
