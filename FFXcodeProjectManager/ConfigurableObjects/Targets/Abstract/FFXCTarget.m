@@ -7,8 +7,8 @@
 
 #import "FFXCTarget.h"
 
-static NSString *const kBuildPhasesKey = @"buildPhases";
-static NSString *const kDependenciesKey = @"dependencies";
+static NSString *const kBuildPhaseUIDsKey = @"buildPhases";
+static NSString *const kDependencyUIDsKey = @"dependencies";
 static NSString *const kTargetNameKey = @"name";
 static NSString *const kProductNameKey = @"productName";
 
@@ -20,8 +20,8 @@ static NSString *const kProductNameKey = @"productName";
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.buildPhases = (dictionary[kBuildPhasesKey]) ?: @[];
-        self.dependencies = (dictionary[kDependenciesKey]) ?: @[];
+        self.buildPhaseUIDs = (dictionary[kBuildPhaseUIDsKey]) ?: @[];
+        self.dependencyUIDs = (dictionary[kDependencyUIDsKey]) ?: @[];
         self.name = (dictionary[kTargetNameKey]) ?: @"";
         self.productName = (dictionary[kProductNameKey]) ?: @"";
     }
@@ -33,8 +33,8 @@ static NSString *const kProductNameKey = @"productName";
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.buildPhases = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kBuildPhasesKey];
-        self.dependencies = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kDependenciesKey];
+        self.buildPhaseUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kBuildPhaseUIDsKey];
+        self.dependencyUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kDependencyUIDsKey];
         self.name = [aDecoder decodeObjectOfClass:[NSString class] forKey:kTargetNameKey];
         self.productName = [aDecoder decodeObjectOfClass:[NSString class] forKey:kProductNameKey];
     }
@@ -44,8 +44,8 @@ static NSString *const kProductNameKey = @"productName";
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.buildPhases forKey:kBuildPhasesKey];
-    [aCoder encodeObject:self.dependencies forKey:kDependenciesKey];
+    [aCoder encodeObject:self.buildPhaseUIDs forKey:kBuildPhaseUIDsKey];
+    [aCoder encodeObject:self.dependencyUIDs forKey:kDependencyUIDsKey];
     [aCoder encodeObject:self.name forKey:kTargetNameKey];
     [aCoder encodeObject:self.productName forKey:kProductNameKey];
 }
@@ -55,8 +55,8 @@ static NSString *const kProductNameKey = @"productName";
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.buildPhases = [self.buildPhases copyWithZone:zone];
-    copy.dependencies = [self.dependencies copyWithZone:zone];
+    copy.buildPhaseUIDs = [self.buildPhaseUIDs copyWithZone:zone];
+    copy.dependencyUIDs = [self.dependencyUIDs copyWithZone:zone];
     copy.name = [self.name copyWithZone:zone];
     copy.productName = [self.productName copyWithZone:zone];
     
@@ -67,8 +67,8 @@ static NSString *const kProductNameKey = @"productName";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kBuildPhasesKey,
-                      kDependenciesKey,
+    NSArray *keys = @[kBuildPhaseUIDsKey,
+                      kDependencyUIDsKey,
                       kTargetNameKey,
                       kProductNameKey];
     

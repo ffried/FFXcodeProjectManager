@@ -10,18 +10,19 @@
 NSUInteger const kDefaultBuildActionMask = 2147483647;
 
 static NSString *const kBuildActionMaskKey = @"buildActionMask";
-static NSString *const kFilesKey = @"files";
+static NSString *const kFileUIDsKey = @"files";
 static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDeploymentPostprocessing";
 
 
 @implementation FFXCBuildPhase
 
+#pragma mark - Initializer
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
         self.buildActionMask = (dictionary[kBuildActionMaskKey]) ?: @(kDefaultBuildActionMask);
-        self.files = dictionary[kFilesKey] ?: @[];
+        self.fileUIDs = dictionary[kFileUIDsKey] ?: @[];
         self.runOnlyForDeploymentPostprocessing = [dictionary[kRunOnlyForDeploymentPostprocessingKey] boolValue];
     }
     return self;
@@ -33,7 +34,7 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.buildActionMask = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:kBuildActionMaskKey];
-        self.files = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kFilesKey];
+        self.fileUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kFileUIDsKey];
         self.runOnlyForDeploymentPostprocessing = [aDecoder decodeBoolForKey:kRunOnlyForDeploymentPostprocessingKey];
     }
     return self;
@@ -43,7 +44,7 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
 {
     [super encodeWithCoder:aCoder];
     [aCoder encodeObject:self.buildActionMask forKey:kBuildActionMaskKey];
-    [aCoder encodeObject:self.files forKey:kFilesKey];
+    [aCoder encodeObject:self.fileUIDs forKey:kFileUIDsKey];
     [aCoder encodeBool:self.runOnlyForDeploymentPostprocessing forKey:kRunOnlyForDeploymentPostprocessingKey];
 }
 
@@ -53,7 +54,7 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
     __typeof(self) copy = [super copyWithZone:zone];
     
     copy.buildActionMask = [self.buildActionMask copyWithZone:zone];
-    copy.files = [self.files copyWithZone:zone];
+    copy.fileUIDs = [self.fileUIDs copyWithZone:zone];
     copy.runOnlyForDeploymentPostprocessing = self.runOnlyForDeploymentPostprocessing;
     
     return copy;
@@ -64,7 +65,7 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
     NSArray *keys = @[kBuildActionMaskKey,
-                      kFilesKey];
+                      kFileUIDsKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];
     dict[kRunOnlyForDeploymentPostprocessingKey] = (self.runOnlyForDeploymentPostprocessing) ? @(1) : @(0);

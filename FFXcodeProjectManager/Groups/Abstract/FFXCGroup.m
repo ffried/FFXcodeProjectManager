@@ -9,7 +9,7 @@
 
 NSString *const kPBXGroup = @"PBXGroup";
 
-static NSString *const kChildrenKey = @"children";
+static NSString *const kChildrenUIDsKey = @"children";
 static NSString *const kGroupSourceTreeKey = @"sourceTree";
 
 
@@ -20,7 +20,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.children = (dictionary[kChildrenKey]) ?: @[];
+        self.childrenUIDs = (dictionary[kChildrenUIDsKey]) ?: @[];
         self.sourceTree = (dictionary[kGroupSourceTreeKey]) ?: @"";
         
         self.isa = (self.isa) ?: kPBXGroup;
@@ -33,7 +33,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.children = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kChildrenKey];
+        self.childrenUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kChildrenUIDsKey];
         self.sourceTree = [aDecoder decodeObjectOfClass:[NSString class] forKey:kGroupSourceTreeKey];
     }
     return self;
@@ -42,7 +42,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.children forKey:kChildrenKey];
+    [aCoder encodeObject:self.childrenUIDs forKey:kChildrenUIDsKey];
     [aCoder encodeObject:self.sourceTree forKey:kGroupSourceTreeKey];
 }
 
@@ -51,7 +51,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.children = [self.children copyWithZone:zone];
+    copy.childrenUIDs = [self.childrenUIDs copyWithZone:zone];
     copy.sourceTree = [self.sourceTree copyWithZone:zone];
     
     return copy;
@@ -61,7 +61,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kChildrenKey,
+    NSArray *keys = @[kChildrenUIDsKey,
                       kGroupSourceTreeKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];

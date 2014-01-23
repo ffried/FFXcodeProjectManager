@@ -1,23 +1,27 @@
 //
-//  FFXCConfigurableObject.m
+//  FFXCBuildFile.m
 //
-//  Created by Florian Friedrich on 19.1.14.
+//  Created by Florian Friedrich on 23.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 
-#import "FFXCConfigurableObject.h"
+#import "FFXCBuildFile.h"
 
-static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
+NSString *const kPBXBuildFile = @"PBXBuildFile";
+
+static NSString *const kFileRefUIDKey = @"fileRef";
 
 
-@implementation FFXCConfigurableObject
+@implementation FFXCBuildFile
 
 #pragma mark - Initializer
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.buildConfigurationListUID = (dictionary[kBuildConfigurationListUIDKey]) ?: @"";
+        self.fileRefUID = (dictionary[kFileRefUIDKey]) ?: @"";
+        
+        self.isa = (self.isa) ?: kPBXBuildFile;
     }
     return self;
 }
@@ -27,7 +31,7 @@ static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.buildConfigurationListUID = [aDecoder decodeObjectOfClass:[NSString class] forKey:kBuildConfigurationListUIDKey];
+        self.fileRefUID = [aDecoder decodeObjectOfClass:[NSString class] forKey:kFileRefUIDKey];
     }
     return self;
 }
@@ -35,7 +39,7 @@ static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.buildConfigurationListUID forKey:kBuildConfigurationListUIDKey];
+    [aCoder encodeObject:self.fileRefUID forKey:kFileRefUIDKey];
 }
 
 #pragma mark - NSCopying
@@ -43,7 +47,7 @@ static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.buildConfigurationListUID = [self.buildConfigurationListUID copyWithZone:zone];
+    copy.fileRefUID = [self.fileRefUID copyWithZone:zone];
     
     return copy;
 }
@@ -52,7 +56,7 @@ static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kBuildConfigurationListUIDKey];
+    NSArray *keys = @[kFileRefUIDKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];
     

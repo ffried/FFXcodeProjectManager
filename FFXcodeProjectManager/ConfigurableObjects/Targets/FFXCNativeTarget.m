@@ -9,8 +9,8 @@
 
 NSString *const kPBXNativeTarget = @"PBXNativeTarget";
 
-static NSString *const kBuildRulesKey = @"buildRules";
-static NSString *const kProductReferenceKey = @"productReference";
+static NSString *const kBuildRuleUIDsKey = @"buildRules";
+static NSString *const kProductReferenceUIDKey = @"productReference";
 static NSString *const kProductTypeKey = @"productType";
 
 
@@ -21,8 +21,8 @@ static NSString *const kProductTypeKey = @"productType";
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.buildRules = (dictionary[kBuildRulesKey]) ?: @[];
-        self.productReference = dictionary[kProductReferenceKey];
+        self.buildRuleUIDs = (dictionary[kBuildRuleUIDsKey]) ?: @[];
+        self.productReferenceUID = (dictionary[kProductReferenceUIDKey]) ?: @"";
         self.productType = (dictionary[kProductTypeKey]) ?: @"";
         
         self.isa = (self.isa) ?: kPBXNativeTarget;
@@ -35,8 +35,8 @@ static NSString *const kProductTypeKey = @"productType";
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.buildRules = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kBuildRulesKey];
-        self.productReference = [aDecoder decodeObjectOfClass:[FFXCObject class] forKey:kProductReferenceKey];
+        self.buildRuleUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kBuildRuleUIDsKey];
+        self.productReferenceUID = [aDecoder decodeObjectOfClass:[NSString class] forKey:kProductReferenceUIDKey];
         self.productType = [aDecoder decodeObjectOfClass:[NSString class] forKey:kProductTypeKey];
     }
     return self;
@@ -45,8 +45,8 @@ static NSString *const kProductTypeKey = @"productType";
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.buildRules forKey:kBuildRulesKey];
-    [aCoder encodeObject:self.productReference forKey:kProductReferenceKey];
+    [aCoder encodeObject:self.buildRuleUIDs forKey:kBuildRuleUIDsKey];
+    [aCoder encodeObject:self.productReferenceUID forKey:kProductReferenceUIDKey];
     [aCoder encodeObject:self.productType forKey:kProductTypeKey];
 }
 
@@ -55,8 +55,8 @@ static NSString *const kProductTypeKey = @"productType";
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.buildRules = [self.buildRules copyWithZone:zone];
-    copy.productReference = [self.productReference copyWithZone:zone];
+    copy.buildRuleUIDs = [self.buildRuleUIDs copyWithZone:zone];
+    copy.productReferenceUID = [self.productReferenceUID copyWithZone:zone];
     copy.productType = [self.productType copyWithZone:zone];
     
     return copy;
@@ -66,8 +66,8 @@ static NSString *const kProductTypeKey = @"productType";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kBuildRulesKey,
-                      kProductReferenceKey,
+    NSArray *keys = @[kBuildRuleUIDsKey,
+                      kProductReferenceUIDKey,
                       kProductTypeKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];

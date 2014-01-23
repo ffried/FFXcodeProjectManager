@@ -8,7 +8,6 @@
 
 #import "FFAppDelegate.h"
 
-
 @implementation FFAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

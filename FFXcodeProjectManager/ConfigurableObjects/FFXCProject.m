@@ -6,7 +6,6 @@
 //
 
 #import "FFXCProject.h"
-#import "FFXCGroup.h"
 
 NSString *const kPBXProject = @"PBXProject";
 
@@ -15,15 +14,16 @@ static NSString *const kCompatibilityVersionKey = @"compatibilityVersion";
 static NSString *const kDevelopmentRegionKey = @"developmentRegion";
 static NSString *const kHasScannedForEncodingsKey = @"hasScannedForEncodings";
 static NSString *const kKnownRegionsKey = @"knownRegions";
-static NSString *const kMainGroupKey = @"mainGroup";
-static NSString *const kProjectRefGroupKey = @"projectRefGroup";
+static NSString *const kMainGroupUIDKey = @"mainGroup";
+static NSString *const kProjectRefGroupUIDKey = @"projectRefGroup";
 static NSString *const kProjectDirPathKey = @"projectDirPath";
 static NSString *const kProjectRootKey = @"projectRoot";
-static NSString *const kTargetsKey = @"targets";
+static NSString *const kTargetUIDsKey = @"targets";
 
 
 @implementation FFXCProject
 
+#pragma mark - Initializer
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
@@ -33,11 +33,11 @@ static NSString *const kTargetsKey = @"targets";
         self.developmentRegion = (dictionary[kDevelopmentRegionKey]) ?: @"";
         self.hasScannedForEncodings = [dictionary[kHasScannedForEncodingsKey] boolValue];
         self.knownRegions = (dictionary[kKnownRegionsKey]) ?: @[];
-        self.mainGroup = dictionary[kMainGroupKey];
-        self.projectRefGroup = dictionary[kProjectRefGroupKey];
+        self.mainGroupUID = (dictionary[kMainGroupUIDKey]) ?: @"";
+        self.projectRefGroupUID = (dictionary[kProjectRefGroupUIDKey]) ?: @"";
         self.projectDirPath = (dictionary[kProjectDirPathKey]) ?: @"";
         self.projectRoot = (dictionary[kProjectRootKey]) ?: @"";
-        self.targets = (dictionary[kTargetsKey]) ?: @[];
+        self.targetUIDs = (dictionary[kTargetUIDsKey]) ?: @[];
     }
     return self;
 }
@@ -52,11 +52,11 @@ static NSString *const kTargetsKey = @"targets";
         self.developmentRegion = [aDecoder decodeObjectOfClass:[NSString class] forKey:kDevelopmentRegionKey];
         self.hasScannedForEncodings = [aDecoder decodeBoolForKey:kHasScannedForEncodingsKey];
         self.knownRegions = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kKnownRegionsKey];
-        self.mainGroup = [aDecoder decodeObjectOfClass:[FFXCGroup class] forKey:kMainGroupKey];
-        self.projectRefGroup = [aDecoder decodeObjectOfClass:[FFXCGroup class] forKey:kProjectRefGroupKey];
+        self.mainGroupUID = [aDecoder decodeObjectOfClass:[NSString class] forKey:kMainGroupUIDKey];
+        self.projectRefGroupUID = [aDecoder decodeObjectOfClass:[NSString class] forKey:kProjectRefGroupUIDKey];
         self.projectDirPath = [aDecoder decodeObjectOfClass:[NSString class] forKey:kProjectDirPathKey];
         self.projectRoot = [aDecoder decodeObjectOfClass:[NSString class] forKey:kProjectRootKey];
-        self.targets = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kTargetsKey];
+        self.targetUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kTargetUIDsKey];
     }
     return self;
 }
@@ -69,11 +69,11 @@ static NSString *const kTargetsKey = @"targets";
     [aCoder encodeObject:self.developmentRegion forKey:kDevelopmentRegionKey];
     [aCoder encodeBool:self.hasScannedForEncodings forKey:kHasScannedForEncodingsKey];
     [aCoder encodeObject:self.knownRegions forKey:kKnownRegionsKey];
-    [aCoder encodeObject:self.mainGroup forKey:kMainGroupKey];
-    [aCoder encodeObject:self.projectRefGroup forKey:kProjectRefGroupKey];
+    [aCoder encodeObject:self.mainGroupUID forKey:kMainGroupUIDKey];
+    [aCoder encodeObject:self.projectRefGroupUID forKey:kProjectRefGroupUIDKey];
     [aCoder encodeObject:self.projectDirPath forKey:kProjectDirPathKey];
     [aCoder encodeObject:self.projectRoot forKey:kProjectRootKey];
-    [aCoder encodeObject:self.targets forKey:kTargetsKey];
+    [aCoder encodeObject:self.targetUIDs forKey:kTargetUIDsKey];
 }
 
 #pragma mark - NSCopying
@@ -86,11 +86,11 @@ static NSString *const kTargetsKey = @"targets";
     copy.developmentRegion = [self.developmentRegion copyWithZone:zone];
     copy.hasScannedForEncodings = self.hasScannedForEncodings;
     copy.knownRegions = [self.knownRegions copyWithZone:zone];
-    copy.mainGroup = [self.mainGroup copyWithZone:zone];
-    copy.projectRefGroup = [self.projectRefGroup copyWithZone:zone];
+    copy.mainGroupUID = [self.mainGroupUID copyWithZone:zone];
+    copy.projectRefGroupUID = [self.projectRefGroupUID copyWithZone:zone];
     copy.projectDirPath = [self.projectDirPath copyWithZone:zone];
     copy.projectRoot = [self.projectRoot copyWithZone:zone];
-    copy.targets = [self.targets copyWithZone:zone];
+    copy.targetUIDs = [self.targetUIDs copyWithZone:zone];
     
     return copy;
 }
@@ -103,11 +103,11 @@ static NSString *const kTargetsKey = @"targets";
                       kCompatibilityVersionKey,
                       kDevelopmentRegionKey,
                       kKnownRegionsKey,
-                      kMainGroupKey,
-                      kProjectRefGroupKey,
+                      kMainGroupUIDKey,
+                      kProjectRefGroupUIDKey,
                       kProjectDirPathKey,
                       kProjectRootKey,
-                      kTargetsKey];
+                      kTargetUIDsKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];
     dict[kHasScannedForEncodingsKey] = (self.hasScannedForEncodings) ? @(1) : @(0);

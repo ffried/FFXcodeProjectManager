@@ -19,6 +19,7 @@
 #import "FFXCShellScriptBuildPhase.h"
 #import "FFXCNativeTarget.h"
 
+NS_CLASS_DEPRECATED(10_9, 10_9, 7_0, 7_0)
 @interface FFXCRunScriptManager : NSObject
 
 @property (nonatomic, strong, readonly) NSDictionary *savedRunScripts;

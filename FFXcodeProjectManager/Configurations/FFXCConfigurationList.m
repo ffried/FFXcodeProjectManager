@@ -9,7 +9,7 @@
 
 NSString *const kXCConfigurationList = @"XCConfigurationList";
 
-static NSString *const kBuildConfigurationsKey = @"buildConfigurations";
+static NSString *const kBuildConfigurationUIDsKey = @"buildConfigurations";
 static NSString *const kDefaultConfigurationIsVisibleKey = @"defaultConfigurationIsVisible";
 static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName";
 
@@ -21,7 +21,7 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.buildConfigurations = (dictionary[kBuildConfigurationsKey]) ?: @[];
+        self.buildConfigurationUIDs = (dictionary[kBuildConfigurationUIDsKey]) ?: @[];
         self.defaultConfigurationIsVisible = [dictionary[kDefaultConfigurationIsVisibleKey] boolValue];
         self.defaultConfigurationName = dictionary[kDefaultConfigurationNameKey];
         
@@ -35,7 +35,7 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.buildConfigurations = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kBuildConfigurationsKey];
+        self.buildConfigurationUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kBuildConfigurationUIDsKey];
         self.defaultConfigurationIsVisible = [aDecoder decodeBoolForKey:kDefaultConfigurationIsVisibleKey];
         self.defaultConfigurationName = [aDecoder decodeObjectOfClass:[NSString class] forKey:kDefaultConfigurationNameKey];
     }
@@ -45,7 +45,7 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.buildConfigurations forKey:kBuildConfigurationsKey];
+    [aCoder encodeObject:self.buildConfigurationUIDs forKey:kBuildConfigurationUIDsKey];
     [aCoder encodeBool:self.defaultConfigurationIsVisible forKey:kDefaultConfigurationIsVisibleKey];
     [aCoder encodeObject:self.defaultConfigurationName forKey:kDefaultConfigurationNameKey];
 }
@@ -55,7 +55,7 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.buildConfigurations = [self.buildConfigurations copyWithZone:zone];
+    copy.buildConfigurationUIDs = [self.buildConfigurationUIDs copyWithZone:zone];
     copy.defaultConfigurationIsVisible = self.defaultConfigurationIsVisible;
     copy.defaultConfigurationName = [self.defaultConfigurationName copyWithZone:zone];
     
@@ -66,7 +66,7 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kBuildConfigurationsKey,
+    NSArray *keys = @[kBuildConfigurationUIDsKey,
                       kDefaultConfigurationNameKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];
