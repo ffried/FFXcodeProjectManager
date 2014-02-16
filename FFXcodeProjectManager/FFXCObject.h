@@ -18,6 +18,11 @@
 #import <Foundation/Foundation.h>
 #import "FFXCProjectUIDGenerator.h"
 
+extern NSString *FFXCObjectDeletedNotification;
+extern NSString *FFXCObjectReplacedNotification;
+extern NSString *FFXCDeletedObjectUserInfoKey;
+extern NSString *FFXCInsertedObjectUserInfoKey;
+
 @interface FFXCObject : NSObject <NSSecureCoding, NSCopying>
 
 @property (nonatomic, strong, readonly) NSString *uid;
@@ -26,5 +31,8 @@
 - (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary;
 
 - (NSDictionary *)dictionaryRepresentation;
+
+- (void)handleObjectDeletedNotification:(NSNotification *)note;
+- (void)handleObjectReplacedNotification:(NSNotification *)note;
 
 @end

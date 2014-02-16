@@ -7,19 +7,24 @@
 
 #import "FFXCObject.h"
 
+NSString *FFXCObjectDeletedNotification = @"FFXCObjectDeletedNotification";
+NSString *FFXCObjectReplacedNotification = @"FFXCObjectReplacedNotification";
+NSString *FFXCDeletedObjectUserInfoKey = @"FFXCDeletedObjectUserInfoKey";
+NSString *FFXCInsertedObjectUserInfoKey = @"FFXCInsertedObjectUserInfoKey";
+
 static NSString *const kUIDKey = @"uid";
 static NSString *const kISAKey = @"isa";
 
 @interface FFXCObject ()
 
-@property (nonatomic, strong, readwrite) NSString *uid;
+@property (nonatomic, strong, readwrite) NSString *uid; // Make it writable internally
 
 @end
 
 
 @implementation FFXCObject
 
-// We need to synthesize this manually because "isa" (without underline) is already in use
+// We need to synthesize this property manually because "isa" (without underline) is already in use
 @synthesize isa = _isa;
 
 #pragma mark - Initializer
@@ -29,6 +34,9 @@ static NSString *const kISAKey = @"isa";
     if (self) {
         self.uid = (uid) ?: [FFXCProjectUIDGenerator randomXcodeProjectUID];
         self.isa = dictionary[kISAKey];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleObjectDeletedNotification:) name:FFXCObjectDeletedNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleObjectReplacedNotification:) name:FFXCObjectReplacedNotification object:nil];
     }
     return self;
 }
@@ -36,6 +44,46 @@ static NSString *const kISAKey = @"isa";
 - (instancetype)init
 {
     return [self initWithUID:nil ofDictionary:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:FFXCObjectDeletedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:FFXCObjectReplacedNotification object:nil];
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    // We have nothing to do here...
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    // We have nothing to do here...
+}
+
+#pragma mark - isEqual
+- (BOOL)isEqual:(id)object
+{
+    if (![object isKindOfClass:[FFXCObject class]]) return NO;
+    
+    FFXCObject *obj = (FFXCObject *)object;
+    return [obj.uid isEqualToString:self.uid];
+}
+
+- (BOOL)isEqualTo:(id)object
+{
+    if (![object isKindOfClass:[FFXCObject class]]) return NO;
+    
+    FFXCObject *obj = (FFXCObject *)object;
+    return [obj.uid isEqualToString:self.uid];
+}
+
+#pragma mark - Description
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@ %p>\n{\n\tUID: %@\n\tISA: %@\n}", NSStringFromClass([self class]), self, self.uid, self.isa];
 }
 
 #pragma mark - NSSecureCoding

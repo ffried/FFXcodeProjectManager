@@ -25,4 +25,7 @@ extern NSString *const kXCConfigurationList;
 @property (nonatomic, assign) BOOL defaultConfigurationIsVisible;
 @property (nonatomic, strong) NSString *defaultConfigurationName;
 
+- (void)addBuildConfigurationUID:(NSString *)buildConfigurationUID;
+- (void)removeBuildConfigurationUID:(NSString *)buildConfigurationUID;
+
 @end

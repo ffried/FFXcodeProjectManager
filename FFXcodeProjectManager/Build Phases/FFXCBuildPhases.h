@@ -1,7 +1,10 @@
 //
-//  FFXCNativeTarget.h
+//  FFXCBuildPhases.h
 //
-//  Created by Florian Friedrich on 21.1.14.
+//  Created by Florian Friedrich on 16.2.14.
+//  Copyright (c) 2014 Florian Friedrich. All rights reserved.
+//
+//  Created by Florian Friedrich on 18.1.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -15,17 +18,9 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "FFXCTarget.h"
-
-extern NSString *const kPBXNativeTarget;
-
-@interface FFXCNativeTarget : FFXCTarget
-
-@property (nonatomic, strong) NSArray *buildRuleUIDs;
-@property (nonatomic, strong) NSString *productReferenceUID;
-@property (nonatomic, strong) NSString *productType;
-
-- (void)addBuildRuleUID:(NSString *)buildRuleUID;
-- (void)removeBuildRuleUID:(NSString *)buildRuleUID;
-
-@end
+#import "FFXCCopyFilesBuildPhase.h"
+#import "FFXCFrameworksBuildPhase.h"
+#import "FFXCHeadersBuildPhase.h"
+#import "FFXCResourcesBuildPhase.h"
+#import "FFXCShellScriptBuildPhase.h"
+#import "FFXCSourcesBuildPhase.h"

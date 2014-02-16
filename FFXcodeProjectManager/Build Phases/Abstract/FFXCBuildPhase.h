@@ -26,4 +26,7 @@ extern NSUInteger const kDefaultBuildActionMask;
 @property (nonatomic, strong) NSArray *fileUIDs;
 @property (nonatomic, assign) BOOL runOnlyForDeploymentPostprocessing;
 
+- (void)addFileUID:(NSString *)fileUID;
+- (void)removeFileUID:(NSString *)fileUID;
+
 @end

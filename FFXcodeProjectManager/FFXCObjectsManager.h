@@ -1,7 +1,7 @@
 //
-//  FFXCNativeTarget.h
+//  FFXCObjectsManager.h
 //
-//  Created by Florian Friedrich on 21.1.14.
+//  Created by Florian Friedrich on 16.2.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -15,17 +15,22 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "FFXCTarget.h"
+#import <Foundation/Foundation.h>
 
-extern NSString *const kPBXNativeTarget;
+@class FFXCObject;
+@interface FFXCObjectsManager : NSObject
 
-@interface FFXCNativeTarget : FFXCTarget
+@property (nonatomic, assign) BOOL enabled;
 
-@property (nonatomic, strong) NSArray *buildRuleUIDs;
-@property (nonatomic, strong) NSString *productReferenceUID;
-@property (nonatomic, strong) NSString *productType;
++ (instancetype)sharedManager;
 
-- (void)addBuildRuleUID:(NSString *)buildRuleUID;
-- (void)removeBuildRuleUID:(NSString *)buildRuleUID;
+- (void)saveObject:(FFXCObject *)object forProjectFilePath:(NSURL *)projectFilePath;
+- (void)deleteObject:(FFXCObject *)object ofProjectFilePath:(NSURL *)projectFilePath;
+
+- (NSArray *)savedProjectFilesPaths;
+- (NSArray *)savedObjectsForProjectFilePath:(NSURL *)projectFilePath;
+
+- (BOOL)writeToPath:(NSURL *)path error:(NSError *__autoreleasing *)error;
+- (BOOL)loadFromPath:(NSURL *)path error:(NSError *__autoreleasing *)error;
 
 @end

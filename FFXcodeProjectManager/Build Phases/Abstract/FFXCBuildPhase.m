@@ -28,6 +28,33 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
     return self;
 }
 
+#pragma mark - Add and Remove Methods
+- (void)addFileUID:(NSString *)fileUID
+{
+    self.fileUIDs = [self.fileUIDs arrayByAddingObject:fileUID];
+}
+
+- (void)removeFileUID:(NSString *)fileUID
+{
+    NSInteger index = [self.fileUIDs indexOfObject:fileUID];
+    if (index != NSNotFound) {
+        NSMutableArray *mFUIDs = self.fileUIDs.mutableCopy;
+        [mFUIDs removeObjectAtIndex:index];
+        self.fileUIDs = mFUIDs.copy;
+    }
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

@@ -33,6 +33,37 @@ static NSString *const kShellScriptKey = @"shellScript";
     return self;
 }
 
+#pragma mark - Methods
+- (void)addInputPath:(NSString *)inputPath
+{
+    self.inputPaths = [self.inputPaths arrayByAddingObject:inputPath];
+}
+
+- (void)removeInputPath:(NSString *)inputPath
+{
+    NSInteger index = [self.inputPaths indexOfObject:inputPath];
+    if (index != NSNotFound) {
+        NSMutableArray *mIPs = self.inputPaths.mutableCopy;
+        [mIPs removeObjectAtIndex:index];
+        self.inputPaths = mIPs.copy;
+    }
+}
+
+- (void)addOutputPath:(NSString *)outputPath
+{
+    self.outputPaths = [self.outputPaths arrayByAddingObject:outputPath];
+}
+
+- (void)removeOutputPath:(NSString *)outputPath
+{
+    NSInteger index = [self.outputPaths indexOfObject:outputPath];
+    if (index != NSNotFound) {
+        NSMutableArray *mOPs = self.outputPaths.mutableCopy;
+        [mOPs removeObjectAtIndex:index];
+        self.outputPaths = mOPs.copy;
+    }
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

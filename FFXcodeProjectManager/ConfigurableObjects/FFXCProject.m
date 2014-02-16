@@ -42,6 +42,37 @@ static NSString *const kTargetUIDsKey = @"targets";
     return self;
 }
 
+#pragma mark - Methods
+- (void)addKnownRegion:(NSString *)knownRegion
+{
+    self.knownRegions = [self.knownRegions arrayByAddingObject:knownRegion];
+}
+
+- (void)removeKnownRegion:(NSString *)knownRegion
+{
+    NSInteger index = [self.knownRegions indexOfObject:knownRegion];
+    if (index != NSNotFound) {
+        NSMutableArray *mKR = self.knownRegions.mutableCopy;
+        [mKR removeObjectAtIndex:index];
+        self.knownRegions = mKR.copy;
+    }
+}
+
+- (void)addTargetUID:(NSString *)targetUID
+{
+    self.targetUIDs = [self.targetUIDs arrayByAddingObject:targetUID];
+}
+
+- (void)removeTargetUID:(NSString *)targetUID
+{
+    NSInteger index = [self.targetUIDs indexOfObject:targetUID];
+    if (index != NSNotFound) {
+        NSMutableArray *mTUIDs = self.targetUIDs.mutableCopy;
+        [mTUIDs removeObjectAtIndex:index];
+        self.targetUIDs = mTUIDs.copy;
+    }
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

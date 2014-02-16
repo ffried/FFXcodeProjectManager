@@ -6,6 +6,7 @@
 //
 
 #import "FFXCProjectFile.h"
+#import "FFXCObject+ClassFactory.h"
 
 static NSString *const kArchiveVersionKey = @"archiveVersion";
 static NSString *const kClassesKey = @"classes";
@@ -14,11 +15,11 @@ static NSString *const kObjectsKey = @"objects";
 static NSString *const kRootObjectUIDKey = @"rootObject";
 
 static NSString *const kProjectFileURLKey = @"projectFileURL";
+static NSString *const kUnknownObjectsKey = @"unknownObjects";
 
 @interface FFXCProjectFile ()
 
-// TODO: Only needed as long as not all objects have a representing class
-@property (nonatomic, strong) NSDictionary *objectsDict;
+@property (nonatomic, strong) NSDictionary *unknownObjects;
 
 @end
 
@@ -30,7 +31,7 @@ static NSString *const kProjectFileURLKey = @"projectFileURL";
 {
     self = [super init];
     if (self) {
-        if (projectFileURL) {
+        if (projectFileURL != nil) {
             self.projectFileURL = projectFileURL;
             NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfURL:projectFileURL];
             if (dictionary) {
@@ -38,18 +39,80 @@ static NSString *const kProjectFileURLKey = @"projectFileURL";
                 self.classes = dictionary[kClassesKey];
                 self.objectVersion = dictionary[kObjectVersionKey];
                 
-                NSDictionary *objectsDict = dictionary[kObjectsKey];
+                NSMutableDictionary *unknownObjects = [[NSMutableDictionary alloc] init];
                 NSMutableArray *objects = [[NSMutableArray alloc] init];
-                [objectsDict enumerateKeysAndObjectsUsingBlock:^(NSString *uid, NSDictionary *objDict, BOOL *stop) {
-                    
+                [dictionary[kObjectsKey] enumerateKeysAndObjectsUsingBlock:^(NSString *uid, NSDictionary *objDict, BOOL *stop) {
+                    Class objClass = [FFXCObject classForDictionary:objDict];
+                    if (objClass)
+                        [objects addObject:[[objClass alloc] initWithUID:uid ofDictionary:objDict]];
+                    else
+                        unknownObjects[uid] = objDict;
                 }];
-                self.objectsDict = objectsDict; // TODO: Remove once every object has a representing class
                 self.objects = objects.copy;
                 
             }
         }
+        self.objectsManager = [FFXCObjectsManager sharedManager];
     }
     return self;
+}
+
+- (instancetype)init
+{
+    return [self initWithProjectFileURL:nil];
+}
+
+#pragma mark - Methods
+- (void)addObject:(FFXCObject *)object
+{
+    self.objects = [self.objects arrayByAddingObject:object];
+    [self.objectsManager saveObject:object forProjectFilePath:self.projectFileURL];
+}
+
+- (void)removeObject:(FFXCObject *)object
+{
+    NSInteger index = [self.objects indexOfObject:object];
+    if (index != NSNotFound) {
+        NSMutableArray *objs = self.objects.mutableCopy;
+        [objs removeObjectAtIndex:index];
+        self.objects = objs.copy;
+    }
+    [self.objectsManager deleteObject:object ofProjectFilePath:self.projectFileURL];
+}
+
+- (void)replaceObject:(FFXCObject *)oldObject withObject:(FFXCObject *)newObject
+{
+    NSInteger index = [self.objects indexOfObject:oldObject];
+    if (index != NSNotFound) {
+        NSMutableArray *objs = self.objects.mutableCopy;
+        [objs replaceObjectAtIndex:index withObject:newObject];
+        self.objects = objs.copy;
+    }
+    [self.objectsManager deleteObject:oldObject ofProjectFilePath:self.projectFileURL];
+    [self.objectsManager saveObject:newObject forProjectFilePath:self.projectFileURL];
+}
+
+- (FFXCObject *)objectWithUID:(NSString *)uid
+{
+    __block FFXCObject *object = nil;
+    [self.objects enumerateObjectsUsingBlock:^(FFXCObject *obj, NSUInteger idx, BOOL *stop) {
+        if ([obj.uid isEqualToString:uid]) {
+            object = obj;
+            *stop = YES;
+        }
+    }];
+    return object;
+}
+
+- (NSArray *)objectsOfType:(NSString *)type
+{
+    NSMutableArray *objects = [[NSMutableArray alloc] init];
+    [self.objects enumerateObjectsUsingBlock:^(FFXCObject *obj, NSUInteger idx, BOOL *stop) {
+        if ([obj.isa isEqualToString:type]) {
+           [objects addObject:obj];
+        }
+    }];
+    return objects.copy;
 }
 
 #pragma mark - NSSecureCoding
@@ -57,40 +120,36 @@ static NSString *const kProjectFileURLKey = @"projectFileURL";
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super init];
+    self = [self init];
     if (self) {
-        self.projectFileURL = [aDecoder decodeObjectOfClass:[NSURL class] forKey:kProjectFileURLKey];
         self.archiveVersion = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:kArchiveVersionKey];
         self.classes = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kClassesKey];
         self.objectVersion = [aDecoder decodeObjectOfClass:[NSNumber class] forKey:kObjectVersionKey];
         self.objects = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kObjectsKey];
         self.rootObjectUID = [aDecoder decodeObjectOfClass:[NSString class] forKey:kRootObjectUIDKey];
         
-        self.objectsDict = [aDecoder decodeObjectOfClass:[NSDictionary class] forKey:@"objectsDict"];
+        self.projectFileURL = [aDecoder decodeObjectOfClass:[NSURL class] forKey:kProjectFileURLKey];
+        self.unknownObjects = [aDecoder decodeObjectOfClass:[NSDictionary class] forKey:kUnknownObjectsKey];
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeObject:self.projectFileURL forKey:kProjectFileURLKey];
     [aCoder encodeObject:self.archiveVersion forKey:kArchiveVersionKey];
     [aCoder encodeObject:self.classes forKey:kClassesKey];
     [aCoder encodeObject:self.objectVersion forKey:kObjectVersionKey];
     [aCoder encodeObject:self.objects forKey:kObjectsKey];
     [aCoder encodeObject:self.rootObjectUID forKey:kRootObjectUIDKey];
     
-    [aCoder encodeObject:self.objectsDict forKey:@"objectsDict"];
+    [aCoder encodeObject:self.projectFileURL forKey:kProjectFileURLKey];
+    [aCoder encodeObject:self.unknownObjects forKey:kUnknownObjectsKey];
 }
 
 /*#pragma mark - NSCopying
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     __typeof(self) copy = [[[self class] alloc] init];
-    
-    // UID not copied as it's unique to one object!
-    // It's generated in the init method
-    copy.isa = [self.isa copyWithZone:zone];
     
     return copy;
 }*/
@@ -102,10 +161,10 @@ static NSString *const kProjectFileURLKey = @"projectFileURL";
                       kClassesKey,
                       kObjectVersionKey,
                       kRootObjectUIDKey];
+    
     NSMutableDictionary *dictionary = [self dictionaryWithValuesForKeys:keys].mutableCopy;
     
-    // TODO: Create a new dictionary here once every object has a representing class
-    NSMutableDictionary *objects = self.objectsDict.mutableCopy;
+    NSMutableDictionary *objects = self.unknownObjects.mutableCopy;
     [self.objects enumerateObjectsUsingBlock:^(FFXCObject *obj, NSUInteger idx, BOOL *stop) {
         objects[obj.uid] = [obj dictionaryRepresentation];
     }];

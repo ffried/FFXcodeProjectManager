@@ -21,7 +21,7 @@ extern NSString *const kPBXProject;
 
 @interface FFXCProject : FFXCConfigurableObject
 
-@property (nonatomic, strong) NSDictionary *attributes; // contains keys like "CLASSPREFIX", "ORGANIZATIONNAME", "TargetAttributes" (which is a dict as well), etc.
+@property (nonatomic, strong) NSDictionary *attributes; // contains keys like "CLASSPREFIX", "ORGANIZATIONNAME", "TargetAttributes" (which is a dictionary as well), etc.
 @property (nonatomic, strong) NSString *compatibilityVersion;
 @property (nonatomic, strong) NSString *developmentRegion;
 @property (nonatomic, assign) BOOL hasScannedForEncodings;
@@ -31,5 +31,11 @@ extern NSString *const kPBXProject;
 @property (nonatomic, strong) NSString *projectDirPath;
 @property (nonatomic, strong) NSString *projectRoot;
 @property (nonatomic, strong) NSArray *targetUIDs;
+
+- (void)addKnownRegion:(NSString *)knownRegion;
+- (void)removeKnownRegion:(NSString *)knownRegion;
+
+- (void)addTargetUID:(NSString *)targetUID;
+- (void)removeTargetUID:(NSString *)targetUID;
 
 @end

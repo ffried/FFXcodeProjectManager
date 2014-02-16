@@ -1,7 +1,7 @@
 //
-//  FFXCRunScriptManager.h
+//  FFXCConfigurations.h
 //
-//  Created by Florian Friedrich on 5.1.14.
+//  Created by Florian Friedrich on 16.2.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -15,29 +15,5 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import "FFXCShellScriptBuildPhase.h"
-#import "FFXCNativeTarget.h"
-
-NS_CLASS_DEPRECATED(10_9, 10_9, 7_0, 7_0)
-@interface FFXCRunScriptManager : NSObject
-
-@property (nonatomic, strong, readonly) NSDictionary *savedRunScripts;
-
-+ (instancetype)sharedManager;
-
-- (NSArray *)targetsInProjectFileAtPath:(NSURL *)path;
-
-- (void)addRunScript:(FFXCShellScriptBuildPhase *)runScript
-            toTarget:(FFXCNativeTarget *)target
- inProjectFileAtPath:(NSURL *)path
-            remember:(BOOL)remember;
-
-- (void)removeRunScript:(FFXCShellScriptBuildPhase *)runScript
-             fromTarget:(FFXCNativeTarget *)target
-    inProjectFileAtPath:(NSURL *)path;
-
-- (BOOL)writeSavedRunScriptsToFile:(NSURL *)filePath error:(NSError *__autoreleasing *)error;
-- (BOOL)loadSavedRunScriptsFromFile:(NSURL *)filePath error:(NSError *__autoreleasing *)error;
-
-@end
+#import "FFXCBuildConfiguration.h"
+#import "FFXCConfigurationList.h"

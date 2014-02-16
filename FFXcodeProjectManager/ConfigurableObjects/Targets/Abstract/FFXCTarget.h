@@ -24,4 +24,10 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *productName;
 
+- (void)addBuildPhaseUID:(NSString *)buildPhaseUID;
+- (void)removeBuildPhaseUID:(NSString *)buildPhaseUID;
+
+- (void)addDependencyUID:(NSString *)dependencyUID;
+- (void)removeDependencyUID:(NSString *)dependencyUID;
+
 @end

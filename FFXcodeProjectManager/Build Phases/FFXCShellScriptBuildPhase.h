@@ -26,4 +26,9 @@ extern NSString *const kPBXShellScriptBuildPhase;
 @property (nonatomic, strong) NSString *shellPath;
 @property (nonatomic, strong) NSString *shellScript;
 
+- (void)addInputPath:(NSString *)inputPath;
+- (void)removeInputPath:(NSString *)inputPath;
+- (void)addOutputPath:(NSString *)outputPath;
+- (void)removeOutputPath:(NSString *)outputPath;
+
 @end

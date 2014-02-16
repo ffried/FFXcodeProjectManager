@@ -9,7 +9,7 @@
 
 NSString *const kPBXGroup = @"PBXGroup";
 
-static NSString *const kChildrenUIDsKey = @"children";
+static NSString *const kChildUIDsKey = @"children";
 static NSString *const kGroupSourceTreeKey = @"sourceTree";
 
 
@@ -20,7 +20,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 {
     self = [super initWithUID:uid ofDictionary:dictionary];
     if (self) {
-        self.childrenUIDs = (dictionary[kChildrenUIDsKey]) ?: @[];
+        self.childUIDs = (dictionary[kChildUIDsKey]) ?: @[];
         self.sourceTree = (dictionary[kGroupSourceTreeKey]) ?: @"";
         
         self.isa = (self.isa) ?: kPBXGroup;
@@ -28,12 +28,28 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
     return self;
 }
 
+#pragma mark - Methods
+- (void)addChildUID:(NSString *)childUID
+{
+    self.childUIDs = [self.childUIDs arrayByAddingObject:childUID];
+}
+
+- (void)removeChildUID:(NSString *)childUID
+{
+    NSInteger index = [self.childUIDs indexOfObject:childUID];
+    if (index != NSNotFound) {
+        NSMutableArray *mCUIDs = self.childUIDs.mutableCopy;
+        [mCUIDs removeObject:childUID];
+        self.childUIDs = mCUIDs.copy;
+    }
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.childrenUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kChildrenUIDsKey];
+        self.childUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kChildUIDsKey];
         self.sourceTree = [aDecoder decodeObjectOfClass:[NSString class] forKey:kGroupSourceTreeKey];
     }
     return self;
@@ -42,7 +58,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [super encodeWithCoder:aCoder];
-    [aCoder encodeObject:self.childrenUIDs forKey:kChildrenUIDsKey];
+    [aCoder encodeObject:self.childUIDs forKey:kChildUIDsKey];
     [aCoder encodeObject:self.sourceTree forKey:kGroupSourceTreeKey];
 }
 
@@ -51,7 +67,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 {
     __typeof(self) copy = [super copyWithZone:zone];
     
-    copy.childrenUIDs = [self.childrenUIDs copyWithZone:zone];
+    copy.childUIDs = [self.childUIDs copyWithZone:zone];
     copy.sourceTree = [self.sourceTree copyWithZone:zone];
     
     return copy;
@@ -61,7 +77,7 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
-    NSArray *keys = @[kChildrenUIDsKey,
+    NSArray *keys = @[kChildUIDsKey,
                       kGroupSourceTreeKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];

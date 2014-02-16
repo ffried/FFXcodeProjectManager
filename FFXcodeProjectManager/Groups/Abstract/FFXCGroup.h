@@ -21,7 +21,10 @@ extern NSString *const kPBXGroup;
 
 @interface FFXCGroup : FFXCObject
 
-@property (nonatomic, strong) NSArray *childrenUIDs;
+@property (nonatomic, strong) NSArray *childUIDs;
 @property (nonatomic, strong) NSString *sourceTree;
+
+- (void)addChildUID:(NSString *)childUID;
+- (void)removeChildUID:(NSString *)childUID;
 
 @end

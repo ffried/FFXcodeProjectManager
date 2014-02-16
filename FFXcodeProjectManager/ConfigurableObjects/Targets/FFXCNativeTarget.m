@@ -30,6 +30,22 @@ static NSString *const kProductTypeKey = @"productType";
     return self;
 }
 
+#pragma mark - Methods
+- (void)addBuildRuleUID:(NSString *)buildRuleUID
+{
+    self.buildRuleUIDs = [self.buildRuleUIDs arrayByAddingObject:buildRuleUID];
+}
+
+- (void)removeBuildRuleUID:(NSString *)buildRuleUID
+{
+    NSInteger index = [self.buildRuleUIDs indexOfObject:buildRuleUID];
+    if (index != NSNotFound) {
+        NSMutableArray *mBRUIDs = self.buildRuleUIDs.mutableCopy;
+        [mBRUIDs removeObjectAtIndex:index];
+        self.buildRuleUIDs = mBRUIDs.copy;
+    }
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

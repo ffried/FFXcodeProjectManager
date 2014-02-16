@@ -17,6 +17,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FFXCObject.h"
+#import "FFXCObjectsManager.h"
 
 @interface FFXCProjectFile : NSObject <NSSecureCoding/*, NSCopying*/>
 
@@ -29,8 +30,16 @@
 
 @property (nonatomic, strong) NSString *rootObjectUID;
 
+@property (nonatomic, strong) FFXCObjectsManager *objectsManager;
+
 - (instancetype)initWithProjectFileURL:(NSURL *)projectFileURL;
 
 - (NSDictionary *)dictionaryRepresentation;
+
+- (void)addObject:(FFXCObject *)object;
+- (void)removeObject:(FFXCObject *)object;
+- (void)replaceObject:(FFXCObject *)oldObject withObject:(FFXCObject *)newObject;
+- (FFXCObject *)objectWithUID:(NSString *)uid;
+- (NSArray *)objectsOfType:(NSString *)type;
 
 @end

@@ -30,6 +30,22 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
     return self;
 }
 
+#pragma mark - Methods
+- (void)addBuildConfigurationUID:(NSString *)buildConfigurationUID
+{
+    self.buildConfigurationUIDs = [self.buildConfigurationUIDs arrayByAddingObject:buildConfigurationUID];
+}
+
+- (void)removeBuildConfigurationUID:(NSString *)buildConfigurationUID
+{
+    NSInteger index = [self.buildConfigurationUIDs indexOfObject:buildConfigurationUID];
+    if (index != NSNotFound) {
+        NSMutableArray *mBCUIDs = self.buildConfigurationUIDs.mutableCopy;
+        [mBCUIDs removeObjectAtIndex:index];
+        self.buildConfigurationUIDs = mBCUIDs.copy;
+    }
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {

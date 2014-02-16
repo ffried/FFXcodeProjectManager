@@ -28,6 +28,37 @@ static NSString *const kProductNameKey = @"productName";
     return self;
 }
 
+#pragma mark - Methods
+- (void)addBuildPhaseUID:(NSString *)buildPhaseUID
+{
+    self.buildPhaseUIDs = [self.buildPhaseUIDs arrayByAddingObject:buildPhaseUID];
+}
+
+- (void)removeBuildPhaseUID:(NSString *)buildPhaseUID
+{
+    NSInteger index = [self.buildPhaseUIDs indexOfObject:buildPhaseUID];
+    if (index != NSNotFound) {
+        NSMutableArray *mBPUIDs = self.buildPhaseUIDs.mutableCopy;
+        [mBPUIDs removeObjectAtIndex:index];
+        self.buildPhaseUIDs = mBPUIDs.copy;
+    }
+}
+
+- (void)addDependencyUID:(NSString *)dependencyUID
+{
+    self.dependencyUIDs = [self.dependencyUIDs arrayByAddingObject:dependencyUID];
+}
+
+- (void)removeDependencyUID:(NSString *)dependencyUID
+{
+    NSInteger index = [self.dependencyUIDs indexOfObject:dependencyUID];
+    if (index != NSNotFound) {
+        NSMutableArray *mDUIDs = self.dependencyUIDs.mutableCopy;
+        [mDUIDs removeObjectAtIndex:index];
+        self.dependencyUIDs = mDUIDs.copy;
+    }
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
