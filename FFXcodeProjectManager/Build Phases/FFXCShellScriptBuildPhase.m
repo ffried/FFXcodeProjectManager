@@ -33,7 +33,7 @@ static NSString *const kShellScriptKey = @"shellScript";
     return self;
 }
 
-#pragma mark - Methods
+#pragma mark - Add and Remove Methods
 - (void)addInputPath:(NSString *)inputPath
 {
     self.inputPaths = [self.inputPaths arrayByAddingObject:inputPath];

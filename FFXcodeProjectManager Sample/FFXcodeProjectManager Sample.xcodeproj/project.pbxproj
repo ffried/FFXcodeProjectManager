@@ -80,6 +80,8 @@
 		07F22F261891980C0057BC37 /* FFXCContainerItemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F201891980C0057BC37 /* FFXCContainerItemProxy.m */; };
 		07F22F271891980C0057BC37 /* FFXCTargetDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F221891980C0057BC37 /* FFXCTargetDependency.m */; };
 		07F22F281891980C0057BC37 /* FFXCTargetDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F221891980C0057BC37 /* FFXCTargetDependency.m */; };
+		07F88DCF18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */; };
+		07F88DD018B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */; };
 		07F9707318A15AFB00EEC942 /* FFXCObject+ClassFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */; };
 		07F9707418A15AFB00EEC942 /* FFXCObject+ClassFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */; };
 /* End PBXBuildFile section */
@@ -183,6 +185,8 @@
 		07F22F201891980C0057BC37 /* FFXCContainerItemProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCContainerItemProxy.m; sourceTree = "<group>"; };
 		07F22F211891980C0057BC37 /* FFXCTargetDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCTargetDependency.h; sourceTree = "<group>"; };
 		07F22F221891980C0057BC37 /* FFXCTargetDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCTargetDependency.m; sourceTree = "<group>"; };
+		07F88DCD18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFXCObject+PrivateMethods.h"; sourceTree = "<group>"; };
+		07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFXCObject+PrivateMethods.m"; sourceTree = "<group>"; };
 		07F9707118A15AFB00EEC942 /* FFXCObject+ClassFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFXCObject+ClassFactory.h"; sourceTree = "<group>"; };
 		07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFXCObject+ClassFactory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -324,6 +328,8 @@
 			children = (
 				076716FC1890352A00F996EF /* FFXCObject.h */,
 				076716FD1890352A00F996EF /* FFXCObject.m */,
+				07F88DCD18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.h */,
+				07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */,
 				07F9707118A15AFB00EEC942 /* FFXCObject+ClassFactory.h */,
 				07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */,
 			);
@@ -614,6 +620,7 @@
 				07DC457718B0D87D0085ACA1 /* FFXCObjectsManager.m in Sources */,
 				076717041890352A00F996EF /* FFXCBuildPhase.m in Sources */,
 				076717241890352A00F996EF /* FFXCNamedGroup.m in Sources */,
+				07F88DCF18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m in Sources */,
 				0767170C1890352A00F996EF /* FFXCHeadersBuildPhase.m in Sources */,
 				07F22F0E189059F90057BC37 /* FFXCNamedFileReference.m in Sources */,
 				076717201890352A00F996EF /* FFXCConfigurationList.m in Sources */,
@@ -632,6 +639,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F88DD018B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m in Sources */,
 				07F22F261891980C0057BC37 /* FFXCContainerItemProxy.m in Sources */,
 				07F22F0D189059F90057BC37 /* FFXCKnownFileReference.m in Sources */,
 				07DC457818B0D87E0085ACA1 /* FFXCObjectsManager.m in Sources */,

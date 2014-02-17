@@ -6,6 +6,7 @@
 //
 
 #import "FFXCObject.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *FFXCObjectDeletedNotification = @"FFXCObjectDeletedNotification";
 NSString *FFXCObjectReplacedNotification = @"FFXCObjectReplacedNotification";
@@ -50,17 +51,6 @@ static NSString *const kISAKey = @"isa";
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:FFXCObjectDeletedNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:FFXCObjectReplacedNotification object:nil];
-}
-
-#pragma mark - Notifications
-- (void)handleObjectDeletedNotification:(NSNotification *)note
-{
-    // We have nothing to do here...
-}
-
-- (void)handleObjectReplacedNotification:(NSNotification *)note
-{
-    // We have nothing to do here...
 }
 
 #pragma mark - isEqual

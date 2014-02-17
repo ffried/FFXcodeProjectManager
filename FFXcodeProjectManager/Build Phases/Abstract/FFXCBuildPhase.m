@@ -48,11 +48,23 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
 - (void)handleObjectDeletedNotification:(NSNotification *)note
 {
     [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) [self removeFileUID:deletedObj.uid];
 }
 
 - (void)handleObjectReplacedNotification:(NSNotification *)note
 {
     [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj) {
+        NSInteger index = [self.fileUIDs indexOfObject:deletedObj.uid];
+        if (index != NSNotFound) {
+            NSMutableArray *mFUIDs = self.fileUIDs.mutableCopy;
+            [mFUIDs replaceObjectAtIndex:index withObject:replaceObj];
+            self.fileUIDs = mFUIDs.copy;
+        }
+    }
 }
 
 #pragma mark - NSSecureCoding

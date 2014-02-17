@@ -1,7 +1,7 @@
 //
-//  FFXCObject.h
+//  FFXCObject+PrivateMethods.h
 //
-//  Created by Florian Friedrich on 5.1.14.
+//  Created by Florian Friedrich on 17.2.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -15,21 +15,15 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import "FFXCProjectUIDGenerator.h"
+#import "FFXCObject.h"
 
-extern NSString *FFXCObjectDeletedNotification;
-extern NSString *FFXCObjectReplacedNotification;
-extern NSString *FFXCDeletedObjectUserInfoKey;
-extern NSString *FFXCInsertedObjectUserInfoKey;
+@interface FFXCObject (PrivateMethods)
 
-@interface FFXCObject : NSObject <NSSecureCoding, NSCopying>
+- (void)handleObjectDeletedNotification:(NSNotification *)note;
+- (void)handleObjectReplacedNotification:(NSNotification *)note;
 
-@property (nonatomic, strong, readonly) NSString *uid;
-@property (nonatomic, strong) NSString *isa;
-
-- (instancetype)initWithUID:(NSString *)uid ofDictionary:(NSDictionary *)dictionary;
-
-- (NSDictionary *)dictionaryRepresentation;
+- (NSArray *)addObject:(id)object toArray:(NSArray *)array;
+- (NSArray *)replaceObject:(id)oldObject withObject:(id)newObject inArray:(NSArray *)array;
+- (NSArray *)removeObject:(id)object fromArray:(NSArray *)array;
 
 @end

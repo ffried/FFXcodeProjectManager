@@ -28,7 +28,7 @@ static NSString *const kProductNameKey = @"productName";
     return self;
 }
 
-#pragma mark - Methods
+#pragma mark - Add and Remove Methods
 - (void)addBuildPhaseUID:(NSString *)buildPhaseUID
 {
     self.buildPhaseUIDs = [self.buildPhaseUIDs arrayByAddingObject:buildPhaseUID];
@@ -56,6 +56,38 @@ static NSString *const kProductNameKey = @"productName";
         NSMutableArray *mDUIDs = self.dependencyUIDs.mutableCopy;
         [mDUIDs removeObjectAtIndex:index];
         self.dependencyUIDs = mDUIDs.copy;
+    }
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        [self removeBuildPhaseUID:deletedObj.uid];
+        [self removeDependencyUID:deletedObj.uid];
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj) {
+        NSInteger index = [self.buildPhaseUIDs indexOfObject:deletedObj.uid];
+        if (index != NSNotFound) {
+            NSMutableArray *mBPUIDs = self.buildPhaseUIDs.mutableCopy;
+            [mBPUIDs replaceObjectAtIndex:index withObject:replaceObj];
+            self.buildPhaseUIDs = mBPUIDs.copy;
+        }
+        index = [self.dependencyUIDs indexOfObject:deletedObj.uid];
+        if (index != NSNotFound) {
+            NSMutableArray *mDUIDs = self.dependencyUIDs.mutableCopy;
+            [mDUIDs replaceObjectAtIndex:index withObject:replaceObj];
+            self.dependencyUIDs = mDUIDs.copy;
+        }
     }
 }
 

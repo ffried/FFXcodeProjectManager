@@ -22,6 +22,26 @@ static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
     return self;
 }
 
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if ([deletedObj.uid isEqualToString:self.buildConfigurationListUID]) {
+        self.buildConfigurationListUID = @"";
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if ([deletedObj.uid isEqualToString:self.buildConfigurationListUID]) {
+        self.buildConfigurationListUID = replaceObj.uid ?: @"";
+    }
+}
+
 #pragma mark - NSSecureCoding
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
