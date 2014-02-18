@@ -6,6 +6,7 @@
 //
 
 #import "FFXCNativeTarget.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXNativeTarget = @"PBXNativeTarget";
 
@@ -33,16 +34,39 @@ static NSString *const kProductTypeKey = @"productType";
 #pragma mark - Methods
 - (void)addBuildRuleUID:(NSString *)buildRuleUID
 {
-    self.buildRuleUIDs = [self.buildRuleUIDs arrayByAddingObject:buildRuleUID];
+    self.buildRuleUIDs = [self addObject:buildRuleUID toArray:self.buildRuleUIDs];
 }
 
 - (void)removeBuildRuleUID:(NSString *)buildRuleUID
 {
-    NSInteger index = [self.buildRuleUIDs indexOfObject:buildRuleUID];
-    if (index != NSNotFound) {
-        NSMutableArray *mBRUIDs = self.buildRuleUIDs.mutableCopy;
-        [mBRUIDs removeObjectAtIndex:index];
-        self.buildRuleUIDs = mBRUIDs.copy;
+    self.buildRuleUIDs = [self removeObject:buildRuleUID fromArray:self.buildRuleUIDs];
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        [self removeBuildRuleUID:deletedObj.uid];
+        if ([self.productReferenceUID isEqualToString:deletedObj.uid]) {
+            self.productReferenceUID = @"";
+        }
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj && replaceObj) {
+        self.buildRuleUIDs = [self replaceObject:deletedObj.uid withObject:replaceObj.uid inArray:self.buildRuleUIDs];
+        if ([self.productReferenceUID isEqualToString:deletedObj.uid]) {
+            self.productReferenceUID = replaceObj.uid ?: @"";
+        }
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
     }
 }
 

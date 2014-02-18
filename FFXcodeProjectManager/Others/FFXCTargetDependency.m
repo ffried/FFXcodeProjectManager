@@ -6,6 +6,7 @@
 //
 
 #import "FFXCTargetDependency.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXTargetDependency = @"PBXTargetDependency";
 
@@ -26,6 +27,38 @@ static NSString *const kTargetProxyUIDKey = @"targetProxy";
         self.isa = (self.isa) ?: kPBXTargetDependency;
     }
     return self;
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        if ([self.targetUID isEqualToString:deletedObj.uid]) {
+            self.targetUID = @"";
+        }
+        if ([self.targetProxyUID isEqualToString:deletedObj.uid]) {
+            self.targetProxyUID = @"";
+        }
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj && replaceObj) {
+        if ([self.targetUID isEqualToString:deletedObj.uid]) {
+            self.targetUID = replaceObj.uid ?: @"";
+        }
+        if ([self.targetProxyUID isEqualToString:deletedObj.uid]) {
+            self.targetProxyUID = replaceObj.uid ?: @"";
+        }
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
+    }
 }
 
 #pragma mark - NSSecureCoding

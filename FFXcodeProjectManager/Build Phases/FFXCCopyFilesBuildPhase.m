@@ -6,6 +6,7 @@
 //
 
 #import "FFXCCopyFilesBuildPhase.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXCopyFilesBuildPhase = @"PBXCopyFilesBuildPhase";
 

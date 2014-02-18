@@ -6,6 +6,7 @@
 //
 
 #import "FFXCVariantGroup.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXVariantGroup = @"PBXVariantGroup";
 

@@ -6,6 +6,7 @@
 //
 
 #import "FFXCConfigurationList.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kXCConfigurationList = @"XCConfigurationList";
 
@@ -30,19 +31,36 @@ static NSString *const kDefaultConfigurationNameKey = @"defaultConfigurationName
     return self;
 }
 
-#pragma mark - Methods
+#pragma mark - Add and Remove Methods
 - (void)addBuildConfigurationUID:(NSString *)buildConfigurationUID
 {
-    self.buildConfigurationUIDs = [self.buildConfigurationUIDs arrayByAddingObject:buildConfigurationUID];
+    self.buildConfigurationUIDs = [self addObject:buildConfigurationUID toArray:self.buildConfigurationUIDs];
 }
 
 - (void)removeBuildConfigurationUID:(NSString *)buildConfigurationUID
 {
-    NSInteger index = [self.buildConfigurationUIDs indexOfObject:buildConfigurationUID];
-    if (index != NSNotFound) {
-        NSMutableArray *mBCUIDs = self.buildConfigurationUIDs.mutableCopy;
-        [mBCUIDs removeObjectAtIndex:index];
-        self.buildConfigurationUIDs = mBCUIDs.copy;
+    self.buildConfigurationUIDs = [self removeObject:buildConfigurationUID fromArray:self.buildConfigurationUIDs];
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        [self removeBuildConfigurationUID:deletedObj.uid];
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj && replaceObj) {
+        self.buildConfigurationUIDs = [self replaceObject:deletedObj.uid withObject:replaceObj.uid inArray:self.buildConfigurationUIDs];
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
     }
 }
 

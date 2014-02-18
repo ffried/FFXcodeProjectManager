@@ -6,6 +6,7 @@
 //
 
 #import "FFXCExplicitFileReference.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *const kExplicitFileTypeKey = @"explicitFileType";
 static NSString *const kIncludeInIndexKey = @"includeInIndex";

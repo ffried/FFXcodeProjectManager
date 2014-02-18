@@ -6,6 +6,7 @@
 //
 
 #import "FFXCConfigurableObject.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
 
@@ -27,8 +28,10 @@ static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
 {
     [super handleObjectDeletedNotification:note];
     FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
-    if ([deletedObj.uid isEqualToString:self.buildConfigurationListUID]) {
-        self.buildConfigurationListUID = @"";
+    if (deletedObj) {
+        if ([deletedObj.uid isEqualToString:self.buildConfigurationListUID]) {
+            self.buildConfigurationListUID = @"";
+        }
     }
 }
 
@@ -37,8 +40,10 @@ static NSString *kBuildConfigurationListUIDKey = @"buildConfigurationList";
     [super handleObjectReplacedNotification:note];
     FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
     FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
-    if ([deletedObj.uid isEqualToString:self.buildConfigurationListUID]) {
-        self.buildConfigurationListUID = replaceObj.uid ?: @"";
+    if (deletedObj) {
+        if ([deletedObj.uid isEqualToString:self.buildConfigurationListUID]) {
+            self.buildConfigurationListUID = replaceObj.uid ?: @"";
+        }
     }
 }
 

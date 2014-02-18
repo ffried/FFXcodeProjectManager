@@ -6,6 +6,7 @@
 //
 
 #import "FFXCNamedGroup.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *const kGroupNameKey = @"name";
 

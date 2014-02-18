@@ -6,6 +6,7 @@
 //
 
 #import "FFXCPathGroup.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *const kGroupPathKey = @"path";
 

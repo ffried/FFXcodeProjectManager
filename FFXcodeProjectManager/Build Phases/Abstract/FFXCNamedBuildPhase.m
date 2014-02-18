@@ -6,6 +6,7 @@
 //
 
 #import "FFXCNamedBuildPhase.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *const kBuildPhaseNameKey = @"name";
 

@@ -6,6 +6,7 @@
 //
 
 #import "FFXCBuildConfiguration.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kXCBuildConfiguration = @"XCBuildConfiguration";
 

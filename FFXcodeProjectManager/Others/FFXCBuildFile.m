@@ -6,6 +6,7 @@
 //
 
 #import "FFXCBuildFile.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXBuildFile = @"PBXBuildFile";
 
@@ -24,6 +25,32 @@ static NSString *const kFileRefUIDKey = @"fileRef";
         self.isa = (self.isa) ?: kPBXBuildFile;
     }
     return self;
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        if ([self.fileRefUID isEqualToString:deletedObj.uid]) {
+            self.fileRefUID = @"";
+        }
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj && replaceObj) {
+        if ([self.fileRefUID isEqualToString:deletedObj.uid]) {
+            self.fileRefUID = replaceObj.uid ?: @"";
+        }
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
+    }
 }
 
 #pragma mark - NSSecureCoding

@@ -7,22 +7,35 @@
 
 #import "FFXCObject+PrivateMethods.h"
 
+
 @implementation FFXCObject (PrivateMethods)
 
 #pragma mark - Collection add and remove methods
 - (NSArray *)addObject:(id)object toArray:(NSArray *)array
 {
-    return nil;
+    return [array arrayByAddingObject:object];
 }
 
 - (NSArray *)replaceObject:(id)oldObject withObject:(id)newObject inArray:(NSArray *)array
 {
-    return nil;
+    NSUInteger index = [array indexOfObject:oldObject];
+    if (index != NSNotFound) {
+        NSMutableArray *mutableArray = [array mutableCopy];
+        [mutableArray replaceObjectAtIndex:index withObject:newObject];
+        return [mutableArray copy];
+    }
+    return array;
 }
 
 - (NSArray *)removeObject:(id)object fromArray:(NSArray *)array
 {
-    return nil;
+    NSUInteger index = [array indexOfObject:object];
+    if (index != NSNotFound) {
+        NSMutableArray *mutableArray = [array mutableCopy];
+        [mutableArray removeObjectAtIndex:index];
+        return [mutableArray copy];
+    }
+    return array;
 }
 
 #pragma mark - Notifications

@@ -6,6 +6,7 @@
 //
 
 #import "FFXCKnownFileReference.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *const kLastKnownFileTypeKey = @"lastKnownFileType";
 

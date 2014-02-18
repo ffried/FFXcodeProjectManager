@@ -9,7 +9,9 @@
 #import "FFXCObject.h"
 
 @interface FFXCObjectsManager ()
+
 @property (nonatomic, strong) NSMutableDictionary *projectFilesPaths;
+
 @end
 
 

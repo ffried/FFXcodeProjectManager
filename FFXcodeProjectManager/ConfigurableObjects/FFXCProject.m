@@ -6,6 +6,7 @@
 //
 
 #import "FFXCProject.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXProject = @"PBXProject";
 
@@ -42,34 +43,58 @@ static NSString *const kTargetUIDsKey = @"targets";
     return self;
 }
 
-#pragma mark - Methods
+#pragma mark - Add and Remove Methods
 - (void)addKnownRegion:(NSString *)knownRegion
 {
-    self.knownRegions = [self.knownRegions arrayByAddingObject:knownRegion];
+    self.knownRegions = [self addObject:knownRegion toArray:self.knownRegions];
 }
 
 - (void)removeKnownRegion:(NSString *)knownRegion
 {
-    NSInteger index = [self.knownRegions indexOfObject:knownRegion];
-    if (index != NSNotFound) {
-        NSMutableArray *mKR = self.knownRegions.mutableCopy;
-        [mKR removeObjectAtIndex:index];
-        self.knownRegions = mKR.copy;
-    }
+    self.knownRegions = [self removeObject:knownRegion fromArray:self.knownRegions];
 }
 
 - (void)addTargetUID:(NSString *)targetUID
 {
-    self.targetUIDs = [self.targetUIDs arrayByAddingObject:targetUID];
+    self.targetUIDs = [self addObject:targetUID toArray:self.targetUIDs];
 }
 
 - (void)removeTargetUID:(NSString *)targetUID
 {
-    NSInteger index = [self.targetUIDs indexOfObject:targetUID];
-    if (index != NSNotFound) {
-        NSMutableArray *mTUIDs = self.targetUIDs.mutableCopy;
-        [mTUIDs removeObjectAtIndex:index];
-        self.targetUIDs = mTUIDs.copy;
+    self.targetUIDs = [self removeObject:targetUID fromArray:self.targetUIDs];
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        [self removeTargetUID:deletedObj.uid];
+        if ([self.mainGroupUID isEqualToString:deletedObj.uid]) {
+            self.mainGroupUID = @"";
+        }
+        if ([self.projectRefGroupUID isEqualToString:deletedObj.uid]) {
+            self.projectRefGroupUID = @"";
+        }
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj && replaceObj) {
+        self.targetUIDs = [self replaceObject:deletedObj.uid withObject:replaceObj.uid inArray:self.targetUIDs];
+        if ([self.mainGroupUID isEqualToString:deletedObj.uid]) {
+            self.mainGroupUID = replaceObj.uid ?: @"";
+        }
+        if ([self.projectRefGroupUID isEqualToString:deletedObj.uid]) {
+            self.projectRefGroupUID = replaceObj.uid ?: @"";
+        }
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 #import "FFXCHeadersBuildPhase.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXHeadersBuildPhase = @"PBXHeadersBuildPhase";
 

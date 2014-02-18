@@ -6,6 +6,7 @@
 //
 
 #import "FFXCShellScriptBuildPhase.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXShellScriptBuildPhase = @"PBXShellScriptBuildPhase";
 NSString *const kDefaultShellPath = @"/bin/sh";
@@ -36,32 +37,22 @@ static NSString *const kShellScriptKey = @"shellScript";
 #pragma mark - Add and Remove Methods
 - (void)addInputPath:(NSString *)inputPath
 {
-    self.inputPaths = [self.inputPaths arrayByAddingObject:inputPath];
+    self.inputPaths = [self addObject:inputPath toArray:self.inputPaths];
 }
 
 - (void)removeInputPath:(NSString *)inputPath
 {
-    NSInteger index = [self.inputPaths indexOfObject:inputPath];
-    if (index != NSNotFound) {
-        NSMutableArray *mIPs = self.inputPaths.mutableCopy;
-        [mIPs removeObjectAtIndex:index];
-        self.inputPaths = mIPs.copy;
-    }
+    self.inputPaths = [self removeObject:inputPath fromArray:self.inputPaths];
 }
 
 - (void)addOutputPath:(NSString *)outputPath
 {
-    self.outputPaths = [self.outputPaths arrayByAddingObject:outputPath];
+    self.outputPaths = [self addObject:outputPath toArray:self.outputPaths];
 }
 
 - (void)removeOutputPath:(NSString *)outputPath
 {
-    NSInteger index = [self.outputPaths indexOfObject:outputPath];
-    if (index != NSNotFound) {
-        NSMutableArray *mOPs = self.outputPaths.mutableCopy;
-        [mOPs removeObjectAtIndex:index];
-        self.outputPaths = mOPs.copy;
-    }
+    self.outputPaths = [self removeObject:outputPath fromArray:self.outputPaths];
 }
 
 #pragma mark - NSSecureCoding

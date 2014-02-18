@@ -6,6 +6,7 @@
 //
 
 #import "FFXCAggregateTarget.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXAggregateTarget = @"PBXAggregateTarget";
 

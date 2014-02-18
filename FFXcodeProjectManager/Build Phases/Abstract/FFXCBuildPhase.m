@@ -6,6 +6,7 @@
 //
 
 #import "FFXCBuildPhase.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSUInteger const kDefaultBuildActionMask = 2147483647;
 
@@ -31,17 +32,12 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
 #pragma mark - Add and Remove Methods
 - (void)addFileUID:(NSString *)fileUID
 {
-    self.fileUIDs = [self.fileUIDs arrayByAddingObject:fileUID];
+    self.fileUIDs = [self addObject:fileUID toArray:self.fileUIDs];
 }
 
 - (void)removeFileUID:(NSString *)fileUID
 {
-    NSInteger index = [self.fileUIDs indexOfObject:fileUID];
-    if (index != NSNotFound) {
-        NSMutableArray *mFUIDs = self.fileUIDs.mutableCopy;
-        [mFUIDs removeObjectAtIndex:index];
-        self.fileUIDs = mFUIDs.copy;
-    }
+    self.fileUIDs = [self removeObject:fileUID fromArray:self.fileUIDs];
 }
 
 #pragma mark - Notifications
@@ -57,13 +53,10 @@ static NSString *const kRunOnlyForDeploymentPostprocessingKey = @"runOnlyForDepl
     [super handleObjectReplacedNotification:note];
     FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
     FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
-    if (deletedObj) {
-        NSInteger index = [self.fileUIDs indexOfObject:deletedObj.uid];
-        if (index != NSNotFound) {
-            NSMutableArray *mFUIDs = self.fileUIDs.mutableCopy;
-            [mFUIDs replaceObjectAtIndex:index withObject:replaceObj];
-            self.fileUIDs = mFUIDs.copy;
-        }
+    if (deletedObj && replaceObj) {
+        self.fileUIDs = [self replaceObject:deletedObj.uid withObject:replaceObj.uid inArray:self.fileUIDs];
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
     }
 }
 

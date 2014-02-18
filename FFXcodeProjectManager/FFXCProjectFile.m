@@ -7,6 +7,7 @@
 
 #import "FFXCProjectFile.h"
 #import "FFXCObject+ClassFactory.h"
+#import "FFXCObjectsManager.h"
 
 static NSString *const kArchiveVersionKey = @"archiveVersion";
 static NSString *const kClassesKey = @"classes";
@@ -43,10 +44,11 @@ static NSString *const kUnknownObjectsKey = @"unknownObjects";
                 NSMutableArray *objects = [[NSMutableArray alloc] init];
                 [dictionary[kObjectsKey] enumerateKeysAndObjectsUsingBlock:^(NSString *uid, NSDictionary *objDict, BOOL *stop) {
                     Class objClass = [FFXCObject classForDictionary:objDict];
-                    if (objClass)
+                    if (objClass) {
                         [objects addObject:[[objClass alloc] initWithUID:uid ofDictionary:objDict]];
-                    else
+                    } else {
                         unknownObjects[uid] = objDict;
+                    }
                 }];
                 self.objects = objects.copy;
                 
@@ -62,7 +64,7 @@ static NSString *const kUnknownObjectsKey = @"unknownObjects";
     return [self initWithProjectFileURL:nil];
 }
 
-#pragma mark - Methods
+#pragma mark - Add and Remove Methods
 - (void)addObject:(FFXCObject *)object
 {
     self.objects = [self.objects arrayByAddingObject:object];
@@ -77,6 +79,7 @@ static NSString *const kUnknownObjectsKey = @"unknownObjects";
         [objs removeObjectAtIndex:index];
         self.objects = objs.copy;
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:FFXCObjectDeletedNotification object:self userInfo:@{FFXCDeletedObjectUserInfoKey: object}];
     [self.objectsManager deleteObject:object ofProjectFilePath:self.projectFileURL];
 }
 
@@ -88,10 +91,12 @@ static NSString *const kUnknownObjectsKey = @"unknownObjects";
         [objs replaceObjectAtIndex:index withObject:newObject];
         self.objects = objs.copy;
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:FFXCObjectReplacedNotification object:self userInfo:@{FFXCDeletedObjectUserInfoKey: oldObject, FFXCInsertedObjectUserInfoKey: newObject}];
     [self.objectsManager deleteObject:oldObject ofProjectFilePath:self.projectFileURL];
     [self.objectsManager saveObject:newObject forProjectFilePath:self.projectFileURL];
 }
 
+#pragma mark - Get Objects
 - (FFXCObject *)objectWithUID:(NSString *)uid
 {
     __block FFXCObject *object = nil;
@@ -145,14 +150,6 @@ static NSString *const kUnknownObjectsKey = @"unknownObjects";
     [aCoder encodeObject:self.projectFileURL forKey:kProjectFileURLKey];
     [aCoder encodeObject:self.unknownObjects forKey:kUnknownObjectsKey];
 }
-
-/*#pragma mark - NSCopying
-- (instancetype)copyWithZone:(NSZone *)zone
-{
-    __typeof(self) copy = [[[self class] alloc] init];
-    
-    return copy;
-}*/
 
 #pragma mark - Dictionary Representation
 - (NSDictionary *)dictionaryRepresentation

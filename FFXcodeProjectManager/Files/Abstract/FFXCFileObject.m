@@ -6,6 +6,7 @@
 //
 
 #import "FFXCFileObject.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXFileReference = @"PBXFileReference";
 

@@ -6,6 +6,7 @@
 //
 
 #import "FFXCContainerItemProxy.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXContainerItemProxy = @"PBXContainerItemProxy";
 
@@ -30,6 +31,32 @@ static NSString *const kRemoteInfoKey = @"remoteInfo";
         self.isa = (self.isa) ?: kPBXContainerItemProxy;
     }
     return self;
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        if ([self.containerPortalUID isEqualToString:deletedObj.uid]) {
+            self.containerPortalUID = @"";
+        }
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj && replaceObj) {
+        if ([self.containerPortalUID isEqualToString:deletedObj.uid]) {
+            self.containerPortalUID = replaceObj.uid ?: @"";
+        }
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
+    }
 }
 
 #pragma mark - NSSecureCoding

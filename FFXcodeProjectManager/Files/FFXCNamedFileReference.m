@@ -6,6 +6,7 @@
 //
 
 #import "FFXCNamedFileReference.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *const kFileNameKey = @"name";
 

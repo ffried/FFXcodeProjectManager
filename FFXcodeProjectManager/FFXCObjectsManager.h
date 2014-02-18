@@ -18,6 +18,7 @@
 #import <Foundation/Foundation.h>
 
 @class FFXCObject;
+
 @interface FFXCObjectsManager : NSObject
 
 @property (nonatomic, assign) BOOL enabled;

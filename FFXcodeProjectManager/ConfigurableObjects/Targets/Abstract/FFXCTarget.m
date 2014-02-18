@@ -6,6 +6,7 @@
 //
 
 #import "FFXCTarget.h"
+#import "FFXCObject+PrivateMethods.h"
 
 static NSString *const kBuildPhaseUIDsKey = @"buildPhases";
 static NSString *const kDependencyUIDsKey = @"dependencies";
@@ -31,32 +32,22 @@ static NSString *const kProductNameKey = @"productName";
 #pragma mark - Add and Remove Methods
 - (void)addBuildPhaseUID:(NSString *)buildPhaseUID
 {
-    self.buildPhaseUIDs = [self.buildPhaseUIDs arrayByAddingObject:buildPhaseUID];
+    self.buildPhaseUIDs = [self addObject:buildPhaseUID toArray:self.buildPhaseUIDs];
 }
 
 - (void)removeBuildPhaseUID:(NSString *)buildPhaseUID
 {
-    NSInteger index = [self.buildPhaseUIDs indexOfObject:buildPhaseUID];
-    if (index != NSNotFound) {
-        NSMutableArray *mBPUIDs = self.buildPhaseUIDs.mutableCopy;
-        [mBPUIDs removeObjectAtIndex:index];
-        self.buildPhaseUIDs = mBPUIDs.copy;
-    }
+    self.buildPhaseUIDs = [self removeObject:buildPhaseUID fromArray:self.buildPhaseUIDs];
 }
 
 - (void)addDependencyUID:(NSString *)dependencyUID
 {
-    self.dependencyUIDs = [self.dependencyUIDs arrayByAddingObject:dependencyUID];
+    self.dependencyUIDs = [self addObject:dependencyUID toArray:self.dependencyUIDs];
 }
 
 - (void)removeDependencyUID:(NSString *)dependencyUID
 {
-    NSInteger index = [self.dependencyUIDs indexOfObject:dependencyUID];
-    if (index != NSNotFound) {
-        NSMutableArray *mDUIDs = self.dependencyUIDs.mutableCopy;
-        [mDUIDs removeObjectAtIndex:index];
-        self.dependencyUIDs = mDUIDs.copy;
-    }
+    self.dependencyUIDs = [self removeObject:dependencyUID fromArray:self.dependencyUIDs];
 }
 
 #pragma mark - Notifications
@@ -75,19 +66,11 @@ static NSString *const kProductNameKey = @"productName";
     [super handleObjectReplacedNotification:note];
     FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
     FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
-    if (deletedObj) {
-        NSInteger index = [self.buildPhaseUIDs indexOfObject:deletedObj.uid];
-        if (index != NSNotFound) {
-            NSMutableArray *mBPUIDs = self.buildPhaseUIDs.mutableCopy;
-            [mBPUIDs replaceObjectAtIndex:index withObject:replaceObj];
-            self.buildPhaseUIDs = mBPUIDs.copy;
-        }
-        index = [self.dependencyUIDs indexOfObject:deletedObj.uid];
-        if (index != NSNotFound) {
-            NSMutableArray *mDUIDs = self.dependencyUIDs.mutableCopy;
-            [mDUIDs replaceObjectAtIndex:index withObject:replaceObj];
-            self.dependencyUIDs = mDUIDs.copy;
-        }
+    if (deletedObj && replaceObj) {
+        self.buildPhaseUIDs = [self replaceObject:deletedObj.uid withObject:replaceObj.uid inArray:self.buildPhaseUIDs];
+        self.dependencyUIDs = [self replaceObject:deletedObj.uid withObject:replaceObj.uid inArray:self.buildPhaseUIDs];
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
     }
 }
 

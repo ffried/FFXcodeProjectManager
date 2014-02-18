@@ -6,6 +6,7 @@
 //
 
 #import "FFXCGroup.h"
+#import "FFXCObject+PrivateMethods.h"
 
 NSString *const kPBXGroup = @"PBXGroup";
 
@@ -28,19 +29,36 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
     return self;
 }
 
-#pragma mark - Methods
+#pragma mark - Add and Remove Methods
 - (void)addChildUID:(NSString *)childUID
 {
-    self.childUIDs = [self.childUIDs arrayByAddingObject:childUID];
+    self.childUIDs = [self addObject:childUID toArray:self.childUIDs];
 }
 
 - (void)removeChildUID:(NSString *)childUID
 {
-    NSInteger index = [self.childUIDs indexOfObject:childUID];
-    if (index != NSNotFound) {
-        NSMutableArray *mCUIDs = self.childUIDs.mutableCopy;
-        [mCUIDs removeObject:childUID];
-        self.childUIDs = mCUIDs.copy;
+    self.childUIDs = [self removeObject:childUID fromArray:self.childUIDs];
+}
+
+#pragma mark - Notifications
+- (void)handleObjectDeletedNotification:(NSNotification *)note
+{
+    [super handleObjectDeletedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    if (deletedObj) {
+        [self removeChildUID:deletedObj.uid];
+    }
+}
+
+- (void)handleObjectReplacedNotification:(NSNotification *)note
+{
+    [super handleObjectReplacedNotification:note];
+    FFXCObject *deletedObj = note.userInfo[FFXCDeletedObjectUserInfoKey];
+    FFXCObject *replaceObj = note.userInfo[FFXCInsertedObjectUserInfoKey];
+    if (deletedObj && replaceObj) {
+        self.childUIDs = [self replaceObject:deletedObj.uid withObject:replaceObj.uid inArray:self.childUIDs];
+    } else if (deletedObj) {
+        [self handleObjectDeletedNotification:note];
     }
 }
 
