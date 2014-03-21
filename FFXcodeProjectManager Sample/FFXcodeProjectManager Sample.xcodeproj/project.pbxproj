@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0733C78618DCBE4D00128571 /* FFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733C78418DCBE4D00128571 /* FFMainViewController.m */; };
+		0733C78718DCBE4D00128571 /* FFMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0733C78518DCBE4D00128571 /* FFMainViewController.xib */; };
 		076717041890352A00F996EF /* FFXCBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D01890352A00F996EF /* FFXCBuildPhase.m */; };
 		076717051890352A00F996EF /* FFXCBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D01890352A00F996EF /* FFXCBuildPhase.m */; };
 		076717061890352A00F996EF /* FFXCNamedBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D21890352A00F996EF /* FFXCNamedBuildPhase.m */; };
@@ -97,6 +99,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0733C78318DCBE4D00128571 /* FFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMainViewController.h; sourceTree = "<group>"; };
+		0733C78418DCBE4D00128571 /* FFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMainViewController.m; sourceTree = "<group>"; };
+		0733C78518DCBE4D00128571 /* FFMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFMainViewController.xib; sourceTree = "<group>"; };
 		076716CF1890352A00F996EF /* FFXCBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		076716D01890352A00F996EF /* FFXCBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		076716D11890352A00F996EF /* FFXCNamedBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCNamedBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -212,6 +217,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0733C78218DCBDA700128571 /* FFXcodeProjectManager Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "FFXcodeProjectManager Tests";
+			path = ../FFXcodeProjectManager;
+			sourceTree = "<group>";
+		};
 		076716CD1890352A00F996EF /* Build Phases */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				07F1BD9B1882B0FF00D96872 /* FFXcodeProjectManager */,
+				0733C78218DCBDA700128571 /* FFXcodeProjectManager Tests */,
 				07F1BD6A1881DA0500D96872 /* FFXcodeProjectManager Sample */,
 				07F1BD881881DA0500D96872 /* FFXcodeProjectManager SampleTests */,
 				07F1BD631881DA0500D96872 /* Frameworks */,
@@ -379,6 +393,9 @@
 		07F1BD6A1881DA0500D96872 /* FFXcodeProjectManager Sample */ = {
 			isa = PBXGroup;
 			children = (
+				0733C78318DCBE4D00128571 /* FFMainViewController.h */,
+				0733C78418DCBE4D00128571 /* FFMainViewController.m */,
+				0733C78518DCBE4D00128571 /* FFMainViewController.xib */,
 				07F1BD761881DA0500D96872 /* FFAppDelegate.h */,
 				07F1BD771881DA0500D96872 /* FFAppDelegate.m */,
 				07F1BD791881DA0500D96872 /* MainMenu.xib */,
@@ -558,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */,
+				0733C78718DCBE4D00128571 /* FFMainViewController.xib in Resources */,
 				0767173F18904DDA00F996EF /* StyleSettings.plist in Resources */,
 				07F1BD7D1881DA0500D96872 /* Images.xcassets in Resources */,
 				07F1BD751881DA0500D96872 /* Credits.rtf in Resources */,
@@ -609,6 +627,7 @@
 				076717061890352A00F996EF /* FFXCNamedBuildPhase.m in Sources */,
 				0767171C1890352A00F996EF /* FFXCNativeTarget.m in Sources */,
 				0767170A1890352A00F996EF /* FFXCFrameworksBuildPhase.m in Sources */,
+				0733C78618DCBE4D00128571 /* FFMainViewController.m in Sources */,
 				076717121890352A00F996EF /* FFXCSourcesBuildPhase.m in Sources */,
 				07F22F0C189059F90057BC37 /* FFXCKnownFileReference.m in Sources */,
 				07F22F0A189059F90057BC37 /* FFXCExplicitFileReference.m in Sources */,
