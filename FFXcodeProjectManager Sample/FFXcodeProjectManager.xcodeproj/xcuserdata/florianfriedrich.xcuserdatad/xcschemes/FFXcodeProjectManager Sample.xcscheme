@@ -17,7 +17,7 @@
                BlueprintIdentifier = "07F1BD601881DA0500D96872"
                BuildableName = "FFXcodeProjectManager Sample.app"
                BlueprintName = "FFXcodeProjectManager Sample"
-               ReferencedContainer = "container:FFXcodeProjectManager Sample.xcodeproj">
+               ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "07F1BD811881DA0500D96872"
                BuildableName = "FFXcodeProjectManager SampleTests.xctest"
                BlueprintName = "FFXcodeProjectManager SampleTests"
-               ReferencedContainer = "container:FFXcodeProjectManager Sample.xcodeproj">
+               ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,27 @@
                BlueprintIdentifier = "07E0CAC218DDFD230034F69E"
                BuildableName = "FFXcodeProjectManagerTests.xctest"
                BlueprintName = "FFXcodeProjectManagerTests"
-               ReferencedContainer = "container:FFXcodeProjectManager Sample.xcodeproj">
+               ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07E0CBB018DF2A9E0034F69E"
+               BuildableName = "FFXcodeProjectManager iOSTests.xctest"
+               BlueprintName = "FFXcodeProjectManager iOSTests"
+               ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07E0CBE718DF2ADE0034F69E"
+               BuildableName = "FFXcodeProjectManager Sample iOSTests.xctest"
+               BlueprintName = "FFXcodeProjectManager Sample iOSTests"
+               ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +75,7 @@
             BlueprintIdentifier = "07F1BD601881DA0500D96872"
             BuildableName = "FFXcodeProjectManager Sample.app"
             BlueprintName = "FFXcodeProjectManager Sample"
-            ReferencedContainer = "container:FFXcodeProjectManager Sample.xcodeproj">
+            ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -74,7 +94,7 @@
             BlueprintIdentifier = "07F1BD601881DA0500D96872"
             BuildableName = "FFXcodeProjectManager Sample.app"
             BlueprintName = "FFXcodeProjectManager Sample"
-            ReferencedContainer = "container:FFXcodeProjectManager Sample.xcodeproj">
+            ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -92,7 +112,7 @@
             BlueprintIdentifier = "07F1BD601881DA0500D96872"
             BuildableName = "FFXcodeProjectManager Sample.app"
             BlueprintName = "FFXcodeProjectManager Sample"
-            ReferencedContainer = "container:FFXcodeProjectManager Sample.xcodeproj">
+            ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

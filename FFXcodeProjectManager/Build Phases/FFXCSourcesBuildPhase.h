@@ -17,8 +17,17 @@
 
 #import <FFXcodeProjectManager/FFXCBuildPhase.h>
 
+/**
+ The isa of a sources build phase.
+ @see FFXCSourcesBuildPhase
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXSourcesBuildPhase;
 
+/**
+ Represents a sources build phase.
+ @author Florian Friedrich
+ */
 @interface FFXCSourcesBuildPhase : FFXCBuildPhase
 
 @end

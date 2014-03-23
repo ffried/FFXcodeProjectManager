@@ -17,11 +17,26 @@
 
 #import <FFXcodeProjectManager/FFXCNamedBuildPhase.h>
 
+/**
+ The isa of a copy files build phase.
+ @see FFXCCopyFilesBuildPhase
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXCopyFilesBuildPhase;
 
+/**
+ Represents a copy files build phase.
+ @author Florian Friedrich
+ */
 @interface FFXCCopyFilesBuildPhase : FFXCNamedBuildPhase
 
+/**
+ The destination path to which to copy the files.
+ */
 @property (nonatomic, strong) NSString *dstPath;
+/**
+ The subfolder spec of the destination path.
+ */
 @property (nonatomic, strong) NSNumber *dstSubfolderSpec;
 
 @end

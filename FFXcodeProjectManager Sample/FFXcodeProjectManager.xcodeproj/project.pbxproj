@@ -18,7 +18,6 @@
 		07E0CAC818DDFD230034F69E /* FFXcodeProjectManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CAB318DDFD230034F69E /* FFXcodeProjectManager.framework */; };
 		07E0CACE18DDFD230034F69E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E0CACC18DDFD230034F69E /* InfoPlist.strings */; };
 		07E0CAD018DDFD230034F69E /* FFXcodeProjectManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CACF18DDFD230034F69E /* FFXcodeProjectManagerTests.m */; };
-		07E0CAD718DDFDE60034F69E /* FFXcodeProjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0CABC18DDFD230034F69E /* FFXcodeProjectManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E0CAD818DDFDE60034F69E /* FFXCObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716FC1890352A00F996EF /* FFXCObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E0CAD918DDFDE60034F69E /* FFXCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716FD1890352A00F996EF /* FFXCObject.m */; };
 		07E0CADA18DDFDE60034F69E /* FFXCObject+PrivateMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F88DCD18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -128,6 +127,13 @@
 		07E0CB4718DE5EC90034F69E /* FFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD771881DA0500D96872 /* FFAppDelegate.m */; };
 		07E0CB4818DE5ED40034F69E /* FFMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0733C78518DCBE4D00128571 /* FFMainViewController.xib */; };
 		07E0CB4918DE5ED80034F69E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD791881DA0500D96872 /* MainMenu.xib */; };
+		07E0CBA518DF2A9E0034F69E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CBA418DF2A9E0034F69E /* Foundation.framework */; };
+		07E0CBB218DF2A9E0034F69E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD831881DA0500D96872 /* XCTest.framework */; };
+		07E0CBB318DF2A9E0034F69E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CBA418DF2A9E0034F69E /* Foundation.framework */; };
+		07E0CBB518DF2A9E0034F69E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CBB418DF2A9E0034F69E /* UIKit.framework */; };
+		07E0CBB818DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CBA318DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a */; };
+		07E0CBBE18DF2A9E0034F69E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E0CBBC18DF2A9E0034F69E /* InfoPlist.strings */; };
+		07E0CBC018DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD6D1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD711881DA0500D96872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD701881DA0500D96872 /* main.m */; };
@@ -156,6 +162,13 @@
 			remoteGlobalIDString = 07E0CAB218DDFD230034F69E;
 			remoteInfo = FFXcodeProjectManager;
 		};
+		07E0CBB618DF2A9E0034F69E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07F1BD591881DA0500D96872 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07E0CBA218DF2A9E0034F69E;
+			remoteInfo = "FFXcodeProjectManager iOS";
+		};
 		07F1BD861881DA0500D96872 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07F1BD591881DA0500D96872 /* Project object */;
@@ -164,6 +177,18 @@
 			remoteInfo = "FFXcodeProjectManager Sample";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07E0CBA118DF2A9E0034F69E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0733C78318DCBE4D00128571 /* FFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMainViewController.h; sourceTree = "<group>"; };
@@ -228,11 +253,20 @@
 		07E0CAB718DDFD230034F69E /* FFXcodeProjectManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFXcodeProjectManager-Info.plist"; sourceTree = "<group>"; };
 		07E0CAB918DDFD230034F69E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07E0CABB18DDFD230034F69E /* FFXcodeProjectManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFXcodeProjectManager-Prefix.pch"; sourceTree = "<group>"; };
-		07E0CABC18DDFD230034F69E /* FFXcodeProjectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFXcodeProjectManager.h; sourceTree = "<group>"; };
+		07E0CABC18DDFD230034F69E /* FFXcodeProjectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FFXcodeProjectManager.h; path = ../FFXcodeProjectManager/FFXcodeProjectManager.h; sourceTree = "<group>"; };
 		07E0CAC318DDFD230034F69E /* FFXcodeProjectManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFXcodeProjectManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E0CACB18DDFD230034F69E /* FFXcodeProjectManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFXcodeProjectManagerTests-Info.plist"; sourceTree = "<group>"; };
 		07E0CACD18DDFD230034F69E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07E0CACF18DDFD230034F69E /* FFXcodeProjectManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectManagerTests.m; sourceTree = "<group>"; };
+		07E0CBA318DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libFFXcodeProjectManager iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E0CBA418DF2A9E0034F69E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07E0CBA818DF2A9E0034F69E /* FFXcodeProjectManager iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FFXcodeProjectManager iOS-Prefix.pch"; sourceTree = "<group>"; };
+		07E0CBB118DF2A9E0034F69E /* FFXcodeProjectManager iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FFXcodeProjectManager iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07E0CBB418DF2A9E0034F69E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		07E0CBBB18DF2A9E0034F69E /* FFXcodeProjectManager iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFXcodeProjectManager iOSTests-Info.plist"; sourceTree = "<group>"; };
+		07E0CBBD18DF2A9E0034F69E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectManager_iOSTests.m; sourceTree = "<group>"; };
+		07E0CBCD18DF2ADE0034F69E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		07F1BD611881DA0500D96872 /* FFXcodeProjectManager Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFXcodeProjectManager Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1BD641881DA0500D96872 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		07F1BD671881DA0500D96872 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -288,6 +322,25 @@
 				07E0CAC818DDFD230034F69E /* FFXcodeProjectManager.framework in Frameworks */,
 				07E0CAC518DDFD230034F69E /* Cocoa.framework in Frameworks */,
 				07E0CAC418DDFD230034F69E /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E0CBA018DF2A9E0034F69E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E0CBA518DF2A9E0034F69E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E0CBAE18DF2A9E0034F69E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E0CBB818DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a in Frameworks */,
+				07E0CBB218DF2A9E0034F69E /* XCTest.framework in Frameworks */,
+				07E0CBB518DF2A9E0034F69E /* UIKit.framework in Frameworks */,
+				07E0CBB318DF2A9E0034F69E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +503,6 @@
 				076717011890352A00F996EF /* FFXCProjectUIDGenerator.m */,
 				07DC457518B0D87D0085ACA1 /* FFXCObjectsManager.h */,
 				07DC457618B0D87D0085ACA1 /* FFXCObjectsManager.m */,
-				07E0CABC18DDFD230034F69E /* FFXcodeProjectManager.h */,
 				07E0CAB618DDFD230034F69E /* Supporting Files */,
 			);
 			path = FFXcodeProjectManager;
@@ -484,13 +536,82 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07F1BD581881DA0500D96872 = {
+		07E0CBA618DF2A9E0034F69E /* FFXcodeProjectManager iOS */ = {
+			isa = PBXGroup;
+			children = (
+				07E0CABC18DDFD230034F69E /* FFXcodeProjectManager.h */,
+				07E0CBA718DF2A9E0034F69E /* Supporting Files */,
+			);
+			path = "FFXcodeProjectManager iOS";
+			sourceTree = "<group>";
+		};
+		07E0CBA718DF2A9E0034F69E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07E0CBA818DF2A9E0034F69E /* FFXcodeProjectManager iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07E0CBB918DF2A9E0034F69E /* FFXcodeProjectManager iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */,
+				07E0CBBA18DF2A9E0034F69E /* Supporting Files */,
+			);
+			path = "FFXcodeProjectManager iOSTests";
+			sourceTree = "<group>";
+		};
+		07E0CBBA18DF2A9E0034F69E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07E0CBBB18DF2A9E0034F69E /* FFXcodeProjectManager iOSTests-Info.plist */,
+				07E0CBBC18DF2A9E0034F69E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07E0CBFF18DF55640034F69E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				07E0CBA618DF2A9E0034F69E /* FFXcodeProjectManager iOS */,
+				07E0CC0218DF557D0034F69E /* Tests */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		07E0CC0018DF556D0034F69E /* OS X */ = {
 			isa = PBXGroup;
 			children = (
 				07F1BD6A1881DA0500D96872 /* FFXcodeProjectManager Sample */,
-				07F1BD881881DA0500D96872 /* FFXcodeProjectManager SampleTests */,
 				07E0CAB518DDFD230034F69E /* FFXcodeProjectManager */,
+				07E0CC0118DF55740034F69E /* Tests */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		07E0CC0118DF55740034F69E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07F1BD881881DA0500D96872 /* FFXcodeProjectManager SampleTests */,
 				07E0CAC918DDFD230034F69E /* FFXcodeProjectManagerTests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		07E0CC0218DF557D0034F69E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07E0CBB918DF2A9E0034F69E /* FFXcodeProjectManager iOSTests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		07F1BD581881DA0500D96872 = {
+			isa = PBXGroup;
+			children = (
+				07E0CC0018DF556D0034F69E /* OS X */,
+				07E0CBFF18DF55640034F69E /* iOS */,
 				07F1BD631881DA0500D96872 /* Frameworks */,
 				07F1BD621881DA0500D96872 /* Products */,
 			);
@@ -503,6 +624,8 @@
 				07F1BD821881DA0500D96872 /* FFXcodeProjectManager SampleTests.xctest */,
 				07E0CAB318DDFD230034F69E /* FFXcodeProjectManager.framework */,
 				07E0CAC318DDFD230034F69E /* FFXcodeProjectManagerTests.xctest */,
+				07E0CBA318DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a */,
+				07E0CBB118DF2A9E0034F69E /* FFXcodeProjectManager iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -512,6 +635,9 @@
 			children = (
 				07F1BD641881DA0500D96872 /* Cocoa.framework */,
 				07F1BD831881DA0500D96872 /* XCTest.framework */,
+				07E0CBA418DF2A9E0034F69E /* Foundation.framework */,
+				07E0CBB418DF2A9E0034F69E /* UIKit.framework */,
+				07E0CBCD18DF2ADE0034F69E /* CoreGraphics.framework */,
 				07F1BD661881DA0500D96872 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -659,7 +785,6 @@
 				07E0CB1F18DDFE920034F69E /* FFXCTargets.h in Headers */,
 				07E0CAEE18DDFE250034F69E /* FFXCContainerItemProxy.h in Headers */,
 				07E0CB3F18DDFEBD0034F69E /* FFXCNamedBuildPhase.h in Headers */,
-				07E0CAD718DDFDE60034F69E /* FFXcodeProjectManager.h in Headers */,
 				07E0CAFD18DDFE390034F69E /* FFXCGroups.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,6 +826,41 @@
 			name = FFXcodeProjectManagerTests;
 			productName = FFXcodeProjectManagerTests;
 			productReference = 07E0CAC318DDFD230034F69E /* FFXcodeProjectManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07E0CBA218DF2A9E0034F69E /* FFXcodeProjectManager iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E0CBC118DF2A9E0034F69E /* Build configuration list for PBXNativeTarget "FFXcodeProjectManager iOS" */;
+			buildPhases = (
+				07E0CB9F18DF2A9E0034F69E /* Sources */,
+				07E0CBA018DF2A9E0034F69E /* Frameworks */,
+				07E0CBA118DF2A9E0034F69E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FFXcodeProjectManager iOS";
+			productName = "FFXcodeProjectManager iOS";
+			productReference = 07E0CBA318DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		07E0CBB018DF2A9E0034F69E /* FFXcodeProjectManager iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07E0CBC418DF2A9E0034F69E /* Build configuration list for PBXNativeTarget "FFXcodeProjectManager iOSTests" */;
+			buildPhases = (
+				07E0CBAD18DF2A9E0034F69E /* Sources */,
+				07E0CBAE18DF2A9E0034F69E /* Frameworks */,
+				07E0CBAF18DF2A9E0034F69E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07E0CBB718DF2A9E0034F69E /* PBXTargetDependency */,
+			);
+			name = "FFXcodeProjectManager iOSTests";
+			productName = "FFXcodeProjectManager iOSTests";
+			productReference = 07E0CBB118DF2A9E0034F69E /* FFXcodeProjectManager iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		07F1BD601881DA0500D96872 /* FFXcodeProjectManager Sample */ = {
@@ -753,12 +913,15 @@
 					07E0CAC218DDFD230034F69E = {
 						TestTargetID = 07F1BD601881DA0500D96872;
 					};
+					07E0CBB018DF2A9E0034F69E = {
+						TestTargetID = 07F1BD601881DA0500D96872;
+					};
 					07F1BD811881DA0500D96872 = {
 						TestTargetID = 07F1BD601881DA0500D96872;
 					};
 				};
 			};
-			buildConfigurationList = 07F1BD5C1881DA0500D96872 /* Build configuration list for PBXProject "FFXcodeProjectManager Sample" */;
+			buildConfigurationList = 07F1BD5C1881DA0500D96872 /* Build configuration list for PBXProject "FFXcodeProjectManager" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -775,6 +938,8 @@
 				07F1BD811881DA0500D96872 /* FFXcodeProjectManager SampleTests */,
 				07E0CAB218DDFD230034F69E /* FFXcodeProjectManager */,
 				07E0CAC218DDFD230034F69E /* FFXcodeProjectManagerTests */,
+				07E0CBA218DF2A9E0034F69E /* FFXcodeProjectManager iOS */,
+				07E0CBB018DF2A9E0034F69E /* FFXcodeProjectManager iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -793,6 +958,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E0CACE18DDFD230034F69E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E0CBAF18DF2A9E0034F69E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E0CBBE18DF2A9E0034F69E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +1092,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		07E0CB9F18DF2A9E0034F69E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07E0CBAD18DF2A9E0034F69E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E0CBC018DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07F1BD5D1881DA0500D96872 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -952,6 +1140,11 @@
 			target = 07E0CAB218DDFD230034F69E /* FFXcodeProjectManager */;
 			targetProxy = 07E0CB4318DDFEE70034F69E /* PBXContainerItemProxy */;
 		};
+		07E0CBB718DF2A9E0034F69E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07E0CBA218DF2A9E0034F69E /* FFXcodeProjectManager iOS */;
+			targetProxy = 07E0CBB618DF2A9E0034F69E /* PBXContainerItemProxy */;
+		};
 		07F1BD871881DA0500D96872 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 07F1BD601881DA0500D96872 /* FFXcodeProjectManager Sample */;
@@ -972,6 +1165,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				07E0CACD18DDFD230034F69E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07E0CBBC18DF2A9E0034F69E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07E0CBBD18DF2A9E0034F69E /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1093,6 +1294,92 @@
 			};
 			name = Release;
 		};
+		07E0CBC218DF2A9E0034F69E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/FFXcodeProjectManager_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFXcodeProjectManager iOS/FFXcodeProjectManager iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		07E0CBC318DF2A9E0034F69E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DSTROOT = /tmp/FFXcodeProjectManager_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFXcodeProjectManager iOS/FFXcodeProjectManager iOS-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07E0CBC518DF2A9E0034F69E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFXcodeProjectManager Sample.app/Contents/MacOS/FFXcodeProjectManager Sample";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFXcodeProjectManager iOS/FFXcodeProjectManager iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "FFXcodeProjectManager iOSTests/FFXcodeProjectManager iOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07E0CBC618DF2A9E0034F69E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FFXcodeProjectManager Sample.app/Contents/MacOS/FFXcodeProjectManager Sample";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FFXcodeProjectManager iOS/FFXcodeProjectManager iOS-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "FFXcodeProjectManager iOSTests/FFXcodeProjectManager iOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		07F1BD901881DA0500D96872 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1125,7 +1412,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1246,7 +1532,23 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		07F1BD5C1881DA0500D96872 /* Build configuration list for PBXProject "FFXcodeProjectManager Sample" */ = {
+		07E0CBC118DF2A9E0034F69E /* Build configuration list for PBXNativeTarget "FFXcodeProjectManager iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E0CBC218DF2A9E0034F69E /* Debug */,
+				07E0CBC318DF2A9E0034F69E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07E0CBC418DF2A9E0034F69E /* Build configuration list for PBXNativeTarget "FFXcodeProjectManager iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07E0CBC518DF2A9E0034F69E /* Debug */,
+				07E0CBC618DF2A9E0034F69E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07F1BD5C1881DA0500D96872 /* Build configuration list for PBXProject "FFXcodeProjectManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07F1BD901881DA0500D96872 /* Debug */,

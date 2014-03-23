@@ -17,7 +17,7 @@
                BlueprintIdentifier = "07E0CAB218DDFD230034F69E"
                BuildableName = "FFXcodeProjectManager.framework"
                BlueprintName = "FFXcodeProjectManager"
-               ReferencedContainer = "container:FFXcodeProjectManager Sample.xcodeproj">
+               ReferencedContainer = "container:FFXcodeProjectManager.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

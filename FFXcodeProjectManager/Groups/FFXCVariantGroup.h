@@ -17,8 +17,17 @@
 
 #import <FFXcodeProjectManager/FFXCNamedGroup.h>
 
+/**
+ The isa of a variant group.
+ @see FFXCVariantGroup
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXVariantGroup;
 
+/**
+ Represents a variant group.
+ @author Florian Friedrich
+ */
 @interface FFXCVariantGroup : FFXCNamedGroup
 
 @end

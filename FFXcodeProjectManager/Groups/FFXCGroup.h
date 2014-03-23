@@ -17,14 +17,41 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The isa of a group.
+ @see FFXCGroup
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXGroup;
 
+/**
+ Represents a group.
+ @author Florian Friedrich
+ */
 @interface FFXCGroup : FFXCObject
 
+/**
+ The UIDs of the group's children.
+ @see FFXCGroup#addChildUID:
+ @see FFXCGroup#removeChildUID:
+ */
 @property (nonatomic, strong) NSArray *childUIDs;
+/**
+ The source tree of the group.
+ */
 @property (nonatomic, strong) NSString *sourceTree;
 
+/**
+ Adds a UID of a child to the children.
+ @param childUID The uid of the child to add.
+ @see FFXCGroup#childUIDs
+ */
 - (void)addChildUID:(NSString *)childUID;
+/**
+ Removes a child UID for the children.
+ @param childUID The UID of the child to remove.
+ @see FFXCGroup#childUIDs
+ */
 - (void)removeChildUID:(NSString *)childUID;
 
 @end

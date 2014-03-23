@@ -17,8 +17,15 @@
 
 #import <FFXcodeProjectManager/FFXCGroup.h>
 
+/**
+ Represents a group with a path.
+ @author Florian Friedrich
+ */
 @interface FFXCPathGroup : FFXCGroup
 
+/**
+ The path of the group.
+ */
 @property (nonatomic, strong) NSString *path;
 
 @end

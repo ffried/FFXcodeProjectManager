@@ -17,11 +17,26 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The isa of a build configuration.
+ @see FFXCBuildConfiguration
+ @see FFXCObject#isa
+ */
 extern NSString *const kXCBuildConfiguration;
 
+/**
+ Represents a build configuration.
+ @author Florian Friedrich
+ */
 @interface FFXCBuildConfiguration : FFXCObject
 
+/**
+ The build settings dictionary.
+ */
 @property (nonatomic, strong) NSDictionary *buildSettings;
+/**
+ The name of the build configuration.
+ */
 @property (nonatomic, strong) NSString *name;
 
 @end

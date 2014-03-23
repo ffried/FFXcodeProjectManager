@@ -17,9 +17,18 @@
 
 #import <FFXcodeProjectManager/FFXCBuildPhase.h>
 
-// Abstract class!
+/**
+ Represents a named build phase.
+ This is an abstract class, do not use this class directly. Instead use subclasses of this class.
+ @see FFXCCopyFilesBuildPhase
+ @see FFXCShellScriptBuildPhase
+ @author Florian Friedrich
+ */
 @interface FFXCNamedBuildPhase : FFXCBuildPhase
 
+/**
+ The name of the build phase.
+ */
 @property (nonatomic, strong) NSString *name;
 
 @end

@@ -17,13 +17,34 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The isa of a container item proxy.
+ @see FFXCContainerItemProxy
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXContainerItemProxy;
 
+/**
+ Represents a container item proxy.
+ @author Florian Friedrich
+ */
 @interface FFXCContainerItemProxy : FFXCObject
 
+/**
+ The UID of the container portal.
+ */
 @property (nonatomic, strong) NSString *containerPortalUID;
+/**
+ The proxy type.
+ */
 @property (nonatomic, strong) NSNumber *proxyType;
+/**
+ The remote global ID string.
+ */
 @property (nonatomic, strong) NSString *remoteGlobalIDString;
+/**
+ The remote info.
+ */
 @property (nonatomic, strong) NSString *remoteInfo;
 
 @end

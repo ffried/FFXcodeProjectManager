@@ -17,11 +17,29 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The isa of a file object.
+ @see FFXCFileObject
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXFileReference;
 
+/**
+ Represents a file object.
+ This is an abstract class, do not use this class directly. Instead use subclasses of this class.
+ @see FFXCExplicitFileReference
+ @see FFXCKnownFileReference
+ @author Florian Friedrich
+ */
 @interface FFXCFileObject : FFXCObject
 
+/**
+ The path of the file.
+ */
 @property (nonatomic, strong) NSString *path;
+/**
+ The source tree of the file.
+ */
 @property (nonatomic, strong) NSString *sourceTree;
 
 @end

@@ -17,15 +17,45 @@
 
 #import <FFXcodeProjectManager/FFXCTarget.h>
 
+/**
+ The isa of a native target.
+ @see FFXCNativeTarget
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXNativeTarget;
 
+/**
+ Represents a native target.
+ @author Florian Friedrich
+ */
 @interface FFXCNativeTarget : FFXCTarget
 
+/**
+ The UID of the build rule.
+ @see FFXCNativeTarget#addBuildRuleUID:
+ @see FFXCNativeTarget#removeBuildRuleUID:
+ */
 @property (nonatomic, strong) NSArray *buildRuleUIDs;
+/**
+ The UID of the product reference.
+ */
 @property (nonatomic, strong) NSString *productReferenceUID;
+/**
+ The type of the product.
+ */
 @property (nonatomic, strong) NSString *productType;
 
+/**
+ Adds the UID of a build rule.
+ @param buildRuleUID The UID of the build rule to add.
+ @see FFXCNativeTarget#buildRuleUIDs
+ */
 - (void)addBuildRuleUID:(NSString *)buildRuleUID;
+/**
+ Removes the UID of a build rule.
+ @param buildRuleUID The UID of the build rule to remove.
+ @see FFXCNativeTarget#buildRuleUIDs
+ */
 - (void)removeBuildRuleUID:(NSString *)buildRuleUID;
 
 @end

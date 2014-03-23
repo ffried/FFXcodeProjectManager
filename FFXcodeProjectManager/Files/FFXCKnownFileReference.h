@@ -17,8 +17,15 @@
 
 #import <FFXcodeProjectManager/FFXCFileObject.h>
 
+/**
+ Represents a file reference with a last known type.
+ @author Florian Friedrich
+ */
 @interface FFXCKnownFileReference : FFXCFileObject
 
+/**
+ The last known file type.
+ */
 @property (nonatomic, strong) NSString *lastKnownFileType;
 
 @end

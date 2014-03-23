@@ -17,8 +17,17 @@
 
 #import <FFXcodeProjectManager/FFXCBuildPhase.h>
 
+/**
+ The isa of a headers build phase.
+ @see FFXCHeadersBuildPhase
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXHeadersBuildPhase;
 
+/**
+ Represents a headers build phase.
+ @author Florian Friedrich
+ */
 @interface FFXCHeadersBuildPhase : FFXCBuildPhase
 
 @end

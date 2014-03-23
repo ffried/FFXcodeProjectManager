@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FFXcodeProjectManager Sample.xcodeproj">
+      location = "self:FFXcodeProjectManager.xcodeproj">
    </FileRef>
 </Workspace>

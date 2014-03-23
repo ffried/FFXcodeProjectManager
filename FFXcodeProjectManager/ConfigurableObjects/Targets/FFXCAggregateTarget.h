@@ -17,8 +17,17 @@
 
 #import <FFXcodeProjectManager/FFXCTarget.h>
 
+/**
+ The isa of an aggregate target.
+ @see FFXCAggregateTarget
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXAggregateTarget;
 
+/**
+ Represents an aggregate target.
+ @author Florian Friedrich
+ */
 @interface FFXCAggregateTarget : FFXCTarget
 
 @end

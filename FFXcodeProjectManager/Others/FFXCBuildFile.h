@@ -17,10 +17,22 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The isa of a build file.
+ @see FFXCBuildFile
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXBuildFile;
 
+/**
+ Represents a build file.
+ @author Florian Friedrich
+ */
 @interface FFXCBuildFile : FFXCObject
 
+/**
+ The file reference UID of the build file.
+ */
 @property (nonatomic, strong) NSString *fileRefUID;
 
 @end

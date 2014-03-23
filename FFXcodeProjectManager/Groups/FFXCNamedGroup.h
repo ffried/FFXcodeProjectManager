@@ -17,8 +17,15 @@
 
 #import <FFXcodeProjectManager/FFXCGroup.h>
 
+/**
+ Represents a group with a name.
+ @author Florian Friedrich
+ */
 @interface FFXCNamedGroup : FFXCGroup
 
+/**
+ The name of the group.
+ */
 @property (nonatomic, strong) NSString *name;
 
 @end

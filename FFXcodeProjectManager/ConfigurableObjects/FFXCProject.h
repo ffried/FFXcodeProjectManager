@@ -17,25 +17,90 @@
 
 #import <FFXcodeProjectManager/FFXCConfigurableObject.h>
 
+/**
+ The isa of a project.
+ @see FFXCProject
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXProject;
 
+/**
+ Represents a project.
+ @author Florian Friedrich
+ */
 @interface FFXCProject : FFXCConfigurableObject
 
-@property (nonatomic, strong) NSDictionary *attributes; // contains keys like "CLASSPREFIX", "ORGANIZATIONNAME", "TargetAttributes" (which is a dictionary as well), etc.
+/**
+ The attributes of the project.
+ Contains keys like "CLASSPREFIX", "ORGANIZATIONNAME", "TargetAttributes" (which is a dictionary as well), etc.
+ */
+@property (nonatomic, strong) NSDictionary *attributes;
+/**
+ The compatibility version of the project.
+ */
 @property (nonatomic, strong) NSString *compatibilityVersion;
+/**
+ The development region of the project.
+ */
 @property (nonatomic, strong) NSString *developmentRegion;
+/**
+ Whether or not it has scanned for encodings.
+ */
 @property (nonatomic, assign) BOOL hasScannedForEncodings;
-@property (nonatomic, strong) NSArray *knownRegions; // Strings "en", "Base", etc.
+/**
+ The known regions of the project.
+ Contains strings like "Base", "en", "de" and so on.
+ @see FFXCProject#addKnownRegion:
+ @see FFXCProject#removeKnownRegion:
+ */
+@property (nonatomic, strong) NSArray *knownRegions;
+/**
+ The UID of the main group of the project.
+ */
 @property (nonatomic, strong) NSString *mainGroupUID;
+/**
+ The UID of the reference group of the project.
+ */
 @property (nonatomic, strong) NSString *projectRefGroupUID;
+/**
+ The path to the project directory.
+ */
 @property (nonatomic, strong) NSString *projectDirPath;
+/**
+ The root of the project.
+ */
 @property (nonatomic, strong) NSString *projectRoot;
+/**
+ The UIDs of the targets of the project.
+ @see FFXCProject#addTargetUID:
+ @see FFXCProject#removeTargetUID:
+ */
 @property (nonatomic, strong) NSArray *targetUIDs;
 
+/**
+ Adds a known region to the project.
+ @param knownRegion The known region to add.
+ @see FFXCProject#knownRegions
+ */
 - (void)addKnownRegion:(NSString *)knownRegion;
+/**
+ Removes a known region from the project.
+ @param knownRegion The known region to remove.
+ @see FFXCProject#knownRegions
+ */
 - (void)removeKnownRegion:(NSString *)knownRegion;
 
+/**
+ Adds a target UID to the project.
+ @param knownRegion The UID of the target to add.
+ @see FFXCProject#targetUIDs
+ */
 - (void)addTargetUID:(NSString *)targetUID;
+/**
+ Removes a target UID from the project.
+ @param knownRegion The UID of the target to remove.
+ @see FFXCProject#targetUIDs
+ */
 - (void)removeTargetUID:(NSString *)targetUID;
 
 @end

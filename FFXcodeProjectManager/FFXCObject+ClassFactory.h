@@ -17,8 +17,18 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The ClassFactory category on FFXCObject.
+ Responsible for getting the correct class from object dictionaries.
+ @author Florian Friedrich
+ */
 @interface FFXCObject (ClassFactory)
 
+/**
+ Finds the responsible class for a object dictionary.
+ @param dictionary The dictionary for which to find a class.
+ @returns The class representing the dictionary or nil if no class exists for the dictionary.
+ */
 + (Class)classForDictionary:(NSDictionary *)dictionary;
 
 @end

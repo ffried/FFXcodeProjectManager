@@ -17,15 +17,45 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The isa of a configuration list.
+ @see FFXCConfigurationList
+ @see FFXCObject#isa
+ */
 extern NSString *const kXCConfigurationList;
 
+/**
+ Represents a configuration list.
+ @author Florian Friedrich
+ */
 @interface FFXCConfigurationList : FFXCObject
 
+/**
+ The UIDs of the configurations.
+ @see FFXCConfigurationList#addBuildConfigurationUID:
+ @see FFXCConfigurationList#removeBuildConfigurationUID:
+ */
 @property (nonatomic, strong) NSArray *buildConfigurationUIDs;
+/**
+ Whether or not the default configuration is visible.
+ */
 @property (nonatomic, assign) BOOL defaultConfigurationIsVisible;
+/**
+ The name of the default configuration.
+ */
 @property (nonatomic, strong) NSString *defaultConfigurationName;
 
+/**
+ Adds a UID of a configuration.
+ @param buildConfigurationUID The UID of the configuration to add.
+ @see FFXCConfigurationList#buildConfigurationUIDs
+ */
 - (void)addBuildConfigurationUID:(NSString *)buildConfigurationUID;
+/**
+ Removes a UID of a configuration.
+ @param buildConfigurationUID The UID of the configuration to remove.
+ @see FFXCConfigurationList#buildConfigurationUIDs
+ */
 - (void)removeBuildConfigurationUID:(NSString *)buildConfigurationUID;
 
 @end

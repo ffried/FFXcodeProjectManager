@@ -17,16 +17,51 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The default build action mask.
+ @see FFXCBuildPhase#buildActionMask
+ */
 extern NSUInteger const kDefaultBuildActionMask;
 
-// Abstract class!
+/**
+ Represents a general build phase.
+ This is an abstract class, do not use this class directly. Instead use subclasses of this class.
+ @see FFXCFrameworksBuildPhase
+ @see FFXCHeadersBuildPhase
+ @see FFXCResourcesBuildPhase
+ @see FFXCSourcesBuildPhase
+ @author Florian Friedrich
+ */
 @interface FFXCBuildPhase : FFXCObject
 
+/**
+ The build action mask of the build phase.
+ Mostly the default build action mask kDefaultBuildActionMask.
+ @see kDefaultBuildActionMask
+ */
 @property (nonatomic, strong) NSNumber *buildActionMask;
+/**
+ The UIDs of the files included in the build phase.
+ @see FFXCBuildPhase#addFileUID:
+ @see FFXCBuildPhase#removeFileUID:
+ */
 @property (nonatomic, strong) NSArray *fileUIDs;
+/**
+ Whether or not the build phase only runs for deployment postprocessing, aka release builds.
+ */
 @property (nonatomic, assign) BOOL runOnlyForDeploymentPostprocessing;
 
+/**
+ Adds a file UID to the build phase.
+ @param fileUID The UID of the file to add.
+ @see FFXCBuildPhase#fileUIDs
+ */
 - (void)addFileUID:(NSString *)fileUID;
+/**
+ Removes a file UID from the build phase.
+ @param fileUID The UID of the file to remove.
+ @see FFXCBuildPhase#fileUIDs
+ */
 - (void)removeFileUID:(NSString *)fileUID;
 
 @end

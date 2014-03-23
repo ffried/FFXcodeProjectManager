@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FFXcodeProjectManager iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>FFXcodeProjectManager.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,31 @@
 			<true/>
 		</dict>
 		<key>07E0CAC218DDFD230034F69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07E0CB4A18DF2A710034F69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07E0CBA218DF2A9E0034F69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07E0CBB018DF2A9E0034F69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07E0CBCA18DF2ADE0034F69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07E0CBE718DF2ADE0034F69E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

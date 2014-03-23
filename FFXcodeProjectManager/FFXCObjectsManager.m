@@ -58,7 +58,7 @@
 }
 
 #pragma mark - Get Saved Objects
-- (NSArray *)savedProjectFilesPaths
+- (NSArray *)savedProjectFilePaths
 {
     NSMutableArray *projectFilePaths = [[NSMutableArray alloc] init];
     [self.projectFilesPaths.allKeys enumerateObjectsUsingBlock:^(NSString *path, NSUInteger idx, BOOL *stop) {

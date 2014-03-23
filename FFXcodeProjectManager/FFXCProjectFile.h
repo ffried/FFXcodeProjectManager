@@ -46,6 +46,11 @@
 @property (nonatomic, strong) NSNumber *objectVersion;
 /**
  The objects of the project file.
+ @see FFXCProjectFile#addObject:
+ @see FFXCProjectFile#removeObject:
+ @see FFXCProjectFile#replaceObject:withObject:
+ @see FFXCProjectFile#objectWithUID:
+ @see FFXCProjectFile#objectsOfType:
  */
 @property (nonatomic, strong) NSArray *objects;
 
@@ -55,9 +60,9 @@
 @property (nonatomic, strong) NSString *rootObjectUID;
 
 /**
- The objectsManager.
+ The objects manager responsible for saving objects added to this project file.
  Defaults to the sharedManager instance.
- @see FFXCObjectsManager#sharedManager
+ @see FFXCObjectsManager
  */
 @property (nonatomic, strong) FFXCObjectsManager *objectsManager;
 
@@ -77,17 +82,20 @@
 /**
  Adds an object to the project file's objects.
  @param object The object to add.
+ @see FFXCProjectFile#objects
  */
 - (void)addObject:(FFXCObject *)object;
 /**
  Removes an object from the project file's objects.
  @param object The object to remove.
+ @see FFXCProjectFile#objects
  */
 - (void)removeObject:(FFXCObject *)object;
 /**
  Replaces an object with another object.
  @param oldObject The old object which will be replaced with newObject.
  @param newObject The object with which to replace the oldObject.
+ @see FFXCProjectFile#objects
  */
 - (void)replaceObject:(FFXCObject *)oldObject withObject:(FFXCObject *)newObject;
 
@@ -95,12 +103,14 @@
  Searches for an object with a given UID.
  @param uid The UID of the object to search for.
  @returns A FFXCObject or nil if no object was found.
+ @see FFXCProjectFile#objects
  */
 - (FFXCObject *)objectWithUID:(NSString *)uid;
 /**
  Searches for objects of a given type.
  @param type The type for which to search objects.
  @returns An array of objects found for the type (can be empty if no objects were found).
+ @see FFXCProjectFile#objects
  */
 - (NSArray *)objectsOfType:(NSString *)type;
 

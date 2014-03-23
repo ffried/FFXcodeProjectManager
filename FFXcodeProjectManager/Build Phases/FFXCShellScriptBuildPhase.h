@@ -17,19 +17,64 @@
 
 #import <FFXcodeProjectManager/FFXCNamedBuildPhase.h>
 
+/**
+ The isa of a shell script build phase.
+ @see FFXCShellScriptBuildPhase
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXShellScriptBuildPhase;
 
+/**
+ Represents a shell script build phase.
+ @author Florian Friedrich
+ */
 @interface FFXCShellScriptBuildPhase : FFXCNamedBuildPhase
 
+/**
+ The input paths of the shell script build phase.
+ @see FFXCShellScriptBuildPhase#addInputPath:
+ @see FFXCShellScriptBuildPhase#removeInputPath:
+ */
 @property (nonatomic, strong) NSArray *inputPaths;
+/**
+ The output paths of the shell script build phase.
+ @see FFXCShellScriptBuildPhase#addOutputPath:
+ @see FFXCShellScriptBuildPhase#removeOutputPath:
+ */
 @property (nonatomic, strong) NSArray *outputPaths;
+/**
+ The shell path of the shell script build phase.
+ */
 @property (nonatomic, strong) NSString *shellPath;
+/**
+ The shell script of the shell script build phase.
+ */
 @property (nonatomic, strong) NSString *shellScript;
 
+/**
+ Adds an input path to the shell script build phase.
+ @param inputPath The inputPath to add.
+ @see FFXCShellScriptBuildPhase#inputPaths
+ */
 - (void)addInputPath:(NSString *)inputPath;
+/**
+ Removes an input path from the shell script build phase.
+ @param inputPath The inputPath to remove.
+ @see FFXCShellScriptBuildPhase#inputPaths
+ */
 - (void)removeInputPath:(NSString *)inputPath;
 
+/**
+ Adds an output path to the shell script build phase.
+ @param outputPath The outputPath to add.
+ @see FFXCShellScriptBuildPhase#outputPaths
+ */
 - (void)addOutputPath:(NSString *)outputPath;
+/**
+ Removes an output path from the shell script build phase.
+ @param outputPath The outputPath to remove.
+ @see FFXCShellScriptBuildPhase#inputPaths
+ */
 - (void)removeOutputPath:(NSString *)outputPath;
 
 @end

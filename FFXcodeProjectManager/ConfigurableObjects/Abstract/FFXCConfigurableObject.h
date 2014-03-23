@@ -17,8 +17,18 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ Represents a configurable object.
+ This is an abstract class, do not use this class directly. Instead use subclasses of this class.
+ @see FFXCTarget
+ @see FFXCProject
+ @author Florian Friedrich
+ */
 @interface FFXCConfigurableObject : FFXCObject
 
+/**
+ The UID of the build configuration list.
+ */
 @property (nonatomic, strong) NSString *buildConfigurationListUID;
 
 @end

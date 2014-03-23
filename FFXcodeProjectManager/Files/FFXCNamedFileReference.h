@@ -17,8 +17,15 @@
 
 #import <FFXcodeProjectManager/FFXCKnownFileReference.h>
 
+/**
+ Represents a file reference with a name.
+ @author Florian Friedrich
+ */
 @interface FFXCNamedFileReference : FFXCKnownFileReference
 
+/**
+ The name of the file reference.
+ */
 @property (nonatomic, strong) NSString *name;
 
 @end

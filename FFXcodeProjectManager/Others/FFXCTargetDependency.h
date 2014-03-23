@@ -17,11 +17,26 @@
 
 #import <FFXcodeProjectManager/FFXCObject.h>
 
+/**
+ The isa of a target dependency.
+ @see FFXCTargetDependency
+ @see FFXCObject#isa
+ */
 extern NSString *const kPBXTargetDependency;
 
+/**
+ Represents a target dependency.
+ @author Florian Friedrich
+ */
 @interface FFXCTargetDependency : FFXCObject
 
+/**
+ The UID of the target.
+ */
 @property (nonatomic, strong) NSString *targetUID;
+/**
+ The UID of the target proxy.
+ */
 @property (nonatomic, strong) NSString *targetProxyUID;
 
 @end

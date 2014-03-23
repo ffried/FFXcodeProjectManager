@@ -17,9 +17,19 @@
 
 #import <FFXcodeProjectManager/FFXCFileObject.h>
 
+/**
+ Represents an explicit file reference.
+ @author Florian Friedrich
+ */
 @interface FFXCExplicitFileReference : FFXCFileObject
 
+/**
+ The explicit file type.
+ */
 @property (nonatomic, strong) NSString *explicitFileType;
+/**
+ Whether or not the file reference should be included in the index.
+ */
 @property (nonatomic, assign) BOOL includeInIndex;
 
 @end
