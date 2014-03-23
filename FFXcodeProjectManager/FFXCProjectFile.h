@@ -16,32 +16,92 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FFXCObject.h"
+#import <FFXcodeProjectManager/FFXCObject.h>
 
 @class FFXCObjectsManager;
 
+/**
+ Represents a project file (pbxproj).
+ Conforms to NSSecureCoding.
+ @author Florian Friedrich
+ */
 @interface FFXCProjectFile : NSObject <NSSecureCoding>
 
+/**
+ The URL of the project file.
+ */
 @property (nonatomic, strong) NSURL *projectFileURL;
 
+/**
+ The archiveVersion of the project file.
+ */
 @property (nonatomic, strong) NSNumber *archiveVersion;
+/**
+ The classes of the project file.
+ */
 @property (nonatomic, strong) NSArray *classes;
+/**
+ The objectVersion of the project file.
+ */
 @property (nonatomic, strong) NSNumber *objectVersion;
+/**
+ The objects of the project file.
+ */
 @property (nonatomic, strong) NSArray *objects;
 
+/**
+ The rootObjectUID of the project file.
+ */
 @property (nonatomic, strong) NSString *rootObjectUID;
 
+/**
+ The objectsManager.
+ Defaults to the sharedManager instance.
+ @see FFXCObjectsManager#sharedManager
+ */
 @property (nonatomic, strong) FFXCObjectsManager *objectsManager;
 
+/**
+ Creates a new project file from a given URL.
+ @param projectFileURL The URL of the project file (the .pbxproj file).
+ @returns A new FFXCProject file instance.
+ */
 - (instancetype)initWithProjectFileURL:(NSURL *)projectFileURL;
 
+/**
+ Creates a dictionary with all objects and attributes.
+ @returns The project file in its dictionary representation.
+ */
 - (NSDictionary *)dictionaryRepresentation;
 
+/**
+ Adds an object to the project file's objects.
+ @param object The object to add.
+ */
 - (void)addObject:(FFXCObject *)object;
+/**
+ Removes an object from the project file's objects.
+ @param object The object to remove.
+ */
 - (void)removeObject:(FFXCObject *)object;
+/**
+ Replaces an object with another object.
+ @param oldObject The old object which will be replaced with newObject.
+ @param newObject The object with which to replace the oldObject.
+ */
 - (void)replaceObject:(FFXCObject *)oldObject withObject:(FFXCObject *)newObject;
 
+/**
+ Searches for an object with a given UID.
+ @param uid The UID of the object to search for.
+ @returns A FFXCObject or nil if no object was found.
+ */
 - (FFXCObject *)objectWithUID:(NSString *)uid;
+/**
+ Searches for objects of a given type.
+ @param type The type for which to search objects.
+ @returns An array of objects found for the type (can be empty if no objects were found).
+ */
 - (NSArray *)objectsOfType:(NSString *)type;
 
 @end

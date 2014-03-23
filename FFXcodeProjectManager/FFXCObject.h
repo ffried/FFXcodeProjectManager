@@ -16,7 +16,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FFXCProjectUIDGenerator.h"
+#import <FFXcodeProjectManager/FFXCProjectUIDGenerator.h>
 
 extern NSString *FFXCObjectDeletedNotification;
 extern NSString *FFXCObjectReplacedNotification;

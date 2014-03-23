@@ -14,6 +14,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    self.mainViewController = [[FFMainViewController alloc] init];
+    self.window.contentView = self.mainViewController.view;
 }
 
 @end

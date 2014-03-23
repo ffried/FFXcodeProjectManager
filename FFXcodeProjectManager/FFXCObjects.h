@@ -15,9 +15,9 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "FFXCBuildPhases.h"
-#import "FFXCConfigurableObjects.h"
-#import "FFXCConfigurations.h"
-#import "FFXCFiles.h"
-#import "FFXCGroups.h"
-#import "FFXCOthers.h"
+#import <FFXcodeProjectManager/FFXCBuildPhases.h>
+#import <FFXcodeProjectManager/FFXCConfigurableObjects.h>
+#import <FFXcodeProjectManager/FFXCConfigurations.h>
+#import <FFXcodeProjectManager/FFXCFiles.h>
+#import <FFXcodeProjectManager/FFXCGroups.h>
+#import <FFXcodeProjectManager/FFXCOthers.h>

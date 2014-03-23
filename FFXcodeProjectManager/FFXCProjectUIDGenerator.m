@@ -7,16 +7,19 @@
 
 #import "FFXCProjectUIDGenerator.h"
 
+// Hex Characters
 static NSString *const kHexCharacters = @"0123456789ABCDEF";
 
 
 @implementation FFXCProjectUIDGenerator
 
+// Generate default length UID
 + (NSString *)randomXcodeProjectUID
 {
     return [[self class] randomXcodeProjectUIDWithLength:kFFXCProjectUIDDefaultLength];
 }
 
+// Generate UID with given length
 + (NSString *)randomXcodeProjectUIDWithLength:(NSUInteger)length
 {
     NSMutableString *uid = [[NSMutableString alloc] init];
@@ -25,7 +28,7 @@ static NSString *const kHexCharacters = @"0123456789ABCDEF";
         [uid appendFormat:@"%C", [kHexCharacters characterAtIndex:(arc4random() % kHexCharacters.length)]];
     }
     
-    return uid.copy;
+    return [uid copy];
 }
 
 @end

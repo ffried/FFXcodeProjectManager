@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>FFXcodeProjectManager.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>07E0CAB218DDFD230034F69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07E0CAC218DDFD230034F69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>07F1BD601881DA0500D96872</key>
 		<dict>
 			<key>primary</key>

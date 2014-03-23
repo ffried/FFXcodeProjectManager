@@ -17,11 +17,25 @@
 
 #import <Foundation/Foundation.h>
 
-static NSUInteger const kFFXCProjectUIDDefaultLength = 24; // Default length (Xcode 5.0.2)
+static NSUInteger const kFFXCProjectUIDDefaultLength = 24; /**< Default length (Xcode 5.0.2) */
 
+/**
+ Class for generating Xcode Object UIDs.
+ It is not needed to create an instance, all methods are class methods.
+ @author Florian Friedrich
+ */
 @interface FFXCProjectUIDGenerator : NSObject
 
-+ (NSString *)randomXcodeProjectUID; // Generates Xcode UID with default length
-+ (NSString *)randomXcodeProjectUIDWithLength:(NSUInteger)length; // Generates Xcode UID with given length
+/**
+ Generates Xcode UID with the default length.
+ @returns A new Xcode Object UID with the default length.
+ */
++ (NSString *)randomXcodeProjectUID;
+/**
+ Generates a Xcode UID with a given length.
+ @param length The length of the new UID.
+ @returns A new Xcode Object UID with the given length.
+ */
++ (NSString *)randomXcodeProjectUIDWithLength:(NSUInteger)length;
 
 @end

@@ -7,12 +7,8 @@
 //
 
 #import "FFMainViewController.h"
-#import "FFXCObjects.h"
-#import "FFXCProjectFile.h"
+#import <FFXcodeProjectManager/FFXcodeProjectManager.h>
 
-@interface FFMainViewController ()
-
-@end
 
 @implementation FFMainViewController
 
@@ -21,11 +17,15 @@
     NSOpenPanel *openPanel = [NSOpenPanel openPanel];
     openPanel.allowsMultipleSelection = NO;
     openPanel.allowedFileTypes = @[@"xcodeproj", @"pbxproj"];
+    openPanel.message = @"Please select the project file which you want to evaluate.";
     
     NSInteger result = [openPanel runModal];
     if (result == NSFileHandlingPanelOKButton) {
         NSURL *selectedURL = openPanel.URLs.firstObject;
-        self.selectedPathLabel.stringValue = selectedURL.absoluteString;
+        if ([[selectedURL.lastPathComponent componentsSeparatedByString:@"."].lastObject isEqualToString:@"xcodeproj"]) {
+            selectedURL = [selectedURL URLByAppendingPathComponent:@"project.pbxproj"];
+        }
+        self.selectedPathLabel.stringValue = selectedURL.path;
         FFXCProjectFile *projectFile = [[FFXCProjectFile alloc] initWithProjectFileURL:selectedURL];
         [self evaluateProjectFile:projectFile];
     }
@@ -33,20 +33,22 @@
 
 - (void)evaluateProjectFile:(FFXCProjectFile *)projectFile
 {
-    NSMutableString *desc = [NSMutableString string];
-    NSMutableDictionary *typesDict = [NSMutableDictionary dictionary];
     NSArray *objects = projectFile.objects;
-    [desc appendFormat:@"### PROJECT FILE AT %@ ###\n", projectFile.projectFileURL.absoluteString];
-    [desc appendFormat:@"%ld objects\n", (long)objects.count];
+    NSMutableDictionary *typesDict = [NSMutableDictionary dictionary];
+    NSString *header = [NSString stringWithFormat:@"### PROJECT FILE FOR %@ PROJECT ###",
+                        projectFile.projectFileURL.path];
+    NSMutableString *summary = [NSMutableString stringWithFormat:@"%ld objects\n", (long)objects.count];
+    NSMutableString *detail = [NSMutableString string];
     [objects enumerateObjectsUsingBlock:^(FFXCObject *obj, NSUInteger idx, BOOL *stop) {
         NSNumber *nr = typesDict[obj.isa];
         if (!nr) nr = @0;
         typesDict[obj.isa] = @(nr.integerValue + 1);
-        [desc appendFormat:@"%@: %@\n", obj.uid, obj.isa];
+        [detail appendFormat:@"%@: %@\n", obj.uid, obj.isa];
     }];
     [typesDict enumerateKeysAndObjectsUsingBlock:^(NSString *objIsa, NSNumber *count, BOOL *stop) {
-        [desc appendFormat:@"%@: %@\n", objIsa, count.stringValue];
+        [summary appendFormat:@"%@: %@\n", objIsa, count.stringValue];
     }];
+    self.outputTextField.stringValue = [NSString stringWithFormat:@"%@\n\n%@\n\n%@", header, summary, detail];
 }
 
 @end

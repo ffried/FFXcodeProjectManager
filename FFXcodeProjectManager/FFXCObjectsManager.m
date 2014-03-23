@@ -6,7 +6,7 @@
 //
 
 #import "FFXCObjectsManager.h"
-#import "FFXCObject.h"
+#import <FFXcodeProjectManager/FFXCObject.h>
 
 @interface FFXCObjectsManager ()
 

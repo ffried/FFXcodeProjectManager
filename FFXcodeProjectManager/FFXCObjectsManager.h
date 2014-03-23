@@ -19,19 +19,65 @@
 
 @class FFXCObject;
 
+/**
+ Manages objects which are added or removed to/from a project file.
+ This class should be used to directly add 
+ */
 @interface FFXCObjectsManager : NSObject
 
+/**
+ Sets the objects manager enabled/disabled.
+ The objects manager only saves objects if enabled is set to YES.
+ */
 @property (nonatomic, assign) BOOL enabled;
 
+/**
+ The shared manager.
+ @returns The shared manager instance.
+ */
 + (instancetype)sharedManager;
 
+/**
+ Saves an object.
+ @param object The object to save.
+ @param projectFilePath The url of the project file for which to save the object.
+ */
 - (void)saveObject:(FFXCObject *)object forProjectFilePath:(NSURL *)projectFilePath;
+/**
+ Deletes a saves object.
+ @param object The object to delete.
+ @param projectFilePath The url of the project file for which to delete the object.
+ */
 - (void)deleteObject:(FFXCObject *)object ofProjectFilePath:(NSURL *)projectFilePath;
 
+/**
+ Returns all saved project file urls.
+ @returns An array of all saved project file paths. This array can be empty.
+ */
 - (NSArray *)savedProjectFilesPaths;
+/**
+ Returns all saved objects for a project file url.
+ @param projectFilePath The url of the project file for which to return the saved objects.
+ @returns An array of all saved objects for the project file at the given url.
+ */
 - (NSArray *)savedObjectsForProjectFilePath:(NSURL *)projectFilePath;
 
+/**
+ Writes the saved objects to the file at the given url.
+ @param path The path to which to save the saved objects.
+ @param error Will be set to any error which might occur while saving.
+ @returns YES or NO wheter or not the write operation was successful.
+ @see FFXCObjectsManager#loadFromPath:error:
+ */
 - (BOOL)writeToPath:(NSURL *)path error:(NSError *__autoreleasing *)error;
+
+/**
+ Loads the saved objects from the file at the given url.
+ @param path The path from which to load the saved objects.
+ @param error Will be set to any error which might occur while loading.
+ @returns YES or NO wheter or not the load operation was successful.
+ @see FFXCObjectsManager#writeToPath:error:
+ */
 - (BOOL)loadFromPath:(NSURL *)path error:(NSError *__autoreleasing *)error;
 
 @end

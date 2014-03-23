@@ -90,6 +90,9 @@ static NSString *const kLastKnownFileTypeKey = @"lastKnownFileType";
         if (!name.length && path.length) {
             returnClass = [FFXCPathGroup class];
         }
+        if (!name.length && !path.length) {
+            returnClass = [FFXCGroup class];
+        }
     }
     if ([isa isEqualToString:kPBXVariantGroup]) {
         returnClass = [FFXCVariantGroup class];

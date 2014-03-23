@@ -6,8 +6,8 @@
 //
 
 #import "FFXCProjectFile.h"
-#import "FFXCObject+ClassFactory.h"
-#import "FFXCObjectsManager.h"
+#import <FFXcodeProjectManager/FFXCObject+ClassFactory.h>
+#import <FFXcodeProjectManager/FFXCObjectsManager.h>
 
 static NSString *const kArchiveVersionKey = @"archiveVersion";
 static NSString *const kClassesKey = @"classes";
@@ -47,6 +47,7 @@ static NSString *const kUnknownObjectsKey = @"unknownObjects";
                     if (objClass) {
                         [objects addObject:[[objClass alloc] initWithUID:uid ofDictionary:objDict]];
                     } else {
+                        NSLog(@"Found unknown object: %@", objDict);
                         unknownObjects[uid] = objDict;
                     }
                 }];

@@ -15,6 +15,7 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "FFXCNamedGroup.h"
-#import "FFXCPathGroup.h"
-#import "FFXCVariantGroup.h"
+#import <FFXcodeProjectManager/FFXCGroup.h>
+#import <FFXcodeProjectManager/FFXCNamedGroup.h>
+#import <FFXcodeProjectManager/FFXCPathGroup.h>
+#import <FFXcodeProjectManager/FFXCVariantGroup.h>
