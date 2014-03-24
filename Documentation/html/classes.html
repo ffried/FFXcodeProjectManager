@@ -8,13 +8,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -73,20 +66,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('classes.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -109,25 +88,22 @@ $(document).ready(function(){initNavTree('classes.html','');});
 <div class="qindex"><a class="qindex" href="#letter_F">F</a></div>
 <table style="margin: 10px; white-space: nowrap;" align="center" width="95%" border="0" cellspacing="0" cellpadding="0">
 <tr><td rowspan="2" valign="bottom"><a name="letter_F"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;F&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="interface_f_f_x_c_configuration_list.html">FFXCConfigurationList</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_headers_build_phase.html">FFXCHeadersBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_objects_manager.html">FFXCObjectsManager</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_sources_build_phase.html">FFXCSourcesBuildPhase</a>&#160;&#160;&#160;</td></tr>
-<tr><td valign="top"><a class="el" href="interface_f_f_x_c_container_item_proxy.html">FFXCContainerItemProxy</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_known_file_reference.html">FFXCKnownFileReference</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_path_group.html">FFXCPathGroup</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_target.html">FFXCTarget</a>&#160;&#160;&#160;</td></tr>
-<tr><td valign="top"><a class="el" href="interface_f_f_x_c_aggregate_target.html">FFXCAggregateTarget</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_copy_files_build_phase.html">FFXCCopyFilesBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_named_build_phase.html">FFXCNamedBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_project.html">FFXCProject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_target_dependency.html">FFXCTargetDependency</a>&#160;&#160;&#160;</td></tr>
-<tr><td valign="top"><a class="el" href="interface_f_f_x_c_build_configuration.html">FFXCBuildConfiguration</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_explicit_file_reference.html">FFXCExplicitFileReference</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_named_file_reference.html">FFXCNamedFileReference</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_project_file.html">FFXCProjectFile</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_variant_group.html">FFXCVariantGroup</a>&#160;&#160;&#160;</td></tr>
-<tr><td valign="top"><a class="el" href="interface_f_f_x_c_build_file.html">FFXCBuildFile</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_file_object.html">FFXCFileObject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_named_group.html">FFXCNamedGroup</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_project_u_i_d_generator.html">FFXCProjectUIDGenerator</a>&#160;&#160;&#160;</td><td></td></tr>
-<tr><td valign="top"><a class="el" href="interface_f_f_x_c_build_phase.html">FFXCBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_frameworks_build_phase.html">FFXCFrameworksBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_native_target.html">FFXCNativeTarget</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_resources_build_phase.html">FFXCResourcesBuildPhase</a>&#160;&#160;&#160;</td><td></td></tr>
-<tr><td valign="top"><a class="el" href="interface_f_f_x_c_configurable_object.html">FFXCConfigurableObject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_group.html">FFXCGroup</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_object.html">FFXCObject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_shell_script_build_phase.html">FFXCShellScriptBuildPhase</a>&#160;&#160;&#160;</td><td></td></tr>
+</td><td valign="top"><a class="el" href="interface_f_f_x_c_configuration_list.html">FFXCConfigurationList</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_headers_build_phase.html">FFXCHeadersBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_project.html">FFXCProject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_target.html">FFXCTarget</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="interface_f_f_x_c_container_item_proxy.html">FFXCContainerItemProxy</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_known_file_reference.html">FFXCKnownFileReference</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_project_file.html">FFXCProjectFile</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_target_dependency.html">FFXCTargetDependency</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="interface_f_f_x_c_aggregate_target.html">FFXCAggregateTarget</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_copy_files_build_phase.html">FFXCCopyFilesBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_named_build_phase.html">FFXCNamedBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_project_u_i_d_generator.html">FFXCProjectUIDGenerator</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_variant_group.html">FFXCVariantGroup</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="interface_f_f_x_c_build_configuration.html">FFXCBuildConfiguration</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_explicit_file_reference.html">FFXCExplicitFileReference</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_named_file_reference.html">FFXCNamedFileReference</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_reference_proxy.html">FFXCReferenceProxy</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_version_group.html">FFXCVersionGroup</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="interface_f_f_x_c_build_file.html">FFXCBuildFile</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_file_object.html">FFXCFileObject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_native_target.html">FFXCNativeTarget</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_resources_build_phase.html">FFXCResourcesBuildPhase</a>&#160;&#160;&#160;</td><td></td></tr>
+<tr><td valign="top"><a class="el" href="interface_f_f_x_c_build_phase.html">FFXCBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_frameworks_build_phase.html">FFXCFrameworksBuildPhase</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_object.html">FFXCObject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_shell_script_build_phase.html">FFXCShellScriptBuildPhase</a>&#160;&#160;&#160;</td><td></td></tr>
+<tr><td valign="top"><a class="el" href="interface_f_f_x_c_configurable_object.html">FFXCConfigurableObject</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_group.html">FFXCGroup</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_objects_manager.html">FFXCObjectsManager</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="interface_f_f_x_c_sources_build_phase.html">FFXCSourcesBuildPhase</a>&#160;&#160;&#160;</td><td></td></tr>
 <tr><td></td><td></td><td></td><td></td><td></td></tr>
 </table>
 <div class="qindex"><a class="qindex" href="#letter_F">F</a></div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated on Sun Mar 23 2014 19:07:14 for FFXcodeProjectFileManager by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Mon Mar 24 2014 09:10:25 for FFXcodeProjectFileManager by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
 </body>
 </html>

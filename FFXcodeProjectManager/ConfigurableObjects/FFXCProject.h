@@ -92,13 +92,13 @@ extern NSString *const kPBXProject;
 
 /**
  Adds a target UID to the project.
- @param knownRegion The UID of the target to add.
+ @param targetUID The UID of the target to add.
  @see FFXCProject#targetUIDs
  */
 - (void)addTargetUID:(NSString *)targetUID;
 /**
  Removes a target UID from the project.
- @param knownRegion The UID of the target to remove.
+ @param targetUID The UID of the target to remove.
  @see FFXCProject#targetUIDs
  */
 - (void)removeTargetUID:(NSString *)targetUID;

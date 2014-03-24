@@ -8,13 +8,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -98,24 +91,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
-      <li class="current"><a href="#index_u"><span>u</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
+      <li class="current"><a href="#index_v"><span>v</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('functions_prop.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -178,6 +158,9 @@ $(document).ready(function(){initNavTree('functions_prop.html','');});
 <li>containerPortalUID
 : <a class="el" href="interface_f_f_x_c_container_item_proxy.html#aa02cd3ee2eb93880a3830d685baa965d">FFXCContainerItemProxy</a>
 </li>
+<li>currentVersionUID
+: <a class="el" href="interface_f_f_x_c_version_group.html#a5724b75093eefd88b31f4fa0ed7d7e29">FFXCVersionGroup</a>
+</li>
 </ul>
 
 
@@ -216,6 +199,9 @@ $(document).ready(function(){initNavTree('functions_prop.html','');});
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
 <li>fileRefUID
 : <a class="el" href="interface_f_f_x_c_build_file.html#a9e407cb844954efe939f63af7df968ac">FFXCBuildFile</a>
+</li>
+<li>fileType
+: <a class="el" href="interface_f_f_x_c_reference_proxy.html#a64de1a3371316e5f8059ee89d6fa348e">FFXCReferenceProxy</a>
 </li>
 <li>fileUIDs
 : <a class="el" href="interface_f_f_x_c_build_phase.html#a82969b0ed97364d87834f332419cd2b9">FFXCBuildPhase</a>
@@ -267,9 +253,9 @@ $(document).ready(function(){initNavTree('functions_prop.html','');});
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
 <li>name
 : <a class="el" href="interface_f_f_x_c_build_configuration.html#a4b93d352d2fca75b34e1b5a50e03f587">FFXCBuildConfiguration</a>
+, <a class="el" href="interface_f_f_x_c_group.html#a4b93d352d2fca75b34e1b5a50e03f587">FFXCGroup</a>
 , <a class="el" href="interface_f_f_x_c_named_build_phase.html#a4b93d352d2fca75b34e1b5a50e03f587">FFXCNamedBuildPhase</a>
 , <a class="el" href="interface_f_f_x_c_named_file_reference.html#a4b93d352d2fca75b34e1b5a50e03f587">FFXCNamedFileReference</a>
-, <a class="el" href="interface_f_f_x_c_named_group.html#a4b93d352d2fca75b34e1b5a50e03f587">FFXCNamedGroup</a>
 , <a class="el" href="interface_f_f_x_c_target.html#a4b93d352d2fca75b34e1b5a50e03f587">FFXCTarget</a>
 </li>
 </ul>
@@ -294,7 +280,7 @@ $(document).ready(function(){initNavTree('functions_prop.html','');});
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
 <li>path
 : <a class="el" href="interface_f_f_x_c_file_object.html#a5552179bb57b10de7dfd8b47e47a76d1">FFXCFileObject</a>
-, <a class="el" href="interface_f_f_x_c_path_group.html#a5552179bb57b10de7dfd8b47e47a76d1">FFXCPathGroup</a>
+, <a class="el" href="interface_f_f_x_c_group.html#a5552179bb57b10de7dfd8b47e47a76d1">FFXCGroup</a>
 </li>
 <li>productName
 : <a class="el" href="interface_f_f_x_c_target.html#ae9a82bea4f5083505b36fa31e67e8498">FFXCTarget</a>
@@ -329,6 +315,9 @@ $(document).ready(function(){initNavTree('functions_prop.html','');});
 </li>
 <li>remoteInfo
 : <a class="el" href="interface_f_f_x_c_container_item_proxy.html#a5f8444241e9c286600c6ca079658a38f">FFXCContainerItemProxy</a>
+</li>
+<li>remoteRefUID
+: <a class="el" href="interface_f_f_x_c_reference_proxy.html#a078999571ae38d53cd484de3f46df56e">FFXCReferenceProxy</a>
 </li>
 <li>rootObjectUID
 : <a class="el" href="interface_f_f_x_c_project_file.html#a39be39e55e3a695fcc9882ec72e53990">FFXCProjectFile</a>
@@ -371,15 +360,19 @@ $(document).ready(function(){initNavTree('functions_prop.html','');});
 : <a class="el" href="interface_f_f_x_c_object.html#a7c21028f6fd9d0c869415010be114a11">FFXCObject</a>
 </li>
 </ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>versionGroupType
+: <a class="el" href="interface_f_f_x_c_version_group.html#ac86bd26ccd77956ac0221971063bb1ae">FFXCVersionGroup</a>
+</li>
+</ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated on Sun Mar 23 2014 19:07:14 for FFXcodeProjectFileManager by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Mon Mar 24 2014 09:10:25 for FFXcodeProjectFileManager by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
 </body>
 </html>

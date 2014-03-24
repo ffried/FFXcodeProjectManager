@@ -4,6 +4,7 @@ var searchData=
   ['randomxcodeprojectuidwithlength_3a',['randomXcodeProjectUIDWithLength:',['../interface_f_f_x_c_project_u_i_d_generator.html#ae55c0a8d2cd327967366e9b040cd1e64',1,'FFXCProjectUIDGenerator']]],
   ['remoteglobalidstring',['remoteGlobalIDString',['../interface_f_f_x_c_container_item_proxy.html#ace2433d0dc8b4150e333218450b89ab4',1,'FFXCContainerItemProxy']]],
   ['remoteinfo',['remoteInfo',['../interface_f_f_x_c_container_item_proxy.html#a5f8444241e9c286600c6ca079658a38f',1,'FFXCContainerItemProxy']]],
+  ['remoterefuid',['remoteRefUID',['../interface_f_f_x_c_reference_proxy.html#a078999571ae38d53cd484de3f46df56e',1,'FFXCReferenceProxy']]],
   ['removebuildconfigurationuid_3a',['removeBuildConfigurationUID:',['../interface_f_f_x_c_configuration_list.html#adb9a5da1f8159ad4251b07f035fe1c23',1,'FFXCConfigurationList']]],
   ['removebuildphaseuid_3a',['removeBuildPhaseUID:',['../interface_f_f_x_c_target.html#a6dc9555e9a0af3da49395bbddea0e03e',1,'FFXCTarget']]],
   ['removebuildruleuid_3a',['removeBuildRuleUID:',['../interface_f_f_x_c_native_target.html#a4ff3a4e224ba3bab7b2bfa594ae38a06',1,'FFXCNativeTarget']]],
