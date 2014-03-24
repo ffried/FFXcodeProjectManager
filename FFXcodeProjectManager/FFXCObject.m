@@ -16,9 +16,13 @@ NSString *FFXCInsertedObjectUserInfoKey = @"FFXCInsertedObjectUserInfoKey";
 static NSString *const kUIDKey = @"uid";
 static NSString *const kISAKey = @"isa";
 
+static NSString *const kObjectDictKey = @"objectDict";
+
 @interface FFXCObject ()
 
 @property (nonatomic, strong, readwrite) NSString *uid; // Make it writable internally
+
+@property (nonatomic, strong) NSDictionary *objectDict; // Backup all keys just to make sure we don't lose anything
 
 @end
 
@@ -33,11 +37,19 @@ static NSString *const kISAKey = @"isa";
 {
     self = [super init];
     if (self) {
+        self.objectDict = [dictionary copy];
+        
         self.uid = (uid) ?: [FFXCProjectUIDGenerator randomXcodeProjectUID];
         self.isa = dictionary[kISAKey];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleObjectDeletedNotification:) name:FFXCObjectDeletedNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleObjectReplacedNotification:) name:FFXCObjectReplacedNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleObjectDeletedNotification:)
+                                                     name:FFXCObjectDeletedNotification
+                                                   object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleObjectReplacedNotification:)
+                                                     name:FFXCObjectReplacedNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -85,6 +97,8 @@ static NSString *const kISAKey = @"isa";
     if (self) {
         self.uid = [aDecoder decodeObjectOfClass:[NSString class] forKey:kUIDKey];
         self.isa = [aDecoder decodeObjectOfClass:[NSString class] forKey:kISAKey];
+        
+        self.objectDict = [aDecoder decodeObjectOfClass:[NSDictionary class] forKey:kObjectDictKey];
     }
     return self;
 }
@@ -93,6 +107,8 @@ static NSString *const kISAKey = @"isa";
 {
     [aCoder encodeObject:self.uid forKey:kUIDKey];
     [aCoder encodeObject:self.isa forKey:kISAKey];
+    
+    [aCoder encodeObject:self.objectDict forKey:kObjectDictKey];
 }
 
 #pragma mark - NSCopying
@@ -101,8 +117,9 @@ static NSString *const kISAKey = @"isa";
     __typeof(self) copy = [[[self class] alloc] init];
     
     // UID not copied as it's unique to one object!
-    // It's generated in the init method
+    // It's generated in the init method.
     copy.isa = [self.isa copyWithZone:zone];
+    copy.objectDict = [self.objectDict copyWithZone:zone];
     
     return copy;
 }
@@ -110,7 +127,9 @@ static NSString *const kISAKey = @"isa";
 #pragma mark - Dictionary Representation
 - (NSDictionary *)dictionaryRepresentation
 {
-    return [self dictionaryWithValuesForKeys:@[kISAKey]];
+    NSMutableDictionary *dict = self.objectDict.mutableCopy;
+    [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:@[kISAKey]]];
+    return dict.copy;
 }
 
 @end

@@ -132,6 +132,8 @@
 		07E0CC0618E00D860034F69E /* FFXCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */; };
 		07E0CC0918E012D50034F69E /* FFXCReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0CC0718E012D50034F69E /* FFXCReferenceProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E0CC0A18E012D50034F69E /* FFXCReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */; };
+		07E0CC0B18E01B020034F69E /* FFXCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */; };
+		07E0CC0C18E01B090034F69E /* FFXCReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD6D1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD711881DA0500D96872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD701881DA0500D96872 /* main.m */; };
@@ -1054,6 +1056,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E0CC0C18E01B090034F69E /* FFXCReferenceProxy.m in Sources */,
 				07E0CB3A18DDFEB80034F69E /* FFXCResourcesBuildPhase.m in Sources */,
 				07E0CB0418DDFE420034F69E /* FFXCFileObject.m in Sources */,
 				07E0CB2918DDFEAA0034F69E /* FFXCProject.m in Sources */,
@@ -1061,6 +1064,7 @@
 				07E0CB3718DDFEB80034F69E /* FFXCCopyFilesBuildPhase.m in Sources */,
 				07E0CAE618DDFDF70034F69E /* FFXCObject+PrivateMethods.m in Sources */,
 				07E0CB1618DDFE690034F69E /* FFXCBuildConfiguration.m in Sources */,
+				07E0CC0B18E01B020034F69E /* FFXCVersionGroup.m in Sources */,
 				07E0CAF218DDFE2B0034F69E /* FFXCBuildFile.m in Sources */,
 				07E0CB3818DDFEB80034F69E /* FFXCFrameworksBuildPhase.m in Sources */,
 				07E0CB4218DDFEC00034F69E /* FFXCNamedBuildPhase.m in Sources */,
