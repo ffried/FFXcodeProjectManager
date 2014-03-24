@@ -130,6 +130,8 @@
 		07E0CBC018DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */; };
 		07E0CC0518E00D860034F69E /* FFXCVersionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E0CC0618E00D860034F69E /* FFXCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */; };
+		07E0CC0918E012D50034F69E /* FFXCReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0CC0718E012D50034F69E /* FFXCReferenceProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E0CC0A18E012D50034F69E /* FFXCReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD6D1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD711881DA0500D96872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD701881DA0500D96872 /* main.m */; };
@@ -261,6 +263,8 @@
 		07E0CBCD18DF2ADE0034F69E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCVersionGroup.h; sourceTree = "<group>"; };
 		07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCVersionGroup.m; sourceTree = "<group>"; };
+		07E0CC0718E012D50034F69E /* FFXCReferenceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCReferenceProxy.h; sourceTree = "<group>"; };
+		07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCReferenceProxy.m; sourceTree = "<group>"; };
 		07F1BD611881DA0500D96872 /* FFXcodeProjectManager Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFXcodeProjectManager Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1BD641881DA0500D96872 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		07F1BD671881DA0500D96872 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -702,6 +706,8 @@
 				07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */,
 				07F22F06189059F90057BC37 /* FFXCNamedFileReference.h */,
 				07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */,
+				07E0CC0718E012D50034F69E /* FFXCReferenceProxy.h */,
+				07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */,
 			);
 			name = Files;
 			path = ../../FFXcodeProjectManager/Files;
@@ -772,6 +778,7 @@
 				07E0CB2618DDFEA50034F69E /* FFXCConfigurableObjects.h in Headers */,
 				07E0CB2318DDFE9E0034F69E /* FFXCNativeTarget.h in Headers */,
 				07E0CAEC18DDFE250034F69E /* FFXCBuildFile.h in Headers */,
+				07E0CC0918E012D50034F69E /* FFXCReferenceProxy.h in Headers */,
 				07E0CB0218DDFE3F0034F69E /* FFXCFileObject.h in Headers */,
 				07E0CB1F18DDFE920034F69E /* FFXCTargets.h in Headers */,
 				07E0CAEE18DDFE250034F69E /* FFXCContainerItemProxy.h in Headers */,
@@ -1015,6 +1022,7 @@
 				07E0CB3618DDFEB10034F69E /* FFXCSourcesBuildPhase.m in Sources */,
 				07E0CAE418DDFDE60034F69E /* FFXCObjectsManager.m in Sources */,
 				07E0CAFC18DDFE360034F69E /* FFXCVariantGroup.m in Sources */,
+				07E0CC0A18E012D50034F69E /* FFXCReferenceProxy.m in Sources */,
 				07E0CB0318DDFE420034F69E /* FFXCFileObject.m in Sources */,
 				07E0CB2818DDFEA90034F69E /* FFXCProject.m in Sources */,
 				07E0CB1A18DDFE720034F69E /* FFXCConfigurableObject.m in Sources */,

@@ -1,7 +1,7 @@
 //
-//  FFXCFileObject.h
+//  FFXCReferenceProxy.h
 //
-//  Created by Florian Friedrich on 22.1.14.
+//  Created by Florian Friedrich on 24.03.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -15,32 +15,28 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <FFXcodeProjectManager/FFXCObject.h>
+#import <FFXcodeProjectManager/FFXCFileObject.h>
 
 /**
- The isa of a file object.
- @see FFXCFileObject
+ The isa of a reference proxy.
+ @see FFXCReferenceProxy
  @see FFXCObject#isa
  */
-extern NSString *const kPBXFileReference;
+extern NSString *const kPBXReferenceProxy;
 
 /**
- Represents a file object.
- This is an abstract class, do not use this class directly. Instead use subclasses of this class.
- @see FFXCExplicitFileReference
- @see FFXCKnownFileReference
- @see FFXCReferenceProxy
+ Represents a reference proxy.
  @author Florian Friedrich
  */
-@interface FFXCFileObject : FFXCObject
+@interface FFXCReferenceProxy : FFXCFileObject
 
 /**
- The path of the file. Can also be environment variables.
+ The type of the file.
  */
-@property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) NSString *fileType;
 /**
- The source tree of the file.
+ The UID of the remote reference.
  */
-@property (nonatomic, strong) NSString *sourceTree;
+@property (nonatomic, strong) NSString *remoteRefUID;
 
 @end

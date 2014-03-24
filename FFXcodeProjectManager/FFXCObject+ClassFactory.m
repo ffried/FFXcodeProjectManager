@@ -77,6 +77,9 @@ static NSString *const kLastKnownFileTypeKey = @"lastKnownFileType";
             }
         }
     }
+    if ([isa isEqualToString:kPBXReferenceProxy]) {
+        returnClass = [FFXCReferenceProxy class];
+    }
     
     // Groups
     if ([isa isEqualToString:kPBXGroup]) {

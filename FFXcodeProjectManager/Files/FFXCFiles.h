@@ -18,3 +18,4 @@
 #import <FFXcodeProjectManager/FFXCExplicitFileReference.h>
 #import <FFXcodeProjectManager/FFXCKnownFileReference.h>
 #import <FFXcodeProjectManager/FFXCNamedFileReference.h>
+#import <FFXcodeProjectManager/FFXCReferenceProxy.h>
