@@ -11,7 +11,6 @@
 
 static NSString *const kISAKey = @"isa";
 static NSString *const kNameKey = @"name";
-static NSString *const kPathKey = @"path";
 static NSString *const kExplicitFileTypeKey = @"explicitFileType";
 static NSString *const kLastKnownFileTypeKey = @"lastKnownFileType";
 
@@ -81,18 +80,7 @@ static NSString *const kLastKnownFileTypeKey = @"lastKnownFileType";
     
     // Groups
     if ([isa isEqualToString:kPBXGroup]) {
-        // Needs more checks
-        NSString *name = dictionary[kNameKey];
-        NSString *path = dictionary[kPathKey];
-        if (name.length && !path.length) {
-            returnClass = [FFXCNamedGroup class];
-        }
-        if (!name.length && path.length) {
-            returnClass = [FFXCPathGroup class];
-        }
-        if (!name.length && !path.length) {
-            returnClass = [FFXCGroup class];
-        }
+        returnClass = [FFXCGroup class];
     }
     if ([isa isEqualToString:kPBXVariantGroup]) {
         returnClass = [FFXCVariantGroup class];

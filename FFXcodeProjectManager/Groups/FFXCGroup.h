@@ -42,6 +42,16 @@ extern NSString *const kPBXGroup;
 @property (nonatomic, strong) NSString *sourceTree;
 
 /**
+ The name of the group. Can be nil.
+ */
+@property (nonatomic, strong) NSString *name;
+/**
+ The path of the group. Can be nil.
+ */
+@property (nonatomic, strong) NSString *path;
+
+
+/**
  Adds a UID of a child to the children.
  @param childUID The uid of the child to add.
  @see FFXCGroup#childUIDs

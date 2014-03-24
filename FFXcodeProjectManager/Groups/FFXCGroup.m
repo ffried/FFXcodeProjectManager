@@ -12,6 +12,8 @@ NSString *const kPBXGroup = @"PBXGroup";
 
 static NSString *const kChildUIDsKey = @"children";
 static NSString *const kGroupSourceTreeKey = @"sourceTree";
+static NSString *const kGroupNameKey = @"name";
+static NSString *const kGroupPathKey = @"path";
 
 
 @implementation FFXCGroup
@@ -23,6 +25,9 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
     if (self) {
         self.childUIDs = (dictionary[kChildUIDsKey]) ?: @[];
         self.sourceTree = (dictionary[kGroupSourceTreeKey]) ?: @"";
+        
+        self.name = dictionary[kGroupNameKey];
+        self.path = dictionary[kGroupPathKey];
         
         self.isa = (self.isa) ?: kPBXGroup;
     }
@@ -69,6 +74,9 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
     if (self) {
         self.childUIDs = [aDecoder decodeObjectOfClass:[NSArray class] forKey:kChildUIDsKey];
         self.sourceTree = [aDecoder decodeObjectOfClass:[NSString class] forKey:kGroupSourceTreeKey];
+        
+        self.name = [aDecoder decodeObjectOfClass:[NSString class] forKey:kGroupNameKey];
+        self.path = [aDecoder decodeObjectOfClass:[NSString class] forKey:kGroupPathKey];
     }
     return self;
 }
@@ -78,6 +86,9 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
     [super encodeWithCoder:aCoder];
     [aCoder encodeObject:self.childUIDs forKey:kChildUIDsKey];
     [aCoder encodeObject:self.sourceTree forKey:kGroupSourceTreeKey];
+    
+    [aCoder encodeObject:self.name forKey:kGroupNameKey];
+    [aCoder encodeObject:self.path forKey:kGroupPathKey];
 }
 
 #pragma mark - NSCopying
@@ -88,6 +99,9 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
     copy.childUIDs = [self.childUIDs copyWithZone:zone];
     copy.sourceTree = [self.sourceTree copyWithZone:zone];
     
+    copy.name = self.name ? [self.name copyWithZone:zone] : nil;
+    copy.path = self.path ? [self.path copyWithZone:zone] : nil;
+    
     return copy;
 }
 
@@ -95,10 +109,14 @@ static NSString *const kGroupSourceTreeKey = @"sourceTree";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dict = [super dictionaryRepresentation].mutableCopy;
+    
     NSArray *keys = @[kChildUIDsKey,
                       kGroupSourceTreeKey];
     
     [dict addEntriesFromDictionary:[self dictionaryWithValuesForKeys:keys]];
+    
+    if (self.name) dict[kGroupNameKey] = self.name;
+    if (self.path) dict[kGroupPathKey] = self.path;
     
     return dict.copy;
 }

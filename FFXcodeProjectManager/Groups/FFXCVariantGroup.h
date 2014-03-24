@@ -28,6 +28,6 @@ extern NSString *const kPBXVariantGroup;
  Represents a variant group.
  @author Florian Friedrich
  */
-@interface FFXCVariantGroup : FFXCNamedGroup
+@interface FFXCVariantGroup : FFXCGroup
 
 @end

@@ -16,6 +16,4 @@
 //
 
 #import <FFXcodeProjectManager/FFXCGroup.h>
-#import <FFXcodeProjectManager/FFXCNamedGroup.h>
-#import <FFXcodeProjectManager/FFXCPathGroup.h>
 #import <FFXcodeProjectManager/FFXCVariantGroup.h>
