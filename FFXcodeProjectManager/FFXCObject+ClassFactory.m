@@ -85,6 +85,9 @@ static NSString *const kLastKnownFileTypeKey = @"lastKnownFileType";
     if ([isa isEqualToString:kPBXVariantGroup]) {
         returnClass = [FFXCVariantGroup class];
     }
+    if ([isa isEqualToString:kXCVersionGroup]) {
+        returnClass = [FFXCVersionGroup class];
+    }
     
     // Others
     if ([isa isEqualToString:kPBXBuildFile]) {

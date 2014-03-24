@@ -1,7 +1,7 @@
 //
-//  FFXCGroups.h
+//  FFXCVersionGroup.h
 //
-//  Created by Florian Friedrich on 16.2.14.
+//  Created by Florian Friedrich on 24.03.14.
 //  Copyright (c) 2014 Florian Friedrich. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"),
@@ -16,5 +16,27 @@
 //
 
 #import <FFXcodeProjectManager/FFXCGroup.h>
-#import <FFXcodeProjectManager/FFXCVariantGroup.h>
-#import <FFXcodeProjectManager/FFXCVersionGroup.h>
+
+/**
+ The isa of a version group.
+ @see FFXCVersionGroup
+ @see FFXCObject#isa
+ */
+extern NSString *const kXCVersionGroup;
+
+/**
+ Represents a version group.
+ @author Florian Friedrich
+ */
+@interface FFXCVersionGroup : FFXCGroup
+
+/**
+ The UID of the current version object.
+ */
+@property (nonatomic, strong) NSString *currentVersionUID;
+/**
+ The type of the version group.
+ */
+@property (nonatomic, strong) NSString *versionGroupType;
+
+@end

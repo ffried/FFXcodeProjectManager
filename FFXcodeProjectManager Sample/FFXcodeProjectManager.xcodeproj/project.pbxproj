@@ -128,6 +128,8 @@
 		07E0CBB818DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CBA318DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a */; };
 		07E0CBBE18DF2A9E0034F69E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E0CBBC18DF2A9E0034F69E /* InfoPlist.strings */; };
 		07E0CBC018DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */; };
+		07E0CC0518E00D860034F69E /* FFXCVersionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E0CC0618E00D860034F69E /* FFXCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD6D1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD711881DA0500D96872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD701881DA0500D96872 /* main.m */; };
@@ -257,6 +259,8 @@
 		07E0CBBD18DF2A9E0034F69E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectManager_iOSTests.m; sourceTree = "<group>"; };
 		07E0CBCD18DF2ADE0034F69E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCVersionGroup.h; sourceTree = "<group>"; };
+		07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCVersionGroup.m; sourceTree = "<group>"; };
 		07F1BD611881DA0500D96872 /* FFXcodeProjectManager Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFXcodeProjectManager Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1BD641881DA0500D96872 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		07F1BD671881DA0500D96872 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -453,6 +457,8 @@
 				0733C78918DDDE1F00128571 /* FFXCGroup.m */,
 				076716FA1890352A00F996EF /* FFXCVariantGroup.h */,
 				076716FB1890352A00F996EF /* FFXCVariantGroup.m */,
+				07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */,
+				07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */,
 			);
 			name = Groups;
 			path = ../../FFXcodeProjectManager/Groups;
@@ -736,6 +742,7 @@
 				07E0CB2718DDFEA70034F69E /* FFXCProject.h in Headers */,
 				07E0CB1C18DDFE8A0034F69E /* FFXCTarget.h in Headers */,
 				07E0CB2D18DDFEB10034F69E /* FFXCFrameworksBuildPhase.h in Headers */,
+				07E0CC0518E00D860034F69E /* FFXCVersionGroup.h in Headers */,
 				07E0CADE18DDFDE60034F69E /* FFXCObjects.h in Headers */,
 				07E0CAFE18DDFE390034F69E /* FFXCGroup.h in Headers */,
 				07E0CB1418DDFE650034F69E /* FFXCConfigurationList.h in Headers */,
@@ -1030,6 +1037,7 @@
 				07E0CB0918DDFE5C0034F69E /* FFXCExplicitFileReference.m in Sources */,
 				07E0CB4018DDFEBD0034F69E /* FFXCNamedBuildPhase.m in Sources */,
 				07E0CB2118DDFE9B0034F69E /* FFXCAggregateTarget.m in Sources */,
+				07E0CC0618E00D860034F69E /* FFXCVersionGroup.m in Sources */,
 				07E0CB2C18DDFEB10034F69E /* FFXCCopyFilesBuildPhase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
