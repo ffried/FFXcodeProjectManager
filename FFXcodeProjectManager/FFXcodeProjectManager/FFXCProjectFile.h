@@ -16,9 +16,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FFXcodeProjectManager/FFXCObject.h>
 
-@class FFXCObjectsManager;
+@class FFXCObject, FFXCObjectsManager;
 
 /**
  Represents a project file (pbxproj).

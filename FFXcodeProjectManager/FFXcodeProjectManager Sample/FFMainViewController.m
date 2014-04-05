@@ -22,7 +22,8 @@
     NSInteger result = [openPanel runModal];
     if (result == NSFileHandlingPanelOKButton) {
         NSURL *selectedURL = openPanel.URLs.firstObject;
-        if ([[selectedURL.lastPathComponent componentsSeparatedByString:@"."].lastObject isEqualToString:@"xcodeproj"]) {
+        if ([[selectedURL.lastPathComponent componentsSeparatedByString:@"."].lastObject
+             isEqualToString:@"xcodeproj"]) {
             selectedURL = [selectedURL URLByAppendingPathComponent:@"project.pbxproj"];
         }
         self.selectedPathLabel.stringValue = selectedURL.path;

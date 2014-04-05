@@ -18,104 +18,6 @@
 		07E0CAC818DDFD230034F69E /* FFXcodeProjectManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CAB318DDFD230034F69E /* FFXcodeProjectManager.framework */; };
 		07E0CACE18DDFD230034F69E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E0CACC18DDFD230034F69E /* InfoPlist.strings */; };
 		07E0CAD018DDFD230034F69E /* FFXcodeProjectManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CACF18DDFD230034F69E /* FFXcodeProjectManagerTests.m */; };
-		07E0CAD818DDFDE60034F69E /* FFXCObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716FC1890352A00F996EF /* FFXCObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAD918DDFDE60034F69E /* FFXCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716FD1890352A00F996EF /* FFXCObject.m */; };
-		07E0CADA18DDFDE60034F69E /* FFXCObject+PrivateMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F88DCD18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07E0CADB18DDFDE60034F69E /* FFXCObject+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */; };
-		07E0CADC18DDFDE60034F69E /* FFXCObject+ClassFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F9707118A15AFB00EEC942 /* FFXCObject+ClassFactory.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07E0CADD18DDFDE60034F69E /* FFXCObject+ClassFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */; };
-		07E0CADE18DDFDE60034F69E /* FFXCObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC457318B0D7EF0085ACA1 /* FFXCObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CADF18DDFDE60034F69E /* FFXCProjectFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716FE1890352A00F996EF /* FFXCProjectFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAE018DDFDE60034F69E /* FFXCProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716FF1890352A00F996EF /* FFXCProjectFile.m */; };
-		07E0CAE118DDFDE60034F69E /* FFXCProjectUIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 076717001890352A00F996EF /* FFXCProjectUIDGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAE218DDFDE60034F69E /* FFXCProjectUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 076717011890352A00F996EF /* FFXCProjectUIDGenerator.m */; };
-		07E0CAE318DDFDE60034F69E /* FFXCObjectsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC457518B0D87D0085ACA1 /* FFXCObjectsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAE418DDFDE60034F69E /* FFXCObjectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC457618B0D87D0085ACA1 /* FFXCObjectsManager.m */; };
-		07E0CAE518DDFDF20034F69E /* FFXCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716FD1890352A00F996EF /* FFXCObject.m */; };
-		07E0CAE618DDFDF70034F69E /* FFXCObject+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */; };
-		07E0CAE718DDFDFD0034F69E /* FFXCObject+ClassFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */; };
-		07E0CAE818DDFDFD0034F69E /* FFXCProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716FF1890352A00F996EF /* FFXCProjectFile.m */; };
-		07E0CAE918DDFDFD0034F69E /* FFXCProjectUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 076717011890352A00F996EF /* FFXCProjectUIDGenerator.m */; };
-		07E0CAEA18DDFDFD0034F69E /* FFXCObjectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC457618B0D87D0085ACA1 /* FFXCObjectsManager.m */; };
-		07E0CAEB18DDFE250034F69E /* FFXCOthers.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC457218B0D2970085ACA1 /* FFXCOthers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAEC18DDFE250034F69E /* FFXCBuildFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F22F1D1891980C0057BC37 /* FFXCBuildFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAED18DDFE250034F69E /* FFXCBuildFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F1E1891980C0057BC37 /* FFXCBuildFile.m */; };
-		07E0CAEE18DDFE250034F69E /* FFXCContainerItemProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F22F1F1891980C0057BC37 /* FFXCContainerItemProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAEF18DDFE250034F69E /* FFXCContainerItemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F201891980C0057BC37 /* FFXCContainerItemProxy.m */; };
-		07E0CAF018DDFE250034F69E /* FFXCTargetDependency.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F22F211891980C0057BC37 /* FFXCTargetDependency.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAF118DDFE250034F69E /* FFXCTargetDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F221891980C0057BC37 /* FFXCTargetDependency.m */; };
-		07E0CAF218DDFE2B0034F69E /* FFXCBuildFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F1E1891980C0057BC37 /* FFXCBuildFile.m */; };
-		07E0CAF318DDFE2B0034F69E /* FFXCContainerItemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F201891980C0057BC37 /* FFXCContainerItemProxy.m */; };
-		07E0CAF418DDFE2B0034F69E /* FFXCTargetDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F221891980C0057BC37 /* FFXCTargetDependency.m */; };
-		07E0CAF518DDFE350034F69E /* FFXCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733C78918DDDE1F00128571 /* FFXCGroup.m */; };
-		07E0CAF818DDFE350034F69E /* FFXCVariantGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716FB1890352A00F996EF /* FFXCVariantGroup.m */; };
-		07E0CAF918DDFE360034F69E /* FFXCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733C78918DDDE1F00128571 /* FFXCGroup.m */; };
-		07E0CAFC18DDFE360034F69E /* FFXCVariantGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716FB1890352A00F996EF /* FFXCVariantGroup.m */; };
-		07E0CAFD18DDFE390034F69E /* FFXCGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC457118B0D2420085ACA1 /* FFXCGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CAFE18DDFE390034F69E /* FFXCGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 0733C78818DDDE1F00128571 /* FFXCGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB0118DDFE390034F69E /* FFXCVariantGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716FA1890352A00F996EF /* FFXCVariantGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB0218DDFE3F0034F69E /* FFXCFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F22F00189059F90057BC37 /* FFXCFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB0318DDFE420034F69E /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F01189059F90057BC37 /* FFXCFileObject.m */; };
-		07E0CB0418DDFE420034F69E /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F01189059F90057BC37 /* FFXCFileObject.m */; };
-		07E0CB0718DDFE5C0034F69E /* FFXCFiles.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC457018B0D2100085ACA1 /* FFXCFiles.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB0818DDFE5C0034F69E /* FFXCExplicitFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F22F02189059F90057BC37 /* FFXCExplicitFileReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB0918DDFE5C0034F69E /* FFXCExplicitFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */; };
-		07E0CB0A18DDFE5C0034F69E /* FFXCKnownFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F22F04189059F90057BC37 /* FFXCKnownFileReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB0B18DDFE5C0034F69E /* FFXCKnownFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */; };
-		07E0CB0C18DDFE5C0034F69E /* FFXCNamedFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 07F22F06189059F90057BC37 /* FFXCNamedFileReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB0D18DDFE5C0034F69E /* FFXCNamedFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */; };
-		07E0CB0E18DDFE600034F69E /* FFXCExplicitFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */; };
-		07E0CB0F18DDFE600034F69E /* FFXCKnownFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */; };
-		07E0CB1018DDFE600034F69E /* FFXCNamedFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */; };
-		07E0CB1118DDFE650034F69E /* FFXCConfigurations.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC456F18B0D1C70085ACA1 /* FFXCConfigurations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB1218DDFE650034F69E /* FFXCBuildConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716EE1890352A00F996EF /* FFXCBuildConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB1318DDFE650034F69E /* FFXCBuildConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716EF1890352A00F996EF /* FFXCBuildConfiguration.m */; };
-		07E0CB1418DDFE650034F69E /* FFXCConfigurationList.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716F01890352A00F996EF /* FFXCConfigurationList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB1518DDFE650034F69E /* FFXCConfigurationList.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716F11890352A00F996EF /* FFXCConfigurationList.m */; };
-		07E0CB1618DDFE690034F69E /* FFXCBuildConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716EF1890352A00F996EF /* FFXCBuildConfiguration.m */; };
-		07E0CB1718DDFE690034F69E /* FFXCConfigurationList.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716F11890352A00F996EF /* FFXCConfigurationList.m */; };
-		07E0CB1918DDFE720034F69E /* FFXCConfigurableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716E21890352A00F996EF /* FFXCConfigurableObject.m */; };
-		07E0CB1A18DDFE720034F69E /* FFXCConfigurableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716E21890352A00F996EF /* FFXCConfigurableObject.m */; };
-		07E0CB1B18DDFE750034F69E /* FFXCConfigurableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716E11890352A00F996EF /* FFXCConfigurableObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB1C18DDFE8A0034F69E /* FFXCTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716E71890352A00F996EF /* FFXCTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB1D18DDFE8E0034F69E /* FFXCTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716E81890352A00F996EF /* FFXCTarget.m */; };
-		07E0CB1E18DDFE8E0034F69E /* FFXCTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716E81890352A00F996EF /* FFXCTarget.m */; };
-		07E0CB1F18DDFE920034F69E /* FFXCTargets.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC456E18B0D16D0085ACA1 /* FFXCTargets.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2018DDFE960034F69E /* FFXCAggregateTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716E91890352A00F996EF /* FFXCAggregateTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2118DDFE9B0034F69E /* FFXCAggregateTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716EA1890352A00F996EF /* FFXCAggregateTarget.m */; };
-		07E0CB2218DDFE9B0034F69E /* FFXCAggregateTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716EA1890352A00F996EF /* FFXCAggregateTarget.m */; };
-		07E0CB2318DDFE9E0034F69E /* FFXCNativeTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716EB1890352A00F996EF /* FFXCNativeTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2418DDFEA10034F69E /* FFXCNativeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716EC1890352A00F996EF /* FFXCNativeTarget.m */; };
-		07E0CB2518DDFEA10034F69E /* FFXCNativeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716EC1890352A00F996EF /* FFXCNativeTarget.m */; };
-		07E0CB2618DDFEA50034F69E /* FFXCConfigurableObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC456D18B0D1300085ACA1 /* FFXCConfigurableObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2718DDFEA70034F69E /* FFXCProject.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716E31890352A00F996EF /* FFXCProject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2818DDFEA90034F69E /* FFXCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716E41890352A00F996EF /* FFXCProject.m */; };
-		07E0CB2918DDFEAA0034F69E /* FFXCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716E41890352A00F996EF /* FFXCProject.m */; };
-		07E0CB2A18DDFEB10034F69E /* FFXCBuildPhases.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DC456C18B0CF2F0085ACA1 /* FFXCBuildPhases.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2B18DDFEB10034F69E /* FFXCCopyFilesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716D31890352A00F996EF /* FFXCCopyFilesBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2C18DDFEB10034F69E /* FFXCCopyFilesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D41890352A00F996EF /* FFXCCopyFilesBuildPhase.m */; };
-		07E0CB2D18DDFEB10034F69E /* FFXCFrameworksBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716D51890352A00F996EF /* FFXCFrameworksBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB2E18DDFEB10034F69E /* FFXCFrameworksBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D61890352A00F996EF /* FFXCFrameworksBuildPhase.m */; };
-		07E0CB2F18DDFEB10034F69E /* FFXCHeadersBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716D71890352A00F996EF /* FFXCHeadersBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB3018DDFEB10034F69E /* FFXCHeadersBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D81890352A00F996EF /* FFXCHeadersBuildPhase.m */; };
-		07E0CB3118DDFEB10034F69E /* FFXCResourcesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716D91890352A00F996EF /* FFXCResourcesBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB3218DDFEB10034F69E /* FFXCResourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716DA1890352A00F996EF /* FFXCResourcesBuildPhase.m */; };
-		07E0CB3318DDFEB10034F69E /* FFXCShellScriptBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716DB1890352A00F996EF /* FFXCShellScriptBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB3418DDFEB10034F69E /* FFXCShellScriptBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716DC1890352A00F996EF /* FFXCShellScriptBuildPhase.m */; };
-		07E0CB3518DDFEB10034F69E /* FFXCSourcesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716DD1890352A00F996EF /* FFXCSourcesBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB3618DDFEB10034F69E /* FFXCSourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716DE1890352A00F996EF /* FFXCSourcesBuildPhase.m */; };
-		07E0CB3718DDFEB80034F69E /* FFXCCopyFilesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D41890352A00F996EF /* FFXCCopyFilesBuildPhase.m */; };
-		07E0CB3818DDFEB80034F69E /* FFXCFrameworksBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D61890352A00F996EF /* FFXCFrameworksBuildPhase.m */; };
-		07E0CB3918DDFEB80034F69E /* FFXCHeadersBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D81890352A00F996EF /* FFXCHeadersBuildPhase.m */; };
-		07E0CB3A18DDFEB80034F69E /* FFXCResourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716DA1890352A00F996EF /* FFXCResourcesBuildPhase.m */; };
-		07E0CB3B18DDFEB80034F69E /* FFXCShellScriptBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716DC1890352A00F996EF /* FFXCShellScriptBuildPhase.m */; };
-		07E0CB3C18DDFEB80034F69E /* FFXCSourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716DE1890352A00F996EF /* FFXCSourcesBuildPhase.m */; };
-		07E0CB3D18DDFEBD0034F69E /* FFXCBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716CF1890352A00F996EF /* FFXCBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB3E18DDFEBD0034F69E /* FFXCBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D01890352A00F996EF /* FFXCBuildPhase.m */; };
-		07E0CB3F18DDFEBD0034F69E /* FFXCNamedBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 076716D11890352A00F996EF /* FFXCNamedBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CB4018DDFEBD0034F69E /* FFXCNamedBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D21890352A00F996EF /* FFXCNamedBuildPhase.m */; };
-		07E0CB4118DDFEC00034F69E /* FFXCBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D01890352A00F996EF /* FFXCBuildPhase.m */; };
-		07E0CB4218DDFEC00034F69E /* FFXCNamedBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 076716D21890352A00F996EF /* FFXCNamedBuildPhase.m */; };
 		07E0CB4518DDFEFB0034F69E /* FFXcodeProjectManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CAB318DDFD230034F69E /* FFXcodeProjectManager.framework */; };
 		07E0CB4618DE5EC50034F69E /* FFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0733C78418DCBE4D00128571 /* FFMainViewController.m */; };
 		07E0CB4718DE5EC90034F69E /* FFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD771881DA0500D96872 /* FFAppDelegate.m */; };
@@ -128,12 +30,79 @@
 		07E0CBB818DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E0CBA318DF2A9E0034F69E /* libFFXcodeProjectManager iOS.a */; };
 		07E0CBBE18DF2A9E0034F69E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07E0CBBC18DF2A9E0034F69E /* InfoPlist.strings */; };
 		07E0CBC018DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */; };
-		07E0CC0518E00D860034F69E /* FFXCVersionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CC0618E00D860034F69E /* FFXCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */; };
-		07E0CC0918E012D50034F69E /* FFXCReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E0CC0718E012D50034F69E /* FFXCReferenceProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07E0CC0A18E012D50034F69E /* FFXCReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */; };
-		07E0CC0B18E01B020034F69E /* FFXCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */; };
-		07E0CC0C18E01B090034F69E /* FFXCReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */; };
+		07EAC0A818F0B40A00EB316F /* FFXCBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC05318F0B40A00EB316F /* FFXCBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0A918F0B40A00EB316F /* FFXCBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC05418F0B40A00EB316F /* FFXCBuildPhase.m */; };
+		07EAC0AA18F0B40A00EB316F /* FFXCNamedBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC05518F0B40A00EB316F /* FFXCNamedBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0AB18F0B40A00EB316F /* FFXCNamedBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC05618F0B40A00EB316F /* FFXCNamedBuildPhase.m */; };
+		07EAC0AC18F0B40A00EB316F /* FFXCBuildPhases.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC05718F0B40A00EB316F /* FFXCBuildPhases.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0AD18F0B40A00EB316F /* FFXCCopyFilesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC05818F0B40A00EB316F /* FFXCCopyFilesBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0AE18F0B40A00EB316F /* FFXCCopyFilesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC05918F0B40A00EB316F /* FFXCCopyFilesBuildPhase.m */; };
+		07EAC0AF18F0B40A00EB316F /* FFXCFrameworksBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC05A18F0B40A00EB316F /* FFXCFrameworksBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0B018F0B40A00EB316F /* FFXCFrameworksBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC05B18F0B40A00EB316F /* FFXCFrameworksBuildPhase.m */; };
+		07EAC0B118F0B40A00EB316F /* FFXCHeadersBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC05C18F0B40A00EB316F /* FFXCHeadersBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0B218F0B40A00EB316F /* FFXCHeadersBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC05D18F0B40A00EB316F /* FFXCHeadersBuildPhase.m */; };
+		07EAC0B318F0B40A00EB316F /* FFXCResourcesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC05E18F0B40A00EB316F /* FFXCResourcesBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0B418F0B40A00EB316F /* FFXCResourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC05F18F0B40A00EB316F /* FFXCResourcesBuildPhase.m */; };
+		07EAC0B518F0B40A00EB316F /* FFXCShellScriptBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC06018F0B40A00EB316F /* FFXCShellScriptBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0B618F0B40A00EB316F /* FFXCShellScriptBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC06118F0B40A00EB316F /* FFXCShellScriptBuildPhase.m */; };
+		07EAC0B718F0B40A00EB316F /* FFXCSourcesBuildPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC06218F0B40A00EB316F /* FFXCSourcesBuildPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0B818F0B40A00EB316F /* FFXCSourcesBuildPhase.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC06318F0B40A00EB316F /* FFXCSourcesBuildPhase.m */; };
+		07EAC0B918F0B40A00EB316F /* FFXCConfigurableObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC06618F0B40A00EB316F /* FFXCConfigurableObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0BA18F0B40A00EB316F /* FFXCConfigurableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC06718F0B40A00EB316F /* FFXCConfigurableObject.m */; };
+		07EAC0BB18F0B40A00EB316F /* FFXCConfigurableObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC06818F0B40A00EB316F /* FFXCConfigurableObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0BC18F0B40A00EB316F /* FFXCProject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC06918F0B40A00EB316F /* FFXCProject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0BD18F0B40A00EB316F /* FFXCProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC06A18F0B40A00EB316F /* FFXCProject.m */; };
+		07EAC0BE18F0B40A00EB316F /* FFXCTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC06D18F0B40A00EB316F /* FFXCTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0BF18F0B40A00EB316F /* FFXCTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC06E18F0B40A00EB316F /* FFXCTarget.m */; };
+		07EAC0C018F0B40A00EB316F /* FFXCAggregateTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC06F18F0B40A00EB316F /* FFXCAggregateTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0C118F0B40A00EB316F /* FFXCAggregateTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC07018F0B40A00EB316F /* FFXCAggregateTarget.m */; };
+		07EAC0C218F0B40A00EB316F /* FFXCNativeTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC07118F0B40A00EB316F /* FFXCNativeTarget.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0C318F0B40A00EB316F /* FFXCNativeTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC07218F0B40A00EB316F /* FFXCNativeTarget.m */; };
+		07EAC0C418F0B40A00EB316F /* FFXCTargets.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC07318F0B40A00EB316F /* FFXCTargets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0C518F0B40A00EB316F /* FFXCBuildConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC07518F0B40A00EB316F /* FFXCBuildConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0C618F0B40A00EB316F /* FFXCBuildConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC07618F0B40A00EB316F /* FFXCBuildConfiguration.m */; };
+		07EAC0C718F0B40A00EB316F /* FFXCConfigurationList.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC07718F0B40A00EB316F /* FFXCConfigurationList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0C818F0B40A00EB316F /* FFXCConfigurationList.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC07818F0B40A00EB316F /* FFXCConfigurationList.m */; };
+		07EAC0C918F0B40A00EB316F /* FFXCConfigurations.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC07918F0B40A00EB316F /* FFXCConfigurations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0CB18F0B40A00EB316F /* FFXCFileObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC07F18F0B40A00EB316F /* FFXCFileObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0CC18F0B40A00EB316F /* FFXCFileObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC08018F0B40A00EB316F /* FFXCFileObject.m */; };
+		07EAC0CD18F0B40A00EB316F /* FFXCExplicitFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08118F0B40A00EB316F /* FFXCExplicitFileReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0CE18F0B40A00EB316F /* FFXCExplicitFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC08218F0B40A00EB316F /* FFXCExplicitFileReference.m */; };
+		07EAC0CF18F0B40A00EB316F /* FFXCFiles.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08318F0B40A00EB316F /* FFXCFiles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0D018F0B40A00EB316F /* FFXCKnownFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08418F0B40A00EB316F /* FFXCKnownFileReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0D118F0B40A00EB316F /* FFXCKnownFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC08518F0B40A00EB316F /* FFXCKnownFileReference.m */; };
+		07EAC0D218F0B40A00EB316F /* FFXCNamedFileReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08618F0B40A00EB316F /* FFXCNamedFileReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0D318F0B40A00EB316F /* FFXCNamedFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC08718F0B40A00EB316F /* FFXCNamedFileReference.m */; };
+		07EAC0D418F0B40A00EB316F /* FFXCReferenceProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08818F0B40A00EB316F /* FFXCReferenceProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0D518F0B40A00EB316F /* FFXCReferenceProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC08918F0B40A00EB316F /* FFXCReferenceProxy.m */; };
+		07EAC0D618F0B40A00EB316F /* FFXCGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08B18F0B40A00EB316F /* FFXCGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0D718F0B40A00EB316F /* FFXCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC08C18F0B40A00EB316F /* FFXCGroup.m */; };
+		07EAC0D818F0B40A00EB316F /* FFXCGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08D18F0B40A00EB316F /* FFXCGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0D918F0B40A00EB316F /* FFXCVariantGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC08E18F0B40A00EB316F /* FFXCVariantGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0DA18F0B40A00EB316F /* FFXCVariantGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC08F18F0B40A00EB316F /* FFXCVariantGroup.m */; };
+		07EAC0DB18F0B40A00EB316F /* FFXCVersionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09018F0B40A00EB316F /* FFXCVersionGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0DC18F0B40A00EB316F /* FFXCVersionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC09118F0B40A00EB316F /* FFXCVersionGroup.m */; };
+		07EAC0DD18F0B40A00EB316F /* FFXCBuildFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09318F0B40A00EB316F /* FFXCBuildFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0DE18F0B40A00EB316F /* FFXCBuildFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC09418F0B40A00EB316F /* FFXCBuildFile.m */; };
+		07EAC0DF18F0B40A00EB316F /* FFXCContainerItemProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09518F0B40A00EB316F /* FFXCContainerItemProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0E018F0B40A00EB316F /* FFXCContainerItemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC09618F0B40A00EB316F /* FFXCContainerItemProxy.m */; };
+		07EAC0E118F0B40A00EB316F /* FFXCOthers.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09718F0B40A00EB316F /* FFXCOthers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0E218F0B40A00EB316F /* FFXCTargetDependency.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09818F0B40A00EB316F /* FFXCTargetDependency.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0E318F0B40A00EB316F /* FFXCTargetDependency.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC09918F0B40A00EB316F /* FFXCTargetDependency.m */; };
+		07EAC0E418F0B40A00EB316F /* FFXCObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09A18F0B40A00EB316F /* FFXCObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0E518F0B40A00EB316F /* FFXCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC09B18F0B40A00EB316F /* FFXCObject.m */; };
+		07EAC0E618F0B40A00EB316F /* FFXCObject+ClassFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09C18F0B40A00EB316F /* FFXCObject+ClassFactory.h */; };
+		07EAC0E718F0B40A00EB316F /* FFXCObject+ClassFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC09D18F0B40A00EB316F /* FFXCObject+ClassFactory.m */; };
+		07EAC0E818F0B40A00EB316F /* FFXCObject+PrivateMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC09E18F0B40A00EB316F /* FFXCObject+PrivateMethods.h */; };
+		07EAC0E918F0B40A00EB316F /* FFXCObject+PrivateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC09F18F0B40A00EB316F /* FFXCObject+PrivateMethods.m */; };
+		07EAC0EA18F0B40A00EB316F /* FFXCObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC0A018F0B40A00EB316F /* FFXCObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0EB18F0B40A00EB316F /* FFXCObjectsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC0A118F0B40A00EB316F /* FFXCObjectsManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0EC18F0B40A00EB316F /* FFXCObjectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC0A218F0B40A00EB316F /* FFXCObjectsManager.m */; };
+		07EAC0ED18F0B40A00EB316F /* FFXcodeProjectManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC0A318F0B40A00EB316F /* FFXcodeProjectManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0EE18F0B40A00EB316F /* FFXCProjectFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC0A418F0B40A00EB316F /* FFXCProjectFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0EF18F0B40A00EB316F /* FFXCProjectFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC0A518F0B40A00EB316F /* FFXCProjectFile.m */; };
+		07EAC0F018F0B40A00EB316F /* FFXCProjectUIDGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 07EAC0A618F0B40A00EB316F /* FFXCProjectUIDGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07EAC0F118F0B40A00EB316F /* FFXCProjectUIDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAC0A718F0B40A00EB316F /* FFXCProjectUIDGenerator.m */; };
 		07F1BD651881DA0500D96872 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F1BD641881DA0500D96872 /* Cocoa.framework */; };
 		07F1BD6F1881DA0500D96872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F1BD6D1881DA0500D96872 /* InfoPlist.strings */; };
 		07F1BD711881DA0500D96872 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F1BD701881DA0500D96872 /* main.m */; };
@@ -194,57 +163,7 @@
 		0733C78318DCBE4D00128571 /* FFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMainViewController.h; sourceTree = "<group>"; };
 		0733C78418DCBE4D00128571 /* FFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMainViewController.m; sourceTree = "<group>"; };
 		0733C78518DCBE4D00128571 /* FFMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FFMainViewController.xib; sourceTree = "<group>"; };
-		0733C78818DDDE1F00128571 /* FFXCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCGroup.h; sourceTree = "<group>"; };
-		0733C78918DDDE1F00128571 /* FFXCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCGroup.m; sourceTree = "<group>"; };
-		076716CF1890352A00F996EF /* FFXCBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716D01890352A00F996EF /* FFXCBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716D11890352A00F996EF /* FFXCNamedBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCNamedBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716D21890352A00F996EF /* FFXCNamedBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCNamedBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716D31890352A00F996EF /* FFXCCopyFilesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCCopyFilesBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716D41890352A00F996EF /* FFXCCopyFilesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCCopyFilesBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716D51890352A00F996EF /* FFXCFrameworksBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCFrameworksBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716D61890352A00F996EF /* FFXCFrameworksBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCFrameworksBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716D71890352A00F996EF /* FFXCHeadersBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCHeadersBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716D81890352A00F996EF /* FFXCHeadersBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCHeadersBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716D91890352A00F996EF /* FFXCResourcesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCResourcesBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716DA1890352A00F996EF /* FFXCResourcesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCResourcesBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716DB1890352A00F996EF /* FFXCShellScriptBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCShellScriptBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716DC1890352A00F996EF /* FFXCShellScriptBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCShellScriptBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716DD1890352A00F996EF /* FFXCSourcesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCSourcesBuildPhase.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716DE1890352A00F996EF /* FFXCSourcesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCSourcesBuildPhase.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716E11890352A00F996EF /* FFXCConfigurableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCConfigurableObject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716E21890352A00F996EF /* FFXCConfigurableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCConfigurableObject.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716E31890352A00F996EF /* FFXCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCProject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716E41890352A00F996EF /* FFXCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCProject.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716E71890352A00F996EF /* FFXCTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCTarget.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716E81890352A00F996EF /* FFXCTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCTarget.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716E91890352A00F996EF /* FFXCAggregateTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCAggregateTarget.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716EA1890352A00F996EF /* FFXCAggregateTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCAggregateTarget.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716EB1890352A00F996EF /* FFXCNativeTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCNativeTarget.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716EC1890352A00F996EF /* FFXCNativeTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCNativeTarget.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716EE1890352A00F996EF /* FFXCBuildConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCBuildConfiguration.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716EF1890352A00F996EF /* FFXCBuildConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCBuildConfiguration.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716F01890352A00F996EF /* FFXCConfigurationList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCConfigurationList.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716F11890352A00F996EF /* FFXCConfigurationList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCConfigurationList.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716FA1890352A00F996EF /* FFXCVariantGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCVariantGroup.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716FB1890352A00F996EF /* FFXCVariantGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCVariantGroup.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716FC1890352A00F996EF /* FFXCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FFXCObject.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716FD1890352A00F996EF /* FFXCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXCObject.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076716FE1890352A00F996EF /* FFXCProjectFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = FFXCProjectFile.h; path = ../../FFXcodeProjectManager/FFXCProjectFile.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076716FF1890352A00F996EF /* FFXCProjectFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = FFXCProjectFile.m; path = ../../FFXcodeProjectManager/FFXCProjectFile.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		076717001890352A00F996EF /* FFXCProjectUIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = FFXCProjectUIDGenerator.h; path = ../../FFXcodeProjectManager/FFXCProjectUIDGenerator.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		076717011890352A00F996EF /* FFXCProjectUIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = FFXCProjectUIDGenerator.m; path = ../../FFXcodeProjectManager/FFXCProjectUIDGenerator.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0767173E18904DDA00F996EF /* StyleSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
-		07DC456C18B0CF2F0085ACA1 /* FFXCBuildPhases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCBuildPhases.h; sourceTree = "<group>"; };
-		07DC456D18B0D1300085ACA1 /* FFXCConfigurableObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCConfigurableObjects.h; sourceTree = "<group>"; };
-		07DC456E18B0D16D0085ACA1 /* FFXCTargets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCTargets.h; sourceTree = "<group>"; };
-		07DC456F18B0D1C70085ACA1 /* FFXCConfigurations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFXCConfigurations.h; sourceTree = "<group>"; };
-		07DC457018B0D2100085ACA1 /* FFXCFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFXCFiles.h; sourceTree = "<group>"; };
-		07DC457118B0D2420085ACA1 /* FFXCGroups.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFXCGroups.h; sourceTree = "<group>"; };
-		07DC457218B0D2970085ACA1 /* FFXCOthers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFXCOthers.h; sourceTree = "<group>"; };
-		07DC457318B0D7EF0085ACA1 /* FFXCObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFXCObjects.h; sourceTree = "<group>"; };
-		07DC457518B0D87D0085ACA1 /* FFXCObjectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFXCObjectsManager.h; path = ../../FFXcodeProjectManager/FFXCObjectsManager.h; sourceTree = "<group>"; };
-		07DC457618B0D87D0085ACA1 /* FFXCObjectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFXCObjectsManager.m; path = ../../FFXcodeProjectManager/FFXCObjectsManager.m; sourceTree = "<group>"; };
 		07E0CAB318DDFD230034F69E /* FFXcodeProjectManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FFXcodeProjectManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E0CAB718DDFD230034F69E /* FFXcodeProjectManager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFXcodeProjectManager-Info.plist"; sourceTree = "<group>"; };
 		07E0CAB918DDFD230034F69E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -263,10 +182,79 @@
 		07E0CBBD18DF2A9E0034F69E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07E0CBBF18DF2A9E0034F69E /* FFXcodeProjectManager_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFXcodeProjectManager_iOSTests.m; sourceTree = "<group>"; };
 		07E0CBCD18DF2ADE0034F69E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCVersionGroup.h; sourceTree = "<group>"; };
-		07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCVersionGroup.m; sourceTree = "<group>"; };
-		07E0CC0718E012D50034F69E /* FFXCReferenceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCReferenceProxy.h; sourceTree = "<group>"; };
-		07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCReferenceProxy.m; sourceTree = "<group>"; };
+		07EAC05318F0B40A00EB316F /* FFXCBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCBuildPhase.h; sourceTree = "<group>"; };
+		07EAC05418F0B40A00EB316F /* FFXCBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCBuildPhase.m; sourceTree = "<group>"; };
+		07EAC05518F0B40A00EB316F /* FFXCNamedBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCNamedBuildPhase.h; sourceTree = "<group>"; };
+		07EAC05618F0B40A00EB316F /* FFXCNamedBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCNamedBuildPhase.m; sourceTree = "<group>"; };
+		07EAC05718F0B40A00EB316F /* FFXCBuildPhases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCBuildPhases.h; sourceTree = "<group>"; };
+		07EAC05818F0B40A00EB316F /* FFXCCopyFilesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCCopyFilesBuildPhase.h; sourceTree = "<group>"; };
+		07EAC05918F0B40A00EB316F /* FFXCCopyFilesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCCopyFilesBuildPhase.m; sourceTree = "<group>"; };
+		07EAC05A18F0B40A00EB316F /* FFXCFrameworksBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCFrameworksBuildPhase.h; sourceTree = "<group>"; };
+		07EAC05B18F0B40A00EB316F /* FFXCFrameworksBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCFrameworksBuildPhase.m; sourceTree = "<group>"; };
+		07EAC05C18F0B40A00EB316F /* FFXCHeadersBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCHeadersBuildPhase.h; sourceTree = "<group>"; };
+		07EAC05D18F0B40A00EB316F /* FFXCHeadersBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCHeadersBuildPhase.m; sourceTree = "<group>"; };
+		07EAC05E18F0B40A00EB316F /* FFXCResourcesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCResourcesBuildPhase.h; sourceTree = "<group>"; };
+		07EAC05F18F0B40A00EB316F /* FFXCResourcesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCResourcesBuildPhase.m; sourceTree = "<group>"; };
+		07EAC06018F0B40A00EB316F /* FFXCShellScriptBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCShellScriptBuildPhase.h; sourceTree = "<group>"; };
+		07EAC06118F0B40A00EB316F /* FFXCShellScriptBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCShellScriptBuildPhase.m; sourceTree = "<group>"; };
+		07EAC06218F0B40A00EB316F /* FFXCSourcesBuildPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCSourcesBuildPhase.h; sourceTree = "<group>"; };
+		07EAC06318F0B40A00EB316F /* FFXCSourcesBuildPhase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCSourcesBuildPhase.m; sourceTree = "<group>"; };
+		07EAC06618F0B40A00EB316F /* FFXCConfigurableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCConfigurableObject.h; sourceTree = "<group>"; };
+		07EAC06718F0B40A00EB316F /* FFXCConfigurableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCConfigurableObject.m; sourceTree = "<group>"; };
+		07EAC06818F0B40A00EB316F /* FFXCConfigurableObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCConfigurableObjects.h; sourceTree = "<group>"; };
+		07EAC06918F0B40A00EB316F /* FFXCProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCProject.h; sourceTree = "<group>"; };
+		07EAC06A18F0B40A00EB316F /* FFXCProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCProject.m; sourceTree = "<group>"; };
+		07EAC06D18F0B40A00EB316F /* FFXCTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCTarget.h; sourceTree = "<group>"; };
+		07EAC06E18F0B40A00EB316F /* FFXCTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCTarget.m; sourceTree = "<group>"; };
+		07EAC06F18F0B40A00EB316F /* FFXCAggregateTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCAggregateTarget.h; sourceTree = "<group>"; };
+		07EAC07018F0B40A00EB316F /* FFXCAggregateTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCAggregateTarget.m; sourceTree = "<group>"; };
+		07EAC07118F0B40A00EB316F /* FFXCNativeTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCNativeTarget.h; sourceTree = "<group>"; };
+		07EAC07218F0B40A00EB316F /* FFXCNativeTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCNativeTarget.m; sourceTree = "<group>"; };
+		07EAC07318F0B40A00EB316F /* FFXCTargets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCTargets.h; sourceTree = "<group>"; };
+		07EAC07518F0B40A00EB316F /* FFXCBuildConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCBuildConfiguration.h; sourceTree = "<group>"; };
+		07EAC07618F0B40A00EB316F /* FFXCBuildConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCBuildConfiguration.m; sourceTree = "<group>"; };
+		07EAC07718F0B40A00EB316F /* FFXCConfigurationList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCConfigurationList.h; sourceTree = "<group>"; };
+		07EAC07818F0B40A00EB316F /* FFXCConfigurationList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCConfigurationList.m; sourceTree = "<group>"; };
+		07EAC07918F0B40A00EB316F /* FFXCConfigurations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCConfigurations.h; sourceTree = "<group>"; };
+		07EAC07F18F0B40A00EB316F /* FFXCFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCFileObject.h; sourceTree = "<group>"; };
+		07EAC08018F0B40A00EB316F /* FFXCFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCFileObject.m; sourceTree = "<group>"; };
+		07EAC08118F0B40A00EB316F /* FFXCExplicitFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCExplicitFileReference.h; sourceTree = "<group>"; };
+		07EAC08218F0B40A00EB316F /* FFXCExplicitFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCExplicitFileReference.m; sourceTree = "<group>"; };
+		07EAC08318F0B40A00EB316F /* FFXCFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCFiles.h; sourceTree = "<group>"; };
+		07EAC08418F0B40A00EB316F /* FFXCKnownFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCKnownFileReference.h; sourceTree = "<group>"; };
+		07EAC08518F0B40A00EB316F /* FFXCKnownFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCKnownFileReference.m; sourceTree = "<group>"; };
+		07EAC08618F0B40A00EB316F /* FFXCNamedFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCNamedFileReference.h; sourceTree = "<group>"; };
+		07EAC08718F0B40A00EB316F /* FFXCNamedFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCNamedFileReference.m; sourceTree = "<group>"; };
+		07EAC08818F0B40A00EB316F /* FFXCReferenceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCReferenceProxy.h; sourceTree = "<group>"; };
+		07EAC08918F0B40A00EB316F /* FFXCReferenceProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCReferenceProxy.m; sourceTree = "<group>"; };
+		07EAC08B18F0B40A00EB316F /* FFXCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCGroup.h; sourceTree = "<group>"; };
+		07EAC08C18F0B40A00EB316F /* FFXCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCGroup.m; sourceTree = "<group>"; };
+		07EAC08D18F0B40A00EB316F /* FFXCGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCGroups.h; sourceTree = "<group>"; };
+		07EAC08E18F0B40A00EB316F /* FFXCVariantGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCVariantGroup.h; sourceTree = "<group>"; };
+		07EAC08F18F0B40A00EB316F /* FFXCVariantGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCVariantGroup.m; sourceTree = "<group>"; };
+		07EAC09018F0B40A00EB316F /* FFXCVersionGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCVersionGroup.h; sourceTree = "<group>"; };
+		07EAC09118F0B40A00EB316F /* FFXCVersionGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCVersionGroup.m; sourceTree = "<group>"; };
+		07EAC09318F0B40A00EB316F /* FFXCBuildFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCBuildFile.h; sourceTree = "<group>"; };
+		07EAC09418F0B40A00EB316F /* FFXCBuildFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCBuildFile.m; sourceTree = "<group>"; };
+		07EAC09518F0B40A00EB316F /* FFXCContainerItemProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCContainerItemProxy.h; sourceTree = "<group>"; };
+		07EAC09618F0B40A00EB316F /* FFXCContainerItemProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCContainerItemProxy.m; sourceTree = "<group>"; };
+		07EAC09718F0B40A00EB316F /* FFXCOthers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCOthers.h; sourceTree = "<group>"; };
+		07EAC09818F0B40A00EB316F /* FFXCTargetDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCTargetDependency.h; sourceTree = "<group>"; };
+		07EAC09918F0B40A00EB316F /* FFXCTargetDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCTargetDependency.m; sourceTree = "<group>"; };
+		07EAC09A18F0B40A00EB316F /* FFXCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCObject.h; sourceTree = "<group>"; };
+		07EAC09B18F0B40A00EB316F /* FFXCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCObject.m; sourceTree = "<group>"; };
+		07EAC09C18F0B40A00EB316F /* FFXCObject+ClassFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFXCObject+ClassFactory.h"; sourceTree = "<group>"; };
+		07EAC09D18F0B40A00EB316F /* FFXCObject+ClassFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFXCObject+ClassFactory.m"; sourceTree = "<group>"; };
+		07EAC09E18F0B40A00EB316F /* FFXCObject+PrivateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFXCObject+PrivateMethods.h"; sourceTree = "<group>"; };
+		07EAC09F18F0B40A00EB316F /* FFXCObject+PrivateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFXCObject+PrivateMethods.m"; sourceTree = "<group>"; };
+		07EAC0A018F0B40A00EB316F /* FFXCObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCObjects.h; sourceTree = "<group>"; };
+		07EAC0A118F0B40A00EB316F /* FFXCObjectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCObjectsManager.h; sourceTree = "<group>"; };
+		07EAC0A218F0B40A00EB316F /* FFXCObjectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCObjectsManager.m; sourceTree = "<group>"; };
+		07EAC0A318F0B40A00EB316F /* FFXcodeProjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXcodeProjectManager.h; sourceTree = "<group>"; };
+		07EAC0A418F0B40A00EB316F /* FFXCProjectFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCProjectFile.h; sourceTree = "<group>"; };
+		07EAC0A518F0B40A00EB316F /* FFXCProjectFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCProjectFile.m; sourceTree = "<group>"; };
+		07EAC0A618F0B40A00EB316F /* FFXCProjectUIDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCProjectUIDGenerator.h; sourceTree = "<group>"; };
+		07EAC0A718F0B40A00EB316F /* FFXCProjectUIDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCProjectUIDGenerator.m; sourceTree = "<group>"; };
 		07F1BD611881DA0500D96872 /* FFXcodeProjectManager Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FFXcodeProjectManager Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1BD641881DA0500D96872 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		07F1BD671881DA0500D96872 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -286,24 +274,6 @@
 		07F1BD8A1881DA0500D96872 /* FFXcodeProjectManager SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FFXcodeProjectManager SampleTests-Info.plist"; sourceTree = "<group>"; };
 		07F1BD8C1881DA0500D96872 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07F1BD8E1881DA0500D96872 /* FFXcodeProjectManager_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FFXcodeProjectManager_SampleTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		07F22F00189059F90057BC37 /* FFXCFileObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCFileObject.h; sourceTree = "<group>"; };
-		07F22F01189059F90057BC37 /* FFXCFileObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCFileObject.m; sourceTree = "<group>"; };
-		07F22F02189059F90057BC37 /* FFXCExplicitFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCExplicitFileReference.h; sourceTree = "<group>"; };
-		07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCExplicitFileReference.m; sourceTree = "<group>"; };
-		07F22F04189059F90057BC37 /* FFXCKnownFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCKnownFileReference.h; sourceTree = "<group>"; };
-		07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCKnownFileReference.m; sourceTree = "<group>"; };
-		07F22F06189059F90057BC37 /* FFXCNamedFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCNamedFileReference.h; sourceTree = "<group>"; };
-		07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCNamedFileReference.m; sourceTree = "<group>"; };
-		07F22F1D1891980C0057BC37 /* FFXCBuildFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCBuildFile.h; sourceTree = "<group>"; };
-		07F22F1E1891980C0057BC37 /* FFXCBuildFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCBuildFile.m; sourceTree = "<group>"; };
-		07F22F1F1891980C0057BC37 /* FFXCContainerItemProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCContainerItemProxy.h; sourceTree = "<group>"; };
-		07F22F201891980C0057BC37 /* FFXCContainerItemProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCContainerItemProxy.m; sourceTree = "<group>"; };
-		07F22F211891980C0057BC37 /* FFXCTargetDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFXCTargetDependency.h; sourceTree = "<group>"; };
-		07F22F221891980C0057BC37 /* FFXCTargetDependency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFXCTargetDependency.m; sourceTree = "<group>"; };
-		07F88DCD18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFXCObject+PrivateMethods.h"; sourceTree = "<group>"; };
-		07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFXCObject+PrivateMethods.m"; sourceTree = "<group>"; };
-		07F9707118A15AFB00EEC942 /* FFXCObject+ClassFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFXCObject+ClassFactory.h"; sourceTree = "<group>"; };
-		07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFXCObject+ClassFactory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,142 +335,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		076716CD1890352A00F996EF /* Build Phases */ = {
-			isa = PBXGroup;
-			children = (
-				076716CE1890352A00F996EF /* Abstract */,
-				07DC456C18B0CF2F0085ACA1 /* FFXCBuildPhases.h */,
-				076716D31890352A00F996EF /* FFXCCopyFilesBuildPhase.h */,
-				076716D41890352A00F996EF /* FFXCCopyFilesBuildPhase.m */,
-				076716D51890352A00F996EF /* FFXCFrameworksBuildPhase.h */,
-				076716D61890352A00F996EF /* FFXCFrameworksBuildPhase.m */,
-				076716D71890352A00F996EF /* FFXCHeadersBuildPhase.h */,
-				076716D81890352A00F996EF /* FFXCHeadersBuildPhase.m */,
-				076716D91890352A00F996EF /* FFXCResourcesBuildPhase.h */,
-				076716DA1890352A00F996EF /* FFXCResourcesBuildPhase.m */,
-				076716DB1890352A00F996EF /* FFXCShellScriptBuildPhase.h */,
-				076716DC1890352A00F996EF /* FFXCShellScriptBuildPhase.m */,
-				076716DD1890352A00F996EF /* FFXCSourcesBuildPhase.h */,
-				076716DE1890352A00F996EF /* FFXCSourcesBuildPhase.m */,
-			);
-			name = "Build Phases";
-			path = "../../FFXcodeProjectManager/Build Phases";
-			sourceTree = "<group>";
-		};
-		076716CE1890352A00F996EF /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				076716CF1890352A00F996EF /* FFXCBuildPhase.h */,
-				076716D01890352A00F996EF /* FFXCBuildPhase.m */,
-				076716D11890352A00F996EF /* FFXCNamedBuildPhase.h */,
-				076716D21890352A00F996EF /* FFXCNamedBuildPhase.m */,
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		076716DF1890352A00F996EF /* ConfigurableObjects */ = {
-			isa = PBXGroup;
-			children = (
-				076716E01890352A00F996EF /* Abstract */,
-				076716E51890352A00F996EF /* Targets */,
-				07DC456D18B0D1300085ACA1 /* FFXCConfigurableObjects.h */,
-				076716E31890352A00F996EF /* FFXCProject.h */,
-				076716E41890352A00F996EF /* FFXCProject.m */,
-			);
-			name = ConfigurableObjects;
-			path = ../../FFXcodeProjectManager/ConfigurableObjects;
-			sourceTree = "<group>";
-		};
-		076716E01890352A00F996EF /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				076716E11890352A00F996EF /* FFXCConfigurableObject.h */,
-				076716E21890352A00F996EF /* FFXCConfigurableObject.m */,
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		076716E51890352A00F996EF /* Targets */ = {
-			isa = PBXGroup;
-			children = (
-				076716E61890352A00F996EF /* Abstract */,
-				07DC456E18B0D16D0085ACA1 /* FFXCTargets.h */,
-				076716E91890352A00F996EF /* FFXCAggregateTarget.h */,
-				076716EA1890352A00F996EF /* FFXCAggregateTarget.m */,
-				076716EB1890352A00F996EF /* FFXCNativeTarget.h */,
-				076716EC1890352A00F996EF /* FFXCNativeTarget.m */,
-			);
-			path = Targets;
-			sourceTree = "<group>";
-		};
-		076716E61890352A00F996EF /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				076716E71890352A00F996EF /* FFXCTarget.h */,
-				076716E81890352A00F996EF /* FFXCTarget.m */,
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		076716ED1890352A00F996EF /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				07DC456F18B0D1C70085ACA1 /* FFXCConfigurations.h */,
-				076716EE1890352A00F996EF /* FFXCBuildConfiguration.h */,
-				076716EF1890352A00F996EF /* FFXCBuildConfiguration.m */,
-				076716F01890352A00F996EF /* FFXCConfigurationList.h */,
-				076716F11890352A00F996EF /* FFXCConfigurationList.m */,
-			);
-			name = Configurations;
-			path = ../../FFXcodeProjectManager/Configurations;
-			sourceTree = "<group>";
-		};
-		076716F21890352A00F996EF /* Groups */ = {
-			isa = PBXGroup;
-			children = (
-				07DC457118B0D2420085ACA1 /* FFXCGroups.h */,
-				0733C78818DDDE1F00128571 /* FFXCGroup.h */,
-				0733C78918DDDE1F00128571 /* FFXCGroup.m */,
-				076716FA1890352A00F996EF /* FFXCVariantGroup.h */,
-				076716FB1890352A00F996EF /* FFXCVariantGroup.m */,
-				07E0CC0318E00D860034F69E /* FFXCVersionGroup.h */,
-				07E0CC0418E00D860034F69E /* FFXCVersionGroup.m */,
-			);
-			name = Groups;
-			path = ../../FFXcodeProjectManager/Groups;
-			sourceTree = "<group>";
-		};
-		07DC457418B0D8240085ACA1 /* FFXCObject */ = {
-			isa = PBXGroup;
-			children = (
-				07DC457318B0D7EF0085ACA1 /* FFXCObjects.h */,
-				076716FC1890352A00F996EF /* FFXCObject.h */,
-				076716FD1890352A00F996EF /* FFXCObject.m */,
-				07F88DCD18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.h */,
-				07F88DCE18B27CFD005E1FD8 /* FFXCObject+PrivateMethods.m */,
-				07F9707118A15AFB00EEC942 /* FFXCObject+ClassFactory.h */,
-				07F9707218A15AFB00EEC942 /* FFXCObject+ClassFactory.m */,
-			);
-			name = FFXCObject;
-			path = ../../FFXcodeProjectManager;
-			sourceTree = "<group>";
-		};
 		07E0CAB518DDFD230034F69E /* FFXcodeProjectManager */ = {
 			isa = PBXGroup;
 			children = (
-				076716CD1890352A00F996EF /* Build Phases */,
-				076716DF1890352A00F996EF /* ConfigurableObjects */,
-				076716ED1890352A00F996EF /* Configurations */,
-				07F22EFE189059F90057BC37 /* Files */,
-				076716F21890352A00F996EF /* Groups */,
-				07F22F1C1891980C0057BC37 /* Others */,
-				07DC457418B0D8240085ACA1 /* FFXCObject */,
-				076716FE1890352A00F996EF /* FFXCProjectFile.h */,
-				076716FF1890352A00F996EF /* FFXCProjectFile.m */,
-				076717001890352A00F996EF /* FFXCProjectUIDGenerator.h */,
-				076717011890352A00F996EF /* FFXCProjectUIDGenerator.m */,
-				07DC457518B0D87D0085ACA1 /* FFXCObjectsManager.h */,
-				07DC457618B0D87D0085ACA1 /* FFXCObjectsManager.m */,
+				07EAC05118F0B40A00EB316F /* Build Phases */,
+				07EAC06418F0B40A00EB316F /* ConfigurableObjects */,
+				07EAC07418F0B40A00EB316F /* Configurations */,
+				07EAC07D18F0B40A00EB316F /* Files */,
+				07EAC08A18F0B40A00EB316F /* Groups */,
+				07EAC09218F0B40A00EB316F /* Others */,
+				07EAC0F218F0B54D00EB316F /* FFXCObject */,
+				07EAC0A118F0B40A00EB316F /* FFXCObjectsManager.h */,
+				07EAC0A218F0B40A00EB316F /* FFXCObjectsManager.m */,
+				07EAC0A418F0B40A00EB316F /* FFXCProjectFile.h */,
+				07EAC0A518F0B40A00EB316F /* FFXCProjectFile.m */,
+				07EAC0A618F0B40A00EB316F /* FFXCProjectUIDGenerator.h */,
+				07EAC0A718F0B40A00EB316F /* FFXCProjectUIDGenerator.m */,
+				07EAC0A318F0B40A00EB316F /* FFXcodeProjectManager.h */,
 				07E0CAB618DDFD230034F69E /* Supporting Files */,
 			);
 			path = FFXcodeProjectManager;
@@ -605,6 +456,161 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
+		07EAC05118F0B40A00EB316F /* Build Phases */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC05218F0B40A00EB316F /* Abstract */,
+				07EAC05718F0B40A00EB316F /* FFXCBuildPhases.h */,
+				07EAC05818F0B40A00EB316F /* FFXCCopyFilesBuildPhase.h */,
+				07EAC05918F0B40A00EB316F /* FFXCCopyFilesBuildPhase.m */,
+				07EAC05A18F0B40A00EB316F /* FFXCFrameworksBuildPhase.h */,
+				07EAC05B18F0B40A00EB316F /* FFXCFrameworksBuildPhase.m */,
+				07EAC05C18F0B40A00EB316F /* FFXCHeadersBuildPhase.h */,
+				07EAC05D18F0B40A00EB316F /* FFXCHeadersBuildPhase.m */,
+				07EAC05E18F0B40A00EB316F /* FFXCResourcesBuildPhase.h */,
+				07EAC05F18F0B40A00EB316F /* FFXCResourcesBuildPhase.m */,
+				07EAC06018F0B40A00EB316F /* FFXCShellScriptBuildPhase.h */,
+				07EAC06118F0B40A00EB316F /* FFXCShellScriptBuildPhase.m */,
+				07EAC06218F0B40A00EB316F /* FFXCSourcesBuildPhase.h */,
+				07EAC06318F0B40A00EB316F /* FFXCSourcesBuildPhase.m */,
+			);
+			path = "Build Phases";
+			sourceTree = "<group>";
+		};
+		07EAC05218F0B40A00EB316F /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC05318F0B40A00EB316F /* FFXCBuildPhase.h */,
+				07EAC05418F0B40A00EB316F /* FFXCBuildPhase.m */,
+				07EAC05518F0B40A00EB316F /* FFXCNamedBuildPhase.h */,
+				07EAC05618F0B40A00EB316F /* FFXCNamedBuildPhase.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		07EAC06418F0B40A00EB316F /* ConfigurableObjects */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC06518F0B40A00EB316F /* Abstract */,
+				07EAC06818F0B40A00EB316F /* FFXCConfigurableObjects.h */,
+				07EAC06918F0B40A00EB316F /* FFXCProject.h */,
+				07EAC06A18F0B40A00EB316F /* FFXCProject.m */,
+				07EAC06B18F0B40A00EB316F /* Targets */,
+			);
+			path = ConfigurableObjects;
+			sourceTree = "<group>";
+		};
+		07EAC06518F0B40A00EB316F /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC06618F0B40A00EB316F /* FFXCConfigurableObject.h */,
+				07EAC06718F0B40A00EB316F /* FFXCConfigurableObject.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		07EAC06B18F0B40A00EB316F /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC06C18F0B40A00EB316F /* Abstract */,
+				07EAC07318F0B40A00EB316F /* FFXCTargets.h */,
+				07EAC06F18F0B40A00EB316F /* FFXCAggregateTarget.h */,
+				07EAC07018F0B40A00EB316F /* FFXCAggregateTarget.m */,
+				07EAC07118F0B40A00EB316F /* FFXCNativeTarget.h */,
+				07EAC07218F0B40A00EB316F /* FFXCNativeTarget.m */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		07EAC06C18F0B40A00EB316F /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC06D18F0B40A00EB316F /* FFXCTarget.h */,
+				07EAC06E18F0B40A00EB316F /* FFXCTarget.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		07EAC07418F0B40A00EB316F /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC07918F0B40A00EB316F /* FFXCConfigurations.h */,
+				07EAC07518F0B40A00EB316F /* FFXCBuildConfiguration.h */,
+				07EAC07618F0B40A00EB316F /* FFXCBuildConfiguration.m */,
+				07EAC07718F0B40A00EB316F /* FFXCConfigurationList.h */,
+				07EAC07818F0B40A00EB316F /* FFXCConfigurationList.m */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		07EAC07D18F0B40A00EB316F /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC07E18F0B40A00EB316F /* Abstract */,
+				07EAC08318F0B40A00EB316F /* FFXCFiles.h */,
+				07EAC08118F0B40A00EB316F /* FFXCExplicitFileReference.h */,
+				07EAC08218F0B40A00EB316F /* FFXCExplicitFileReference.m */,
+				07EAC08418F0B40A00EB316F /* FFXCKnownFileReference.h */,
+				07EAC08518F0B40A00EB316F /* FFXCKnownFileReference.m */,
+				07EAC08618F0B40A00EB316F /* FFXCNamedFileReference.h */,
+				07EAC08718F0B40A00EB316F /* FFXCNamedFileReference.m */,
+				07EAC08818F0B40A00EB316F /* FFXCReferenceProxy.h */,
+				07EAC08918F0B40A00EB316F /* FFXCReferenceProxy.m */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		07EAC07E18F0B40A00EB316F /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC07F18F0B40A00EB316F /* FFXCFileObject.h */,
+				07EAC08018F0B40A00EB316F /* FFXCFileObject.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		07EAC08A18F0B40A00EB316F /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC08D18F0B40A00EB316F /* FFXCGroups.h */,
+				07EAC08B18F0B40A00EB316F /* FFXCGroup.h */,
+				07EAC08C18F0B40A00EB316F /* FFXCGroup.m */,
+				07EAC08E18F0B40A00EB316F /* FFXCVariantGroup.h */,
+				07EAC08F18F0B40A00EB316F /* FFXCVariantGroup.m */,
+				07EAC09018F0B40A00EB316F /* FFXCVersionGroup.h */,
+				07EAC09118F0B40A00EB316F /* FFXCVersionGroup.m */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		07EAC09218F0B40A00EB316F /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC09718F0B40A00EB316F /* FFXCOthers.h */,
+				07EAC09318F0B40A00EB316F /* FFXCBuildFile.h */,
+				07EAC09418F0B40A00EB316F /* FFXCBuildFile.m */,
+				07EAC09518F0B40A00EB316F /* FFXCContainerItemProxy.h */,
+				07EAC09618F0B40A00EB316F /* FFXCContainerItemProxy.m */,
+				07EAC09818F0B40A00EB316F /* FFXCTargetDependency.h */,
+				07EAC09918F0B40A00EB316F /* FFXCTargetDependency.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		07EAC0F218F0B54D00EB316F /* FFXCObject */ = {
+			isa = PBXGroup;
+			children = (
+				07EAC0A018F0B40A00EB316F /* FFXCObjects.h */,
+				07EAC09A18F0B40A00EB316F /* FFXCObject.h */,
+				07EAC09B18F0B40A00EB316F /* FFXCObject.m */,
+				07EAC09C18F0B40A00EB316F /* FFXCObject+ClassFactory.h */,
+				07EAC09D18F0B40A00EB316F /* FFXCObject+ClassFactory.m */,
+				07EAC09E18F0B40A00EB316F /* FFXCObject+PrivateMethods.h */,
+				07EAC09F18F0B40A00EB316F /* FFXCObject+PrivateMethods.m */,
+			);
+			name = FFXCObject;
+			sourceTree = "<group>";
+		};
 		07F1BD581881DA0500D96872 = {
 			isa = PBXGroup;
 			children = (
@@ -697,48 +703,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07F22EFE189059F90057BC37 /* Files */ = {
-			isa = PBXGroup;
-			children = (
-				07F22EFF189059F90057BC37 /* Abstract */,
-				07DC457018B0D2100085ACA1 /* FFXCFiles.h */,
-				07F22F02189059F90057BC37 /* FFXCExplicitFileReference.h */,
-				07F22F03189059F90057BC37 /* FFXCExplicitFileReference.m */,
-				07F22F04189059F90057BC37 /* FFXCKnownFileReference.h */,
-				07F22F05189059F90057BC37 /* FFXCKnownFileReference.m */,
-				07F22F06189059F90057BC37 /* FFXCNamedFileReference.h */,
-				07F22F07189059F90057BC37 /* FFXCNamedFileReference.m */,
-				07E0CC0718E012D50034F69E /* FFXCReferenceProxy.h */,
-				07E0CC0818E012D50034F69E /* FFXCReferenceProxy.m */,
-			);
-			name = Files;
-			path = ../../FFXcodeProjectManager/Files;
-			sourceTree = "<group>";
-		};
-		07F22EFF189059F90057BC37 /* Abstract */ = {
-			isa = PBXGroup;
-			children = (
-				07F22F00189059F90057BC37 /* FFXCFileObject.h */,
-				07F22F01189059F90057BC37 /* FFXCFileObject.m */,
-			);
-			path = Abstract;
-			sourceTree = "<group>";
-		};
-		07F22F1C1891980C0057BC37 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				07DC457218B0D2970085ACA1 /* FFXCOthers.h */,
-				07F22F1D1891980C0057BC37 /* FFXCBuildFile.h */,
-				07F22F1E1891980C0057BC37 /* FFXCBuildFile.m */,
-				07F22F1F1891980C0057BC37 /* FFXCContainerItemProxy.h */,
-				07F22F201891980C0057BC37 /* FFXCContainerItemProxy.m */,
-				07F22F211891980C0057BC37 /* FFXCTargetDependency.h */,
-				07F22F221891980C0057BC37 /* FFXCTargetDependency.m */,
-			);
-			name = Others;
-			path = ../../FFXcodeProjectManager/Others;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -746,46 +710,47 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E0CB0118DDFE390034F69E /* FFXCVariantGroup.h in Headers */,
-				07E0CB2718DDFEA70034F69E /* FFXCProject.h in Headers */,
-				07E0CB1C18DDFE8A0034F69E /* FFXCTarget.h in Headers */,
-				07E0CB2D18DDFEB10034F69E /* FFXCFrameworksBuildPhase.h in Headers */,
-				07E0CC0518E00D860034F69E /* FFXCVersionGroup.h in Headers */,
-				07E0CADE18DDFDE60034F69E /* FFXCObjects.h in Headers */,
-				07E0CAFE18DDFE390034F69E /* FFXCGroup.h in Headers */,
-				07E0CB1418DDFE650034F69E /* FFXCConfigurationList.h in Headers */,
-				07E0CB3118DDFEB10034F69E /* FFXCResourcesBuildPhase.h in Headers */,
-				07E0CB1118DDFE650034F69E /* FFXCConfigurations.h in Headers */,
-				07E0CB1B18DDFE750034F69E /* FFXCConfigurableObject.h in Headers */,
-				07E0CB2F18DDFEB10034F69E /* FFXCHeadersBuildPhase.h in Headers */,
-				07E0CB1218DDFE650034F69E /* FFXCBuildConfiguration.h in Headers */,
-				07E0CADF18DDFDE60034F69E /* FFXCProjectFile.h in Headers */,
-				07E0CB3318DDFEB10034F69E /* FFXCShellScriptBuildPhase.h in Headers */,
-				07E0CADA18DDFDE60034F69E /* FFXCObject+PrivateMethods.h in Headers */,
-				07E0CB2A18DDFEB10034F69E /* FFXCBuildPhases.h in Headers */,
-				07E0CB0718DDFE5C0034F69E /* FFXCFiles.h in Headers */,
-				07E0CAD818DDFDE60034F69E /* FFXCObject.h in Headers */,
-				07E0CAEB18DDFE250034F69E /* FFXCOthers.h in Headers */,
-				07E0CB2B18DDFEB10034F69E /* FFXCCopyFilesBuildPhase.h in Headers */,
-				07E0CB3D18DDFEBD0034F69E /* FFXCBuildPhase.h in Headers */,
-				07E0CB2018DDFE960034F69E /* FFXCAggregateTarget.h in Headers */,
-				07E0CAF018DDFE250034F69E /* FFXCTargetDependency.h in Headers */,
-				07E0CADC18DDFDE60034F69E /* FFXCObject+ClassFactory.h in Headers */,
-				07E0CB3518DDFEB10034F69E /* FFXCSourcesBuildPhase.h in Headers */,
-				07E0CAE118DDFDE60034F69E /* FFXCProjectUIDGenerator.h in Headers */,
-				07E0CB0C18DDFE5C0034F69E /* FFXCNamedFileReference.h in Headers */,
-				07E0CB0818DDFE5C0034F69E /* FFXCExplicitFileReference.h in Headers */,
-				07E0CB0A18DDFE5C0034F69E /* FFXCKnownFileReference.h in Headers */,
-				07E0CAE318DDFDE60034F69E /* FFXCObjectsManager.h in Headers */,
-				07E0CB2618DDFEA50034F69E /* FFXCConfigurableObjects.h in Headers */,
-				07E0CB2318DDFE9E0034F69E /* FFXCNativeTarget.h in Headers */,
-				07E0CAEC18DDFE250034F69E /* FFXCBuildFile.h in Headers */,
-				07E0CC0918E012D50034F69E /* FFXCReferenceProxy.h in Headers */,
-				07E0CB0218DDFE3F0034F69E /* FFXCFileObject.h in Headers */,
-				07E0CB1F18DDFE920034F69E /* FFXCTargets.h in Headers */,
-				07E0CAEE18DDFE250034F69E /* FFXCContainerItemProxy.h in Headers */,
-				07E0CB3F18DDFEBD0034F69E /* FFXCNamedBuildPhase.h in Headers */,
-				07E0CAFD18DDFE390034F69E /* FFXCGroups.h in Headers */,
+				07EAC0D018F0B40A00EB316F /* FFXCKnownFileReference.h in Headers */,
+				07EAC0DF18F0B40A00EB316F /* FFXCContainerItemProxy.h in Headers */,
+				07EAC0CB18F0B40A00EB316F /* FFXCFileObject.h in Headers */,
+				07EAC0AC18F0B40A00EB316F /* FFXCBuildPhases.h in Headers */,
+				07EAC0B918F0B40A00EB316F /* FFXCConfigurableObject.h in Headers */,
+				07EAC0D818F0B40A00EB316F /* FFXCGroups.h in Headers */,
+				07EAC0D918F0B40A00EB316F /* FFXCVariantGroup.h in Headers */,
+				07EAC0D418F0B40A00EB316F /* FFXCReferenceProxy.h in Headers */,
+				07EAC0E618F0B40A00EB316F /* FFXCObject+ClassFactory.h in Headers */,
+				07EAC0AD18F0B40A00EB316F /* FFXCCopyFilesBuildPhase.h in Headers */,
+				07EAC0AA18F0B40A00EB316F /* FFXCNamedBuildPhase.h in Headers */,
+				07EAC0EA18F0B40A00EB316F /* FFXCObjects.h in Headers */,
+				07EAC0CF18F0B40A00EB316F /* FFXCFiles.h in Headers */,
+				07EAC0C418F0B40A00EB316F /* FFXCTargets.h in Headers */,
+				07EAC0B118F0B40A00EB316F /* FFXCHeadersBuildPhase.h in Headers */,
+				07EAC0CD18F0B40A00EB316F /* FFXCExplicitFileReference.h in Headers */,
+				07EAC0E218F0B40A00EB316F /* FFXCTargetDependency.h in Headers */,
+				07EAC0B718F0B40A00EB316F /* FFXCSourcesBuildPhase.h in Headers */,
+				07EAC0EB18F0B40A00EB316F /* FFXCObjectsManager.h in Headers */,
+				07EAC0BB18F0B40A00EB316F /* FFXCConfigurableObjects.h in Headers */,
+				07EAC0D618F0B40A00EB316F /* FFXCGroup.h in Headers */,
+				07EAC0ED18F0B40A00EB316F /* FFXcodeProjectManager.h in Headers */,
+				07EAC0B318F0B40A00EB316F /* FFXCResourcesBuildPhase.h in Headers */,
+				07EAC0C218F0B40A00EB316F /* FFXCNativeTarget.h in Headers */,
+				07EAC0E818F0B40A00EB316F /* FFXCObject+PrivateMethods.h in Headers */,
+				07EAC0DD18F0B40A00EB316F /* FFXCBuildFile.h in Headers */,
+				07EAC0AF18F0B40A00EB316F /* FFXCFrameworksBuildPhase.h in Headers */,
+				07EAC0C918F0B40A00EB316F /* FFXCConfigurations.h in Headers */,
+				07EAC0BC18F0B40A00EB316F /* FFXCProject.h in Headers */,
+				07EAC0EE18F0B40A00EB316F /* FFXCProjectFile.h in Headers */,
+				07EAC0E418F0B40A00EB316F /* FFXCObject.h in Headers */,
+				07EAC0F018F0B40A00EB316F /* FFXCProjectUIDGenerator.h in Headers */,
+				07EAC0D218F0B40A00EB316F /* FFXCNamedFileReference.h in Headers */,
+				07EAC0C518F0B40A00EB316F /* FFXCBuildConfiguration.h in Headers */,
+				07EAC0DB18F0B40A00EB316F /* FFXCVersionGroup.h in Headers */,
+				07EAC0C018F0B40A00EB316F /* FFXCAggregateTarget.h in Headers */,
+				07EAC0C718F0B40A00EB316F /* FFXCConfigurationList.h in Headers */,
+				07EAC0BE18F0B40A00EB316F /* FFXCTarget.h in Headers */,
+				07EAC0B518F0B40A00EB316F /* FFXCShellScriptBuildPhase.h in Headers */,
+				07EAC0E118F0B40A00EB316F /* FFXCOthers.h in Headers */,
+				07EAC0A818F0B40A00EB316F /* FFXCBuildPhase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,7 +973,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}/..\"?FFXC,FF\nelse\necho \"warning: You have to install and set up Objective-Clean to use its features!\" \nfi\nfi";
+			shellScript = "if [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}\"?FFXC,FF\nelse\necho \"warning: You have to install and set up Objective-Clean to use its features!\" \nfi\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1017,38 +982,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E0CAF118DDFE250034F69E /* FFXCTargetDependency.m in Sources */,
-				07E0CADB18DDFDE60034F69E /* FFXCObject+PrivateMethods.m in Sources */,
-				07E0CB2E18DDFEB10034F69E /* FFXCFrameworksBuildPhase.m in Sources */,
-				07E0CB3018DDFEB10034F69E /* FFXCHeadersBuildPhase.m in Sources */,
-				07E0CB3618DDFEB10034F69E /* FFXCSourcesBuildPhase.m in Sources */,
-				07E0CAE418DDFDE60034F69E /* FFXCObjectsManager.m in Sources */,
-				07E0CAFC18DDFE360034F69E /* FFXCVariantGroup.m in Sources */,
-				07E0CC0A18E012D50034F69E /* FFXCReferenceProxy.m in Sources */,
-				07E0CB0318DDFE420034F69E /* FFXCFileObject.m in Sources */,
-				07E0CB2818DDFEA90034F69E /* FFXCProject.m in Sources */,
-				07E0CB1A18DDFE720034F69E /* FFXCConfigurableObject.m in Sources */,
-				07E0CB3E18DDFEBD0034F69E /* FFXCBuildPhase.m in Sources */,
-				07E0CB0B18DDFE5C0034F69E /* FFXCKnownFileReference.m in Sources */,
-				07E0CB1D18DDFE8E0034F69E /* FFXCTarget.m in Sources */,
-				07E0CAED18DDFE250034F69E /* FFXCBuildFile.m in Sources */,
-				07E0CB1518DDFE650034F69E /* FFXCConfigurationList.m in Sources */,
-				07E0CB0D18DDFE5C0034F69E /* FFXCNamedFileReference.m in Sources */,
-				07E0CADD18DDFDE60034F69E /* FFXCObject+ClassFactory.m in Sources */,
-				07E0CAE018DDFDE60034F69E /* FFXCProjectFile.m in Sources */,
-				07E0CAE218DDFDE60034F69E /* FFXCProjectUIDGenerator.m in Sources */,
-				07E0CB3418DDFEB10034F69E /* FFXCShellScriptBuildPhase.m in Sources */,
-				07E0CB1318DDFE650034F69E /* FFXCBuildConfiguration.m in Sources */,
-				07E0CB3218DDFEB10034F69E /* FFXCResourcesBuildPhase.m in Sources */,
-				07E0CB2418DDFEA10034F69E /* FFXCNativeTarget.m in Sources */,
-				07E0CAEF18DDFE250034F69E /* FFXCContainerItemProxy.m in Sources */,
-				07E0CAF918DDFE360034F69E /* FFXCGroup.m in Sources */,
-				07E0CAD918DDFDE60034F69E /* FFXCObject.m in Sources */,
-				07E0CB0918DDFE5C0034F69E /* FFXCExplicitFileReference.m in Sources */,
-				07E0CB4018DDFEBD0034F69E /* FFXCNamedBuildPhase.m in Sources */,
-				07E0CB2118DDFE9B0034F69E /* FFXCAggregateTarget.m in Sources */,
-				07E0CC0618E00D860034F69E /* FFXCVersionGroup.m in Sources */,
-				07E0CB2C18DDFEB10034F69E /* FFXCCopyFilesBuildPhase.m in Sources */,
+				07EAC0E018F0B40A00EB316F /* FFXCContainerItemProxy.m in Sources */,
+				07EAC0DA18F0B40A00EB316F /* FFXCVariantGroup.m in Sources */,
+				07EAC0D118F0B40A00EB316F /* FFXCKnownFileReference.m in Sources */,
+				07EAC0D318F0B40A00EB316F /* FFXCNamedFileReference.m in Sources */,
+				07EAC0A918F0B40A00EB316F /* FFXCBuildPhase.m in Sources */,
+				07EAC0B418F0B40A00EB316F /* FFXCResourcesBuildPhase.m in Sources */,
+				07EAC0B618F0B40A00EB316F /* FFXCShellScriptBuildPhase.m in Sources */,
+				07EAC0D718F0B40A00EB316F /* FFXCGroup.m in Sources */,
+				07EAC0C318F0B40A00EB316F /* FFXCNativeTarget.m in Sources */,
+				07EAC0AB18F0B40A00EB316F /* FFXCNamedBuildPhase.m in Sources */,
+				07EAC0DE18F0B40A00EB316F /* FFXCBuildFile.m in Sources */,
+				07EAC0B218F0B40A00EB316F /* FFXCHeadersBuildPhase.m in Sources */,
+				07EAC0E918F0B40A00EB316F /* FFXCObject+PrivateMethods.m in Sources */,
+				07EAC0C118F0B40A00EB316F /* FFXCAggregateTarget.m in Sources */,
+				07EAC0E518F0B40A00EB316F /* FFXCObject.m in Sources */,
+				07EAC0BA18F0B40A00EB316F /* FFXCConfigurableObject.m in Sources */,
+				07EAC0C818F0B40A00EB316F /* FFXCConfigurationList.m in Sources */,
+				07EAC0CC18F0B40A00EB316F /* FFXCFileObject.m in Sources */,
+				07EAC0BD18F0B40A00EB316F /* FFXCProject.m in Sources */,
+				07EAC0B018F0B40A00EB316F /* FFXCFrameworksBuildPhase.m in Sources */,
+				07EAC0EF18F0B40A00EB316F /* FFXCProjectFile.m in Sources */,
+				07EAC0C618F0B40A00EB316F /* FFXCBuildConfiguration.m in Sources */,
+				07EAC0B818F0B40A00EB316F /* FFXCSourcesBuildPhase.m in Sources */,
+				07EAC0BF18F0B40A00EB316F /* FFXCTarget.m in Sources */,
+				07EAC0DC18F0B40A00EB316F /* FFXCVersionGroup.m in Sources */,
+				07EAC0E718F0B40A00EB316F /* FFXCObject+ClassFactory.m in Sources */,
+				07EAC0EC18F0B40A00EB316F /* FFXCObjectsManager.m in Sources */,
+				07EAC0F118F0B40A00EB316F /* FFXCProjectUIDGenerator.m in Sources */,
+				07EAC0AE18F0B40A00EB316F /* FFXCCopyFilesBuildPhase.m in Sources */,
+				07EAC0CE18F0B40A00EB316F /* FFXCExplicitFileReference.m in Sources */,
+				07EAC0E318F0B40A00EB316F /* FFXCTargetDependency.m in Sources */,
+				07EAC0D518F0B40A00EB316F /* FFXCReferenceProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,39 +1021,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E0CC0C18E01B090034F69E /* FFXCReferenceProxy.m in Sources */,
-				07E0CB3A18DDFEB80034F69E /* FFXCResourcesBuildPhase.m in Sources */,
-				07E0CB0418DDFE420034F69E /* FFXCFileObject.m in Sources */,
-				07E0CB2918DDFEAA0034F69E /* FFXCProject.m in Sources */,
-				07E0CAF518DDFE350034F69E /* FFXCGroup.m in Sources */,
-				07E0CB3718DDFEB80034F69E /* FFXCCopyFilesBuildPhase.m in Sources */,
-				07E0CAE618DDFDF70034F69E /* FFXCObject+PrivateMethods.m in Sources */,
-				07E0CB1618DDFE690034F69E /* FFXCBuildConfiguration.m in Sources */,
-				07E0CC0B18E01B020034F69E /* FFXCVersionGroup.m in Sources */,
-				07E0CAF218DDFE2B0034F69E /* FFXCBuildFile.m in Sources */,
-				07E0CB3818DDFEB80034F69E /* FFXCFrameworksBuildPhase.m in Sources */,
-				07E0CB4218DDFEC00034F69E /* FFXCNamedBuildPhase.m in Sources */,
 				07E0CAD018DDFD230034F69E /* FFXcodeProjectManagerTests.m in Sources */,
-				07E0CB1018DDFE600034F69E /* FFXCNamedFileReference.m in Sources */,
-				07E0CB1918DDFE720034F69E /* FFXCConfigurableObject.m in Sources */,
-				07E0CB1E18DDFE8E0034F69E /* FFXCTarget.m in Sources */,
-				07E0CAF318DDFE2B0034F69E /* FFXCContainerItemProxy.m in Sources */,
-				07E0CAF418DDFE2B0034F69E /* FFXCTargetDependency.m in Sources */,
-				07E0CAF818DDFE350034F69E /* FFXCVariantGroup.m in Sources */,
-				07E0CAE518DDFDF20034F69E /* FFXCObject.m in Sources */,
-				07E0CB4118DDFEC00034F69E /* FFXCBuildPhase.m in Sources */,
-				07E0CB3B18DDFEB80034F69E /* FFXCShellScriptBuildPhase.m in Sources */,
-				07E0CB1718DDFE690034F69E /* FFXCConfigurationList.m in Sources */,
-				07E0CAEA18DDFDFD0034F69E /* FFXCObjectsManager.m in Sources */,
-				07E0CAE918DDFDFD0034F69E /* FFXCProjectUIDGenerator.m in Sources */,
-				07E0CB3C18DDFEB80034F69E /* FFXCSourcesBuildPhase.m in Sources */,
-				07E0CB2518DDFEA10034F69E /* FFXCNativeTarget.m in Sources */,
-				07E0CB0F18DDFE600034F69E /* FFXCKnownFileReference.m in Sources */,
-				07E0CAE718DDFDFD0034F69E /* FFXCObject+ClassFactory.m in Sources */,
-				07E0CB0E18DDFE600034F69E /* FFXCExplicitFileReference.m in Sources */,
-				07E0CB2218DDFE9B0034F69E /* FFXCAggregateTarget.m in Sources */,
-				07E0CB3918DDFEB80034F69E /* FFXCHeadersBuildPhase.m in Sources */,
-				07E0CAE818DDFDFD0034F69E /* FFXCProjectFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1523,6 +1456,7 @@
 				07E0CAD218DDFD230034F69E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07E0CAD618DDFD230034F69E /* Build configuration list for PBXNativeTarget "FFXcodeProjectManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -1531,6 +1465,7 @@
 				07E0CAD418DDFD230034F69E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07E0CBC118DF2A9E0034F69E /* Build configuration list for PBXNativeTarget "FFXcodeProjectManager iOS" */ = {
 			isa = XCConfigurationList;
@@ -1539,6 +1474,7 @@
 				07E0CBC318DF2A9E0034F69E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07E0CBC418DF2A9E0034F69E /* Build configuration list for PBXNativeTarget "FFXcodeProjectManager iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1547,6 +1483,7 @@
 				07E0CBC618DF2A9E0034F69E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07F1BD5C1881DA0500D96872 /* Build configuration list for PBXProject "FFXcodeProjectManager" */ = {
 			isa = XCConfigurationList;
